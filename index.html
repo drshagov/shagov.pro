@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Yevgen Shagov, MD, PhD. Evidence reviews of longevity and healthspan claims: what works, for whom, and at what cost.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yevgen Shagov">
+<meta property="og:title" content="Longer life? Better health? Prove it. | Yevgen Shagov, MD, PhD">
+<meta property="og:description" content="Dated, evidence-based verdicts on longevity and healthspan claims.">
+<meta property="og:url" content="https://shagov.pro/">
+<meta property="og:image" content="https://shagov.pro/img/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<title>Longevity & Healthspan Claims: Evidence Reviews | Yevgen Shagov, MD, PhD</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=PT+Serif:ital@0;1&display=swap">
+<style>
+:root {
+  /* Navy dial, white metal and tantalum for structure, soft gold as the warm accent (as in the Instagram carousels).
+     Crimson lives only in the VERDICT stamp. Simple outside, depth on request. */
+  --dial: #0C1838;
+  --dial-deep: #060C1F;
+  --dial-light: #1E3878;
+  --rhodium: #DCE1E8;
+  --tantalum: #6E7A8C;
+  --tantalum-dark: #4A5466;
+  --ivory: #E0BE7A;
+  --gold: #D9B56C;
+  --chrome: #2B4C9E;
+  --white: #F5F6F8;
+  --paper: #FFFFFF;
+  --ink: #0B132B;
+  --ink-2: #3A4459;
+  --on-dial: #FFFFFF;
+  --on-dial-2: #C6CEDD;
+  --on-dial-3: #A3AEC0;
+  --crimson: #C23F4E;
+  --crimson-light: #E06473;
+  --emerald: #2F8F70;
+  --amber: #B7832F;
+  --hair-dark: rgba(220,225,232,.18);
+  --hair-light: rgba(11,19,43,.12);
+  --metal: linear-gradient(135deg, #F4F6F9 0%, #BFC6D0 38%, #EEF1F5 52%, #8F99A8 100%);
+  --serif: 'PT Serif', Georgia, 'Times New Roman', serif;
+  --sans: Inter, 'Helvetica Neue', Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--white); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; }
+a { color: inherit; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--chrome); outline-offset: 3px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.narrow { max-width: 760px; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+sup.c a { font-size: 11px; color: var(--tantalum); text-decoration: none; padding: 0 1px; font-weight: 700; }
+b.k { font-weight: 700; }
+
+/* ---------- Dial material ---------- */
+.dial { position: relative; isolation: isolate; overflow: hidden; color: var(--on-dial);
+  background: radial-gradient(70% 90% at var(--cx, 70%) var(--cy, 30%), var(--dial-light) 0%, var(--dial) 45%, var(--dial-deep) 100%); }
+.dial::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: repeating-conic-gradient(from 0deg at var(--cx, 70%) var(--cy, 30%), rgba(255,255,255,.03) 0deg .2deg, rgba(255,255,255,0) .2deg .75deg);
+  -webkit-mask-image: radial-gradient(90% 100% at var(--cx, 70%) var(--cy, 30%), #000 0%, rgba(0,0,0,.3) 70%, transparent 100%);
+          mask-image: radial-gradient(90% 100% at var(--cx, 70%) var(--cy, 30%), #000 0%, rgba(0,0,0,.3) 70%, transparent 100%); }
+
+/* ---------- Header ---------- */
+.draft { background: var(--rhodium); color: var(--dial-deep); font-size: 11px; letter-spacing: 1.5px; text-align: center; padding: 6px 12px; font-weight: 700; }
+header.site { background: var(--dial-deep); color: var(--on-dial); border-bottom: 1px solid var(--hair-dark); }
+header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; flex-wrap: wrap; }
+.logo { font-family: var(--serif); letter-spacing: 7px; font-size: 17px; text-decoration: none; color: var(--on-dial); }
+.logo span { color: var(--gold); }
+nav.main { display: flex; gap: 24px; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; }
+nav.main a { color: var(--on-dial-3); text-decoration: none; }
+nav.main a.on { color: var(--on-dial); }
+nav.main a.v { color: var(--crimson-light); }
+
+/* ---------- Type ---------- */
+.eyebrow { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 11.5px; letter-spacing: 3.5px; text-transform: uppercase; font-weight: 700; color: var(--tantalum); }
+.dial .eyebrow { color: var(--gold); }
+.eyebrow::before { content: ""; width: 4px; height: 16px; border-radius: 1px; background: var(--metal); flex: none; }
+h1 { font-weight: 800; font-size: clamp(38px, 6.4vw, 70px); line-height: .98; letter-spacing: -1px; text-transform: uppercase; }
+h2 { font-weight: 700; font-size: clamp(26px, 3.4vw, 38px); line-height: 1.1; letter-spacing: -.5px; }
+h2 .s { color: var(--tantalum); font-weight: 400; }
+.dial h2 .s { color: var(--on-dial-3); }
+h3 { font-weight: 700; font-size: 19px; line-height: 1.3; }
+.iv { color: var(--ivory); }
+.lead { font-size: 19px; line-height: 1.55; }
+.muted { color: var(--ink-2); }
+.dial .muted { color: var(--on-dial-2); }
+.small { font-size: 14px; }
+.link { font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; color: var(--chrome); }
+.dial .link { color: var(--gold); }
+section.sec { padding: 72px 0; }
+.stack { display: flex; flex-direction: column; gap: 18px; }
+.stack-lg { display: flex; flex-direction: column; gap: 32px; }
+.head { display: flex; flex-direction: column; gap: 14px; max-width: 720px; }
+.paper { background: var(--paper); }
+
+/* ---------- Date window ---------- */
+.date { display: inline-flex; align-items: center; justify-content: center; min-width: 54px; padding: 4px 8px; background: var(--paper); color: var(--ink); font-family: var(--sans); font-weight: 700; font-size: 15px; letter-spacing: 1.5px; font-variant-numeric: tabular-nums; border-radius: 2px; box-shadow: 0 0 0 2px #E9ECF1, 0 0 0 3px #8F99A8, inset 0 1px 2px rgba(0,0,0,.18); }
+
+/* ---------- Stamp ---------- */
+.stamp { display: inline-flex; border: 3px solid currentColor; padding: 4px; border-radius: 2px; transform: rotate(-2deg); text-transform: uppercase; line-height: 1; }
+.stamp .in { display: flex; flex-direction: column; border: 1.5px solid currentColor; }
+.stamp .band { background: currentColor; font-size: 10.5px; letter-spacing: 4px; padding: 7px 14px 6px; text-align: center; }
+.stamp .band b { color: var(--paper); font-weight: 800; }
+.dial .stamp .band b { color: var(--dial-deep); }
+.stamp .word { font-size: 22px; font-weight: 800; letter-spacing: 2px; padding: 12px 16px 6px; text-align: center; white-space: nowrap; }
+.stamp .cap { font-size: 9px; letter-spacing: 4px; font-weight: 700; text-align: center; padding: 2px 12px 9px; }
+.stamp.lg .word { font-size: clamp(26px, 5vw, 40px); padding: 14px 22px 6px; }
+.stamp.lg .band { font-size: 12px; }
+.stamp.lg .cap { font-size: 11px; padding: 2px 16px 12px; }
+.s-nj { color: var(--crimson); } .dial .s-nj { color: var(--crimson-light); }
+.s-np { color: var(--amber); }
+.s-p { color: var(--emerald); }
+.pill { display: inline-block; font-size: 10.5px; letter-spacing: 2px; font-weight: 800; text-transform: uppercase; border: 1.5px solid currentColor; padding: 5px 9px 4px; border-radius: 2px; white-space: nowrap; }
+
+/* ---------- HERO: the system ---------- */
+.hero { padding: 56px 0 64px; --cx: 50%; --cy: 58%; }
+.hero-top { display: flex; flex-direction: column; gap: 14px; align-items: center; text-align: center; margin-bottom: 36px; }
+.hero-top .lead { color: var(--on-dial-2); max-width: 620px; }
+.sys { max-width: 920px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+.promise { border: 1px solid var(--hair-dark); background: rgba(6,12,31,.45); padding: 24px 26px 22px; display: flex; flex-direction: column; gap: 6px; position: relative; }
+.promise::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: var(--gold); opacity: .85; }
+.promise .k { font-size: 11px; letter-spacing: 3px; font-weight: 700; color: var(--on-dial-3); text-transform: uppercase; }
+.promise .big { font-size: clamp(30px, 4.4vw, 46px); font-weight: 800; letter-spacing: -.8px; line-height: 1; text-transform: uppercase; }
+.promise .q { font-family: var(--serif); font-style: italic; color: var(--on-dial-2); font-size: 16px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.tag { font-size: 12px; font-weight: 600; padding: 4px 10px; border: 1px solid var(--hair-dark); border-radius: 20px; color: var(--on-dial-2); }
+.conn { grid-column: 1 / -1; height: 60px; position: relative; }
+.conn svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.conn .lbl { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 3px 14px; font-size: 11px; letter-spacing: 3px; font-weight: 700; color: var(--gold); text-transform: uppercase; white-space: nowrap; background: var(--dial); border: 1px solid var(--hair-dark); border-radius: 20px; }
+.prove { grid-column: 1 / -1; background: var(--paper); color: var(--ink); padding: 26px 30px; display: grid; grid-template-columns: auto minmax(0,1fr); gap: 8px 28px; align-items: center; border-radius: 2px; box-shadow: 0 0 0 1px #E9ECF1, 0 0 0 2px #8F99A8, 0 18px 40px rgba(0,0,0,.35); }
+.prove .brand { font-size: 11.5px; letter-spacing: 4px; font-weight: 800; color: var(--crimson); grid-column: 1 / -1; }
+.prove .big { font-size: clamp(40px, 6.6vw, 72px); font-weight: 800; letter-spacing: -1.5px; line-height: 1; }
+.prove .qs { list-style: none; margin: 0; padding: 0 0 0 28px; border-left: 1px solid var(--hair-light); display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; counter-reset: q; }
+.prove .qs li { font-size: 14.5px; font-weight: 600; line-height: 1.35; display: grid; grid-template-columns: 26px 1fr; }
+.prove .qs li::before { counter-increment: q; content: "0" counter(q); font-family: var(--serif); color: var(--tantalum); font-weight: 400; }
+.outs { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+.out { border: 1px solid var(--hair-dark); background: rgba(6,12,31,.45); padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; border-top: 2px solid currentColor; }
+.out.s-p { color: #5CC39F; } .out.s-np { color: #DDAA55; } .out.s-nj { color: var(--crimson-light); }
+.out .pill { align-self: flex-start; }
+.out p { color: var(--on-dial-2); font-size: 14px; line-height: 1.45; }
+.hero-foot { text-align: center; margin-top: 30px; }
+.latest { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; text-decoration: none; color: var(--on-dial); padding: 12px 16px; border: 1px solid rgba(217,181,108,.45); background: rgba(6,12,31,.5); margin-top: 6px; }
+.latest .lt { font-weight: 600; text-align: left; }
+.latest .lt small { display: block; font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+.latest .go { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: var(--gold); }
+.latest:hover { border-color: var(--gold); }
+
+/* ---------- Verdict strip ---------- */
+.strip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(280px, 340px); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 18px; scrollbar-width: thin; }
+.vc { scroll-snap-align: start; background: var(--paper); border: 1px solid var(--hair-light); padding: 22px; display: flex; flex-direction: column; gap: 16px; text-decoration: none; color: inherit; position: relative; min-height: 300px; }
+.vc::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--metal); }
+.vc:hover { border-color: var(--tantalum); }
+.vc .top { display: flex; flex-wrap: wrap; gap: 8px 12px; justify-content: space-between; align-items: center; font-size: 12px; color: var(--tantalum); letter-spacing: 1px; }
+.vc h3 { font-size: 21px; }
+.vc .stamp { align-self: flex-start; margin-top: auto; }
+.vc .read { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: var(--chrome); }
+.vc.ghost { background: transparent; border-style: dashed; color: var(--tantalum); justify-content: center; align-items: flex-start; }
+.vc.ghost::before { display: none; }
+
+/* ---------- Questions grid ---------- */
+.q4 { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); border-top: 1px solid var(--ink); }
+.q4 > div { padding: 18px 18px 4px 0; display: flex; flex-direction: column; gap: 8px; }
+.q4 > div + div { padding-left: 18px; border-left: 1px solid var(--hair-light); }
+.q4 .n { font-family: var(--serif); color: var(--tantalum); font-size: 20px; }
+.q4 .t { font-weight: 700; }
+.q4 p { color: var(--ink-2); font-size: 15px; }
+
+/* ---------- Building + About ---------- */
+.split { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,.8fr); gap: 40px; align-items: end; }
+.split .copy { padding-bottom: 72px; display: flex; flex-direction: column; gap: 18px; }
+.portrait { margin: 0; justify-self: end; width: 100%; max-width: 400px; }
+.portrait img { display: block; width: 100%; height: auto; -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 100%); mask-image: linear-gradient(180deg, #000 72%, transparent 100%); }
+.years { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border-top: 1px solid var(--ink); }
+.years > div { padding: 20px 20px 4px 0; }
+.years > div + div { padding-left: 20px; border-left: 1px solid var(--hair-light); }
+.years b { display: block; font-size: 34px; font-weight: 800; letter-spacing: -.5px; line-height: 1; }
+.years span { display: block; margin-top: 10px; color: var(--ink-2); font-size: 15px; }
+.about-strip { display: grid; grid-template-columns: 260px minmax(0,1fr); gap: 40px; align-items: center; }
+.about-strip { grid-template-columns: 360px minmax(0,1fr); align-items: end; }
+.years.on-dial { border-top-color: rgba(217,181,108,.5); }
+.years.on-dial > div + div { border-left-color: var(--hair-dark); }
+.years.on-dial span { color: var(--on-dial-2); }
+
+/* ---------- Tables / rows ---------- */
+.rowlist { border-top: 1px solid var(--ink); }
+.row { display: grid; grid-template-columns: 72px minmax(0,1fr) auto auto; gap: 20px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--hair-light); text-decoration: none; color: inherit; }
+.row:hover .rt { color: var(--chrome); }
+.row .rt { font-weight: 700; font-size: 18px; }
+.row .rd { font-size: 14px; color: var(--ink-2); }
+.defs { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+.def { background: var(--paper); border: 1px solid var(--hair-light); padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; border-top: 3px solid currentColor; }
+.def .pill { align-self: flex-start; }
+.def p { color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+.qtable { border-top: 1px solid var(--ink); }
+.qtable > div { display: grid; grid-template-columns: 52px minmax(0,1fr) minmax(0,1fr); gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--hair-light); }
+.qtable .n { font-family: var(--serif); color: var(--tantalum); font-size: 20px; }
+.qtable .t { font-weight: 700; }
+.qtable .m { color: var(--ink-2); font-size: 15.5px; }
+.rules { list-style: none; margin: 0; padding: 0; counter-reset: r; }
+.rules li { display: grid; grid-template-columns: 52px minmax(0,1fr); padding: 16px 0; border-top: 1px solid var(--hair-light); }
+.rules li::before { counter-increment: r; content: "0" counter(r); font-family: var(--serif); color: var(--tantalum); font-size: 18px; }
+
+/* ---------- Article ---------- */
+.art-head { padding: 56px 0 56px; --cx: 85%; --cy: 10%; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 13px; color: var(--on-dial-3); }
+.meta b { color: var(--on-dial); font-weight: 600; }
+.toc { display: flex; flex-wrap: wrap; gap: 8px; }
+.toc a { text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 1px; padding: 7px 12px; border: 1px solid var(--hair-dark); border-radius: 20px; color: var(--on-dial-2); }
+.toc a:hover { border-color: var(--rhodium); color: var(--on-dial); }
+.glance { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 28px 40px; align-items: center; padding: 32px; background: var(--paper); border: 1px solid var(--hair-light); position: relative; }
+.glance::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--metal); }
+.bottom { font-size: 21px; line-height: 1.45; font-weight: 600; }
+.facts { display: grid; grid-template-columns: max-content minmax(0,1fr); gap: 8px 20px; font-size: 15.5px; margin: 0; }
+.facts dt { font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; color: var(--tantalum); padding-top: 4px; }
+.facts dd { margin: 0; }
+.take { padding: 36px; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 28px 48px; --cx: 90%; --cy: 0%; }
+.take-head { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 10px; }
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: st; }
+.steps li { display: grid; grid-template-columns: 40px minmax(0,1fr); padding: 14px 0; border-top: 1px solid var(--hair-dark); }
+.steps li::before { counter-increment: st; content: "0" counter(st); grid-row: span 2; font-family: var(--serif); color: var(--gold); font-size: 18px; }
+.steps b { font-weight: 700; }
+.steps span { color: var(--on-dial-2); font-size: 15.5px; }
+.ask { align-self: start; background: var(--paper); color: var(--ink); padding: 24px; border-top: 3px solid var(--gold); }
+.ask-k { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 800; color: var(--tantalum); margin-bottom: 14px; }
+.ask ol { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 12px; font-weight: 600; font-size: 17px; line-height: 1.4; }
+.ask li::marker { color: var(--gold); font-weight: 800; }
+.zero { display: grid; grid-template-columns: auto minmax(0,1fr); gap: 20px; align-items: center; padding: 18px 22px; border: 1px solid rgba(194,63,78,.35); background: rgba(194,63,78,.05); max-width: 760px; }
+.zero b { font-size: 48px; font-weight: 800; color: var(--crimson); line-height: 1; }
+.zero span { font-size: 15.5px; color: var(--ink-2); }
+.nums { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border-top: 1px solid var(--ink); }
+.nums > div { padding: 20px 16px 4px 0; }
+.nums > div + div { padding-left: 16px; border-left: 1px solid var(--hair-light); }
+.nums b { display: block; font-size: clamp(30px, 4vw, 44px); font-weight: 800; letter-spacing: -1px; line-height: 1; font-variant-numeric: tabular-nums; }
+.nums .bad b { color: var(--crimson); }
+.nums span { display: block; margin-top: 10px; color: var(--ink-2); font-size: 15px; }
+.src-note { font-size: 13px; color: var(--tantalum); }
+.insight { border-left: 3px solid var(--gold); padding: 6px 0 6px 18px; font-size: 18px; line-height: 1.5; max-width: 760px; }
+.insight > span { display: block; font-size: 11px; letter-spacing: 3px; font-weight: 800; text-transform: uppercase; color: #A8853F; margin-bottom: 4px; }
+.eag { border-top: 1px solid var(--ink); }
+.eag > div { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 20px; padding: 14px 0; border-bottom: 1px solid var(--hair-light); }
+.eag dt, .eag .k2 { font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; color: var(--tantalum); padding-top: 4px; }
+details.depth { border-bottom: 1px solid var(--hair-light); }
+details.depth:first-of-type { border-top: 1px solid var(--hair-light); }
+details.depth summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 52px minmax(0,1fr) 28px; gap: 16px; align-items: center; padding: 20px 0; }
+details.depth summary::-webkit-details-marker { display: none; }
+details.depth summary .n { font-family: var(--serif); color: var(--tantalum); font-size: 20px; }
+.sq { display: flex; flex-direction: column; gap: 4px; }
+.ans { color: var(--ink-2); font-size: 15.5px; }
+.plus { width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--tantalum); position: relative; }
+.plus::before, .plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 1.5px; background: var(--ink); transform: translate(-50%, -50%); }
+.plus::after { transform: translate(-50%, -50%) rotate(90deg); transition: transform .2s; }
+details[open] .plus::after { transform: translate(-50%, -50%) rotate(0deg); }
+details.depth .body { padding: 0 0 26px 68px; display: flex; flex-direction: column; gap: 14px; }
+details.depth ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 10px; }
+details.depth li::marker { color: var(--tantalum); }
+.sources { font-size: 14px; color: var(--ink-2); padding-left: 22px; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.sources a { color: var(--chrome); word-break: break-word; }
+.disclose { display: flex; flex-direction: column; gap: 8px; padding-top: 8px; max-width: 760px; }
+.author-card { display: grid; grid-template-columns: 76px minmax(0,1fr); gap: 22px; padding: 28px; background: var(--paper); border: 1px solid var(--hair-light); max-width: 820px; }
+.avatar { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px #E9ECF1, 0 0 0 3px #8F99A8; }
+
+/* ---------- Contact ---------- */
+.contact { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 36px; align-items: center; max-width: 860px; }
+.contact img { width: 220px; height: 220px; border-radius: 50%; object-fit: cover; object-position: 50% 20%; box-shadow: 0 0 0 2px #E9ECF1, 0 0 0 3px #8F99A8; }
+
+/* ---------- Footer ---------- */
+footer.site { padding: 52px 0 36px; --cx: 50%; --cy: 0%; }
+.fav-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-top: 22px; border-top: 1px solid rgba(217,181,108,.35); }
+.fav { font-size: 18px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; }
+.dots { width: 150px; height: 20px; flex: none; }
+.hs { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 14px; color: var(--on-dial-3); margin-top: 14px; }
+.hs b { color: var(--gold); letter-spacing: 4px; font-weight: 600; }
+.hs i { height: 18px; border-left: 1px solid var(--on-dial-3); }
+.fine { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; font-size: 13px; color: var(--on-dial-3); margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--hair-dark); }
+.fine .links { display: flex; gap: 20px; flex-wrap: wrap; }
+.fine a { text-decoration: none; color: var(--on-dial-2); }
+
+.facts-tbl { border-top: 1px solid var(--ink); }
+.facts-tbl > div { display: grid; grid-template-columns: 180px minmax(0,1fr); gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--hair-light); }
+.facts-tbl .y { font-weight: 800; font-size: 18px; }
+.fav3 { border-top: 1px solid rgba(217,181,108,.4); }
+.fav3 > div { display: grid; grid-template-columns: 140px minmax(0,1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--hair-dark); }
+.fav3 b { color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-size: 15px; }
+.fav3 span { color: var(--on-dial-2); }
+@media (max-width: 820px) { .facts-tbl > div, .fav3 > div { grid-template-columns: 1fr; gap: 4px; } .fav-row { flex-wrap: wrap; } }
+.view { display: none; }
+.view.on { display: block; }
+
+@media (max-width: 820px) {
+  body { font-size: 16px; }
+  section.sec { padding: 52px 0; }
+  .hero { padding: 40px 0 48px; }
+  .hero-top { align-items: flex-start; text-align: left; margin-bottom: 26px; }
+  .sys { grid-template-columns: 1fr 1fr; gap: 0 10px; }
+  .promise { padding: 16px 14px; }
+  .promise .q { font-size: 14px; }
+  .tag { font-size: 11px; padding: 3px 8px; }
+  .prove { grid-template-columns: 1fr; padding: 22px 20px; }
+  .prove .qs { padding: 12px 0 0; border-left: 0; border-top: 1px solid var(--hair-light); grid-template-columns: 1fr; gap: 4px; }
+  .prove .qs li { font-size: 13.5px; }
+  .latest { gap: 8px 12px; }
+  .latest .lt { flex: 1 1 60%; }
+  .outs { grid-template-columns: 1fr; gap: 8px; }
+  .out { flex-direction: row; align-items: center; gap: 12px; padding: 12px 14px; }
+  .out p { font-size: 13.5px; }
+  .hero-foot { text-align: left; }
+  .q4 { grid-template-columns: 1fr 1fr; }
+  .q4 > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .q4 > div:nth-child(n+3) { border-top: 1px solid var(--hair-light); }
+  .split { grid-template-columns: 1fr; gap: 0; }
+  .split .copy { padding-bottom: 8px; }
+  .portrait { justify-self: center; max-width: 320px; }
+  .years { grid-template-columns: 1fr; }
+  .years > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--hair-light); }
+  .strip { grid-auto-columns: 78%; }
+  .about-strip { grid-template-columns: 1fr; gap: 24px; }
+  .about-strip .portrait { max-width: 300px; justify-self: center !important; }
+  .about-strip .stack-lg { padding: 8px 0 52px !important; }
+  .years.on-dial > div + div { border-top-color: var(--hair-dark); }
+  .row { grid-template-columns: 64px minmax(0,1fr); gap: 8px 14px; }
+  .row .pill, .row .rd2 { grid-column: 2; justify-self: start; }
+  .defs { grid-template-columns: 1fr; }
+  .qtable > div { grid-template-columns: 40px minmax(0,1fr); gap: 6px 12px; }
+  .qtable .m { grid-column: 2; }
+  .rules li { grid-template-columns: 40px minmax(0,1fr); }
+  .glance { grid-template-columns: 1fr; padding: 24px; }
+  .facts { grid-template-columns: 1fr; gap: 2px; }
+  .facts dd { margin-bottom: 12px; }
+  .bottom { font-size: 19px; }
+  .take { grid-template-columns: 1fr; padding: 26px 20px; }
+  .nums { grid-template-columns: 1fr; }
+  .nums > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--hair-light); }
+  .eag > div { grid-template-columns: 1fr; gap: 4px; }
+  details.depth summary { grid-template-columns: 34px minmax(0,1fr) 24px; gap: 10px; align-items: start; }
+  details.depth .body { padding-left: 0; }
+  .author-card { grid-template-columns: 1fr; padding: 22px; }
+  .contact { grid-template-columns: 1fr; gap: 24px; }
+  .contact img { width: 160px; height: 160px; }
+  nav.main { gap: 16px; font-size: 11px; letter-spacing: 2px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+.logo { letter-spacing: 1px; font-size: 19px; display:inline-flex; align-items:baseline; gap:10px; }
+.logo .cred { font-family: var(--sans); font-size: 10.5px; letter-spacing: 2.5px; color: var(--gold); font-weight:700; }
+.sys { grid-template-columns: 1fr 1fr; gap: 16px; }
+.promise { padding: 26px 26px 22px; }
+.prove { grid-template-columns: 1fr; gap: 10px; text-align:left; }
+.prove .pl { margin:0; font-size: 17px; line-height:1.45; color: var(--ink-2); max-width: 620px; }
+.photo { margin:0; width:100%; max-width:400px; justify-self:end; border:1px solid rgba(217,181,108,.55); padding:6px; background: rgba(6,12,31,.4); }
+.photo img { display:block; width:100%; height:auto; }
+.about-strip { grid-template-columns: 340px minmax(0,1fr); align-items:center; padding-top: 64px; padding-bottom: 64px; }
+.about-strip .photo { justify-self:start; }
+.years { grid-template-columns: repeat(4, minmax(0,1fr)); }
+.years i { display:block; font-style:normal; margin-top:10px; font-size:11px; letter-spacing:2px; text-transform:uppercase; font-weight:700; color: var(--gold); }
+.years span { margin-top:6px; font-size:14px; }
+.facts-tbl b { font-weight:700; }
+@media (max-width: 820px) {
+  .about-strip { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 48px; gap: 28px; }
+  .about-strip .photo, .split .photo { max-width: 100%; justify-self: stretch; }
+  .years { grid-template-columns: 1fr 1fr; }
+  .years > div:nth-child(3) { padding-left:0; border-left:0; }
+  .years > div:nth-child(n+3) { border-top:1px solid var(--hair-dark); }
+  .sys { gap: 10px; }
+  .promise .big { font-size: 26px; }
+  .split .photo { margin-bottom: 40px; }
+  header.site .wrap { padding-top:10px; padding-bottom:10px; }
+}
+
+.hero-id { margin: 0 0 22px; text-align:center; font-size: 11.5px; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; color: var(--gold); }
+.sys { gap: 12px; }
+.promise { padding: 22px 24px; gap: 8px; justify-content:flex-start; }
+.promise .q { font-size: 14px; white-space: nowrap; }
+.prove { padding: 26px 24px; box-shadow: 0 18px 40px rgba(0,0,0,.35); border: 1px solid #8F99A8; }
+.cut { margin:0; width:100%; max-width:400px; justify-self:center; }
+.cut img { display:block; width:100%; height:auto; -webkit-mask-image: linear-gradient(180deg,#000 86%,transparent 100%); mask-image: linear-gradient(180deg,#000 86%,transparent 100%); }
+.about-strip .cut { justify-self:start; }
+@media (max-width: 820px) {
+  .hero-id { text-align:left; letter-spacing: 2.2px; font-size: 10.5px; }
+  .promise { padding: 18px 16px; }
+  .promise .big { font-size: 25px; }
+  .promise .q { font-size: 12.5px; white-space: normal; }
+  .prove { padding: 22px 16px; }
+  .about-strip .cut, .split .cut { max-width: 340px; justify-self:center; }
+  .split .cut { margin-top: 8px; }
+}
+
+.logo { flex-direction: column; align-items: flex-start; gap: 3px; letter-spacing: 0; }
+.logo .nm { font-family: var(--serif); font-size: 20px; letter-spacing: .5px; color: var(--on-dial); }
+.logo .nm b { font-family: var(--sans); font-weight: 800; letter-spacing: 3px; font-size: 17px; margin-left: 4px; }
+.logo .cred { font-size: 10px; letter-spacing: 2px; }
+nav.main { gap: 8px; }
+nav.main a { border: 1px solid var(--hair-dark); padding: 8px 14px; border-radius: 2px; font-size: 11px; letter-spacing: 2px; color: var(--on-dial-2); }
+nav.main a.v { border-color: rgba(194,63,78,.6); }
+nav.main a.on { border-color: var(--gold); color: var(--on-dial); }
+.promise .k { font-size: 10.5px; letter-spacing: 2.5px; color: var(--on-dial-3); font-weight:700; text-transform:uppercase; }
+.sys .conn { grid-column: 1 / -1; position: relative; height: 64px; }
+.sys .conn svg { position:absolute; left:0; top:0; width:100%; height:100%; }
+.sys .conn .arrow { position:absolute; left:50%; bottom:0; transform:translateX(-50%); width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:8px solid var(--gold); }
+.sys .conn .lbl { position:absolute; left:50%; top:26px; transform:translate(10px,-50%); font-size:10.5px; letter-spacing:2.5px; text-transform:uppercase; font-weight:700; color: var(--gold); background: transparent; padding: 0 6px; }
+.sys { row-gap: 0; }
+@media (max-width: 820px) {
+  header.site .wrap { flex-direction: column; align-items: stretch; gap: 12px; }
+  nav.main { display:grid; grid-template-columns: repeat(3,1fr); gap: 6px; }
+  nav.main a { text-align:center; padding: 9px 4px; font-size: 10.5px; letter-spacing: 1.5px; }
+  .promise .big { font-size: 23px; }
+  .promise .q { font-size: 12px; }
+  .sys .conn { height: 54px; }
+}
+
+.sys .conn .lbl { top: 70%; border: 0 !important; background: none !important; box-shadow:none !important; transform: translate(12px,-50%); }
+
+:root { --ta: #9AA6B8; --ta-brushed: linear-gradient(90deg,#3E4757 0%,#A7B1C0 45%,#6E7A8C 70%,#4A5466 100%); }
+/* nav: quiet text, active underline */
+nav.main a { border: 0 !important; padding: 6px 0; background: none; color: var(--on-dial-3); border-bottom: 1px solid transparent !important; }
+nav.main a.v { color: var(--on-dial-2); }
+nav.main a.on { color: var(--on-dial); border-bottom: 1px solid var(--gold) !important; }
+nav.main { gap: 22px; }
+/* tantalum metal: frames and lines */
+.promise { border-color: rgba(154,166,184,.35); }
+.promise::before { background: var(--ta-brushed); opacity: 1; height: 2px; }
+.dial .eyebrow { color: var(--ta); }
+.dial .eyebrow::before { background: var(--ta-brushed); }
+.years.on-dial { border-top-color: rgba(154,166,184,.5); }
+.years i { color: var(--ta); }
+/* guilloche: concentric azurage over the sunray, hero only */
+.hero::after { content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background: repeating-radial-gradient(circle at 50% 62%, rgba(255,255,255,.035) 0 1px, transparent 1px 7px);
+  -webkit-mask-image: radial-gradient(60% 70% at 50% 62%, #000 0%, rgba(0,0,0,.35) 60%, transparent 100%);
+          mask-image: radial-gradient(60% 70% at 50% 62%, #000 0%, rgba(0,0,0,.35) 60%, transparent 100%); }
+@media (max-width: 820px) {
+  nav.main { display:flex; gap: 20px; }
+  nav.main a { padding: 4px 0; text-align:left; font-size: 11px; letter-spacing: 2px; }
+}
+
+/* v3.7 header: one typeface, quieter */
+.logo .nm { font-family: var(--sans); font-size: 17px; letter-spacing: 1px; font-weight: 400; }
+.logo .nm b { font-weight: 800; letter-spacing: 2.5px; font-size: 17px; margin-left: 2px; }
+.logo .cred { color: var(--ta); font-size: 10px; letter-spacing: 1.8px; font-weight: 600; }
+.hero { padding-top: 44px; }
+.promise .big { line-height: 1.02; }
+.sys .conn .lbl { top: 74%; }
+@media (max-width: 820px) {
+  header.site .wrap { gap: 10px; padding-top: 12px; padding-bottom: 6px; min-height: 0; }
+  .hero { padding-top: 32px; }
+}
+
+h1.name { text-transform: none; letter-spacing: -.5px; font-weight: 400; display:flex; flex-direction:column; gap: 6px; }
+h1.name b { font-weight: 800; letter-spacing: 1px; }
+h1.name small { font-size: 15px; letter-spacing: 3px; font-weight: 700; color: var(--gold); }
+.keyq { font-family: var(--serif); font-size: 23px; line-height: 1.35; color: var(--ink); border-left: 2px solid var(--gold); padding: 4px 0 4px 18px; margin: 8px 0; }
+@media (max-width: 820px) { .hs i { display:none; } .hs { gap: 8px; } }
+
+/* v3.8: wordmark in the Instagram serif, letter-spaced */
+.logo .nm, h1.name, h2.name2 { font-family: var(--serif); }
+.logo .nm { font-size: 18px; letter-spacing: 2px; }
+.logo .nm b { font-family: var(--serif); font-weight: 700; letter-spacing: 4px; font-size: 17px; }
+h1.name { font-weight: 400; letter-spacing: 1px; }
+h1.name b { font-family: var(--serif); font-weight: 700; letter-spacing: 5px; }
+h1.name small { font-family: var(--sans); }
+h2.name2 { font-weight: 400; letter-spacing: .5px; }
+h2.name2 b { font-weight: 700; letter-spacing: 3px; }
+h2.name2 small { font-family: var(--sans); font-size: 12px; letter-spacing: 2.5px; color: var(--gold); font-weight: 700; margin-left: 6px; vertical-align: middle; }
+@media (max-width: 820px) { .about-strip { padding-bottom: 36px; } }
+
+/* v4.0 */
+.latest2 { display:grid; gap:4px; margin: 18px auto 0; max-width: 920px; text-decoration:none; color: var(--on-dial); padding: 14px 18px; border:1px solid rgba(217,181,108,.55); background: rgba(6,12,31,.55); }
+.latest2:hover { border-color: var(--gold); }
+.latest2 .l1 { font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; color: var(--gold); }
+.latest2 .l2 { font-size: 18px; font-weight: 700; display:flex; align-items:center; gap: 12px; flex-wrap: wrap; }
+.latest2 .l3 { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: var(--gold); margin-top: 4px; }
+.hero-foot .link.sub { color: var(--on-dial-2); border-bottom-color: rgba(198,206,221,.4); font-size: 11px; }
+.hs2 { margin-top: 14px; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; color: var(--gold); }
+.eyebrow { letter-spacing: 2.6px; }
+.dial .eyebrow { color: #B5BFCE; }
+.strip { display:block; }
+.strip .vc { max-width: 560px; }
+.cut { max-width: 300px !important; }
+.sys .conn svg path { stroke-opacity: .55; }
+@media (max-width: 820px) {
+  h2 { font-size: 29px; }
+  .latest2 .l2 { font-size: 17px; }
+  .cut { max-width: 270px !important; }
+  header.site .wrap { gap: 8px; padding-top: 10px; padding-bottom: 4px; }
+}
+
+.latest3 { display:grid; grid-template-columns: 1fr auto; grid-template-areas: "a g" "b g" "c g"; row-gap: 4px; align-items:center; margin-top: 14px; padding-top: 16px; border-top: 1px solid var(--hair-light); text-decoration:none; color: var(--ink); }
+.latest3 .l1 { grid-area:a; font-size: 10.5px; letter-spacing: 2.2px; text-transform: uppercase; font-weight: 700; color: var(--tantalum); }
+.latest3 .l2 { grid-area:b; font-size: 21px; font-weight: 700; }
+.latest3 .l4 { grid-area:c; font-size: 12px; letter-spacing: 2.2px; text-transform: uppercase; font-weight: 800; color: var(--crimson); }
+.latest3 .go { grid-area:g; font-size: 22px; color: var(--ink); padding-left: 12px; }
+.latest3:hover .l2 { text-decoration: underline; text-underline-offset: 4px; }
+
+/* v4.1 */
+header.site { position: sticky; top: 0; z-index: 50; }
+.fnav { display:flex; flex-wrap:wrap; gap: 10px 22px; margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--hair-dark); font-size: 11.5px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; }
+.fnav a { color: var(--on-dial); text-decoration: none; }
+.fnav a.totop { color: var(--gold); margin-left: auto; }
+.latest3 .go { display:flex; align-items:center; color: var(--ink); }
+.avatar { object-position: center; }
+@media (max-width: 820px) {
+  .logo .cred { font-size: 9.5px; letter-spacing: 1.5px; }
+  nav.main { flex-basis: 100%; }
+  header.site .wrap { flex-direction: row; align-items:center; flex-wrap: wrap; gap: 6px 14px; padding-top: 10px; padding-bottom: 10px; }
+  nav.main { gap: 16px; }
+  nav.main a { font-size: 10.5px; letter-spacing: 1.6px; }
+  .fnav a.totop { margin-left: 0; flex-basis: 100%; }
+}
+
+/* v4.2 */
+.subscribe { margin-top: 28px; padding: 22px 22px; background: var(--dial-deep); color: var(--on-dial); display:grid; gap: 14px; border-top: 2px solid var(--gold); }
+.sub-t b { font-size: 18px; } .sub-t span { color: var(--on-dial-2); font-size: 14px; }
+.sub-f { display:flex; gap: 8px; flex-wrap: wrap; }
+.sub-f input { flex: 1 1 200px; min-width: 0; padding: 12px 14px; font: inherit; font-size: 15px; border: 1px solid var(--hair-dark); background: rgba(255,255,255,.06); color: #fff; }
+.sub-f input::placeholder { color: var(--on-dial-3); }
+.sub-f button { padding: 12px 20px; border: 0; background: var(--gold); color: var(--dial-deep); font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; font-size: 12px; cursor: pointer; }
+.h1s { font-size: clamp(34px,6vw,60px); }
+#v-work .facts-tbl > div { grid-template-columns: 220px minmax(0,1fr); }
+@media (max-width: 820px) { #v-work .facts-tbl > div { grid-template-columns: 1fr; } }
+.links2 { display:flex; flex-wrap:wrap; gap: 14px 28px; }
+.sub-t span { display:block; margin-top:4px; }
+
+/* v4.3 compact header: one row, hides on scroll down, returns on scroll up */
+header.site { position: sticky; top: 0; z-index: 50; transition: transform .25s ease; }
+header.site.hide { transform: translateY(-100%); }
+header.site .wrap { flex-direction: row !important; flex-wrap: nowrap !important; align-items: center !important; justify-content: space-between; min-height: 56px; padding-top: 0 !important; padding-bottom: 0 !important; gap: 12px !important; }
+.logo { flex-direction: row !important; align-items: baseline !important; gap: 10px !important; white-space: nowrap; }
+.logo .cred { display: inline !important; }
+nav.main { flex-basis: auto !important; gap: 20px !important; }
+.hero-id2 { margin: 0 0 18px; font-size: 11px; letter-spacing: 2.4px; text-transform: uppercase; font-weight: 700; color: var(--on-dial-2); text-align:center; }
+@media (max-width: 820px) {
+  .logo .cred { display: none !important; }
+  .logo .nm { font-size: 16px; letter-spacing: 1px; }
+  .logo .nm b { font-size: 15px; letter-spacing: 2.5px; }
+  nav.main { gap: 14px !important; }
+  nav.main a { font-size: 10px !important; letter-spacing: 1.4px !important; }
+  header.site .wrap { min-height: 50px; }
+  .hero-id2 { text-align:left; font-size: 10px; letter-spacing: 1.8px; }
+}
+@media (max-width: 820px){ .hero-id2 .hf{display:none} }
+
+/* v4.6 header: name + credentials as one block */
+.logo { flex-direction: column !important; align-items: flex-start !important; gap: 2px !important; }
+.logo .cred { display: block !important; font-size: 9.5px !important; letter-spacing: 1.6px !important; color: var(--ta); }
+.fbtn { display:inline-block; padding: 12px 20px; background: var(--gold); color: var(--dial-deep); font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; font-size: 12px; text-decoration:none; }
+@media (max-width: 820px) {
+  .logo .cred { display:block !important; font-size: 8.5px !important; letter-spacing: 1.2px !important; }
+  header.site .wrap { min-height: 56px; padding-top: 8px !important; padding-bottom: 8px !important; }
+}
+
+.follow-strip { background: var(--dial-deep); border-top: 1px solid var(--hair-dark); }
+.follow-strip .fs { display:flex; align-items:center; justify-content:space-between; gap: 16px; flex-wrap: wrap; padding-top: 26px; padding-bottom: 26px; color: var(--on-dial); }
+.follow-strip b { font-size: 17px; } .follow-strip span { color: var(--on-dial-2); font-size: 14px; }
+@media (max-width: 820px) { .follow-strip span { display:block; margin-top: 4px; } }
+
+.pcards { display:grid; gap: 14px; }
+.pc { background:#fff; border:1px solid var(--hair-light); border-top: 2px solid var(--gold); padding: 22px 22px; }
+.pc .n { font-family: var(--serif); color: var(--gold); font-size: 20px; }
+.pc h3 { margin: 6px 0 4px; font-size: 21px; }
+.pc .t { font-weight: 600; margin: 0 0 8px; }
+.pc p { margin: 0; color: var(--ink-2); }
+.contact-box { border-top: 1px solid var(--ink); padding-top: 22px; }
+
+.pc2 { border-top: 1px solid var(--hair-light); }
+.pc2 h3 { margin: 8px 0 6px; }
+.contact-box { border-top: 0 !important; padding: 28px 24px !important; display:grid; gap: 12px; color: var(--on-dial); }
+.contact-box h3 { margin: 0; font-size: 24px; color:#fff; }
+.contact-box p { margin: 0; color: var(--on-dial-2); }
+.contact-box .small { color: var(--on-dial-3); }
+.contact-box .fbtn { text-transform:none; letter-spacing: .3px; font-size: 14px; }
+
+.stamp { width: max-content; max-width: 100%; align-self: flex-start; }
+.stamp .in { flex: 1 1 auto; min-width: 0; }
+@media (max-width: 820px) { .stamp.lg .word { font-size: 28px; padding: 12px 16px 6px; } .stamp.lg .band { letter-spacing: 3px; } }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#home"><span class="nm">Yevgen <b>SHAGOV</b></span><span class="cred">MD, PhD · Associate Professor</span></a>
+    <nav class="main" aria-label="Main">
+      <a class="v" href="#verdict" data-nav="verdict">Verdicts</a>
+      <a href="#how-i-check" data-nav="how-i-check">Method</a>
+      <a href="#about" data-nav="about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- =================== HOME =================== -->
+<div class="view" id="v-home">
+
+  <section class="hero dial">
+    <div class="wrap">
+      <div class="sys" role="group" aria-label="Two promises, one test">
+        <div class="promise">
+          <span class="k">They promise</span>
+          <span class="big">Longer<br>life?</span>
+          <span class="q">Longevity · Lifespan<br>Anti-aging</span>
+        </div>
+        <div class="promise">
+          <span class="k">They promise</span>
+          <span class="big">Better<br>health?</span>
+          <span class="q">Healthspan · Performance<br>Biohacking</span>
+        </div>
+        <div class="conn" aria-hidden="true">
+          <svg viewBox="0 0 100 60" preserveAspectRatio="none"><path d="M25 0 V26 H75 V0 M50 26 V58" fill="none" stroke="#C9D1DC" stroke-opacity=".75" stroke-width="1.2" vector-effect="non-scaling-stroke"></path></svg>
+          <span class="arrow"></span>
+          <span class="lbl">The standard</span>
+        </div>
+        <div class="prove">
+          <span class="brand">SHAGOV | VERDICT.</span>
+          <h1 class="big">Prove it.</h1>
+          <p class="pl">I check longevity and healthspan claims against the evidence: what works, for whom, and at what cost.</p>
+          <a class="latest3" href="#verdict-001"><span class="l1">Latest verdict · 001</span><span class="l2">Whole-body MRI</span><span class="l4">Not justified</span><span class="go" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20"><path d="M5 15 L15 5 M7 5 H15 V13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></a>
+        </div>
+      </div>
+            <p class="hero-foot"><a class="link sub" href="#how-i-check">How I check →</a></p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap stack-lg">
+      <div class="head"><div class="eyebrow">Verdicts</div><h2>Every verdict has a number <span class="s">and a date.</span></h2></div>
+      <div class="strip" aria-label="Published verdicts">
+        <a class="vc" href="#verdict-001">
+          <div class="top"><span class="date">001</span><span>7 Nov 2026 · Diagnostics</span></div>
+          <h3>Whole-body MRI: will it help healthy people live longer?</h3>
+          <p class="muted small">Finding more is not the same as living longer.</p>
+          <span class="stamp s-nj"><span class="in"><span class="band"><b>SHAGOV | VERDICT.</b></span><span class="word">Not justified.</span></span></span>
+          <span class="read">Read the review →</span>
+        </a>
+      </div>
+      <p><a class="link" href="#verdict">All verdicts →</a></p>
+
+    </div>
+  </section>
+
+
+  <section class="sec dial" style="--cx: 85%; --cy: 40%;">
+    <div class="wrap narrow stack">
+      <div class="eyebrow">Beyond the verdicts</div>
+      <h2>Checking promises is half the work. <span class="s">The other half is building.</span></h2>
+      <p class="muted">My current work explores how clinical expertise and technology can help physicians make health outcomes more measurable and accountable.</p>
+      <p class="links2"><a class="link" href="#about">About me →</a><a class="link" href="#work">Explore partnerships →</a></p>
+    </div>
+  </section>
+
+  <section class="dial" style="--cx: 25%; --cy: 40%;">
+    <div class="wrap about-strip">
+      <figure class="cut"><img src="img/portrait-bench.webp" alt="Yevgen Shagov, MD, PhD" width="900" height="1184"></figure>
+      <div class="stack-lg">
+        <div class="head"><div class="eyebrow">About</div><h2 class="name2">Yevgen <b>SHAGOV</b> <small>MD, PhD</small></h2><p class="muted">Physician · Healthcare founder · Systems architect<br>Associate Professor, Kyiv Medical University</p></div>
+        <div class="years on-dial">
+          <div><b>2003</b><i>Medicine</i><span>Medical career begins</span></div>
+          <div><b>2009</b><i>Healthcare ventures</i><span>Building clinics, physician networks and medical education</span></div>
+          <div><b>2018</b><i>Health over time</i><span>Long-term observation of individual health, including my own</span></div>
+          <div><b>2024</b><i>Academic role</i><span>Associate Professor · Kyiv Medical University</span></div>
+        </div>
+        <p><a class="link" href="#about">About me →</a></p>
+      </div>
+    </div>
+  </section>
+  <section class="follow-strip">
+    <div class="wrap fs">
+      <div><b>A new verdict every week.</b> <span>Announced first on Instagram.</span></div>
+      <a class="fbtn" href="https://www.instagram.com/dr.shagov/">Follow @dr.shagov</a>
+    </div>
+  </section>
+</div>
+
+<!-- =================== LIBRARY =================== -->
+<div class="view" id="v-verdict">
+  <section class="sec dial" style="--cx: 85%; --cy: 0%;">
+    <div class="wrap narrow stack">
+      <div class="eyebrow">SHAGOV | VERDICT.</div>
+      <h1>One promise.<br>Four questions.<br><span class="iv">One dated verdict.</span></h1>
+      <p class="lead muted">I check public health promises: tests, drips, devices, supplements, programs. A new verdict every week.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap stack-lg">
+      <div class="rowlist">
+        <a class="row" href="#verdict-001">
+          <span class="date">001</span>
+          <span><span class="rt">Whole-body MRI: will it help healthy people live longer?</span><br><span class="rd">Diagnostics</span></span>
+          <span class="pill s-nj">Not justified</span>
+          <span class="rd rd2">7 Nov 2026</span>
+        </a>
+      </div>
+      <div class="defs">
+        <div class="def s-p"><span class="pill">Proven</span><p>Enough evidence that the promised benefit is real for this goal and this group of people, with an acceptable balance of benefit and risk.</p></div>
+        <div class="def s-np"><span class="pill">Not proven</span><p>There is a plausible rationale, but the evidence is insufficient to confirm the claimed benefit.</p></div>
+        <div class="def s-nj"><span class="pill">Not justified</span><p>The claim exceeds the evidence, or the balance of expected benefit, risk and cost does not support it for this purpose.</p></div>
+      </div>
+      <p><a class="link" href="#how-i-check">How I check →</a></p>
+    </div>
+  </section>
+</div>
+
+<!-- =================== METHOD =================== -->
+<div class="view" id="v-how-i-check">
+  <section class="sec dial" style="--cx: 85%; --cy: 0%;">
+    <div class="wrap narrow stack">
+      <div class="eyebrow">How I check · VERDICT. 000</div>
+      <h1>Not how new.<br>Not how expensive.<br><span class="iv">Does it work?</span></h1>
+      <p class="lead muted">I do not judge how new, expensive or popular a technology is. I judge whether there is a reason to use it for a specific goal.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap stack-lg">
+      <div class="head"><div class="eyebrow">Step one</div><h2>Four questions</h2></div>
+      <div class="qtable">
+        <div><span class="n">01</span><span class="t">What is promised, and to whom?</span><span class="m">The claim as it is offered, and the group of people it is offered to.</span></div>
+        <div><span class="n">02</span><span class="t">How and when can the result be checked?</span><span class="m">What should change, by when, and how it is measured. A result a person can feel or a doctor can measure.</span></div>
+        <div><span class="n">03</span><span class="t">What is proven in people?</span><span class="m">Human studies, systematic reviews, guidelines of medical societies. A changed lab marker alone is not enough.</span></div>
+        <div><span class="n">04</span><span class="t">What is the cost of being wrong?</span><span class="m">Side effects, false alarms, extra procedures, money, time. Harms counted next to benefits.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec paper">
+    <div class="wrap stack-lg">
+      <div class="head"><div class="eyebrow">Step two</div><h2>Three verdicts</h2></div>
+      <div class="defs">
+        <div class="def s-p"><span class="pill">Proven</span><p>Enough evidence that the promised benefit is real for this goal and this group of people, with an acceptable balance of benefit and risk.</p></div>
+        <div class="def s-np"><span class="pill">Not proven</span><p>There is a plausible rationale, but the evidence is insufficient to confirm the claimed benefit.</p></div>
+        <div class="def s-nj"><span class="pill">Not justified</span><p>The claim exceeds the evidence, or the balance of expected benefit, risk and cost does not support it for this purpose.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap narrow stack-lg">
+      <div class="head"><div class="eyebrow">Rules</div><h2>What a verdict is, and what it is not</h2></div>
+      <ol class="rules">
+        <li><span>A verdict is about one promise, one goal and one group of people. Not about the whole technology.</span></li>
+        <li><span>For a treatment, Proven means the promised benefit is shown. A change in a lab marker is not enough.</span></li>
+        <li><span>For a test, Proven means the test is shown to deliver what it promises: accurate detection, a better decision, or better health, whichever is claimed.</span></li>
+        <li><span>Not justified is not a sentence on the technology. No proof of benefit is not proof of no benefit.</span></li>
+        <li><span>Every verdict has a date. When new evidence comes, I review it and show what changed.</span></li>
+        <li><span>No scores, no ratings. Three verdicts only.</span></li>
+        <li><span>My own future services will be judged by the same scale. When I have a commercial interest, I say so.</span></li>
+      </ol>
+    </div>
+  </section>
+</div>
+
+<!-- =================== ARTICLE 001 =================== -->
+<div class="view" id="v-verdict-001">
+  <section class="art-head dial">
+    <div class="wrap stack-lg">
+      <div class="eyebrow">VERDICT &nbsp;<span class="date">001</span>&nbsp; Diagnostics</div>
+      <h1>Whole-body MRI:<br><span class="iv">will it help healthy people live longer?</span></h1>
+      <div class="meta">
+        <span>Verdict issued <b>7 Nov 2026</b></span>
+        <span>Full review published <b>7 Nov 2026</b></span>
+        <span>Evidence last reviewed <b>7 Nov 2026</b></span>
+      </div>
+      <nav class="toc" aria-label="On this page">
+        <a href="#a-verdict">Verdict</a><a href="#a-do">What to do</a><a href="#a-numbers">Key numbers</a><a href="#a-evidence">Evidence</a><a href="#a-sources">Sources</a>
+      </nav>
+    </div>
+  </section>
+
+  <section class="sec" id="a-verdict" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="glance">
+        <span class="stamp lg s-nj"><span class="in"><span class="band"><b>SHAGOV &nbsp;|&nbsp; VERDICT.</b></span><span class="word">Not justified.</span><span class="cap">Diagnostics · 2026</span></span></span>
+        <div class="stack">
+          <p class="bottom">In studies, most people scanned had some finding, and a small share had a confirmed cancer. No study has shown that people who get the scan live longer.</p>
+          <dl class="facts">
+            <dt>Promise checked</dt><dd>Find disease early, and live longer as a result. This is the expectation behind the offer, not a quote from one seller.</dd>
+            <dt>Checked for</dt><dd>Adults without symptoms and without a known high inherited risk.</dd>
+            <dt>Not about</dt><dd>MRI in general, or people with inherited cancer syndromes. For them, it is part of the plan.</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="a-do" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="take dial">
+        <div class="take-head">
+          <div class="eyebrow">Take this with you</div>
+          <h2>What to do instead</h2>
+        </div>
+        <ol class="steps">
+          <li><b>No symptoms, no strong family history?</b><span>Skip the whole-body scan. Spend the money and time on checks that are proven.</span></li>
+          <li><b>Do the proven checks for your age and sex.</b><span>Blood pressure, cholesterol, colon, breast, cervix. Ask your doctor which apply to you.</span></li>
+          <li><b>Worried about something specific?</b><span>Ask for a test aimed at that question. A targeted test answers it better.</span></li>
+          <li><b>Several relatives with cancer at a young age?</b><span>Start with genetic counselling. If you carry a high-risk gene, whole-body MRI may be part of your plan.</span></li>
+          <li><b>Already had a scan?</b><span>Take the report to your doctor. Many findings turn out to be harmless. A doctor decides what needs follow-up.</span></li>
+        </ol>
+        <div class="ask">
+          <div class="ask-k">Before you pay for any scan, ask three questions</div>
+          <ol>
+            <li>What will we do if you find something?</li>
+            <li>What does a clean result <em>not</em> rule out?</li>
+            <li>Is there proof it helps people like me live longer?</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="a-numbers">
+    <div class="wrap stack-lg">
+      <div class="head"><div class="eyebrow">Key numbers</div><h2>What the scan really finds</h2></div>
+      <div class="nums">
+        <div><b>78%</b><span>had at least one finding<sup class="c"><a href="#s1">1</a></sup></span></div>
+        <div><b>14.8%</b><span>had a non-cancer finding that needed follow-up<sup class="c"><a href="#s1">1</a></sup></span></div>
+        <div><b>1.4%</b><span>had a confirmed cancer<sup class="c"><a href="#s1">1</a></sup></span></div>
+      </div>
+      <p class="src-note">Estimates from a 2026 meta-analysis of heterogeneous, mostly low-quality studies of people without an established indication for whole-body MRI. Cancer detection was calculated in a subgroup of 4,463 participants. These figures are not an individual risk prediction.<sup class="c"><a href="#s1">1</a></sup></p>
+      <div class="zero"><b>0</b><span>Randomized trials showing that people who get the scan die less often. This is not a detection rate. It is the missing proof of benefit.<sup class="c"><a href="#s1">1</a>,<a href="#s2">2</a></sup></span></div>
+      <p class="insight"><span>Insight</span>A clean scan is not a clean bill of health. A screening scan without contrast is not designed to replace proven checks for the most common killers: heart disease, breast and colon cancer, stroke.<sup class="c"><a href="#s8">8</a></sup></p>
+    </div>
+  </section>
+
+  <section class="sec paper" id="a-evidence">
+    <div class="wrap stack-lg">
+      <div class="head"><div class="eyebrow">Evidence at a glance</div><h2>What was promised, <span class="s">and what was shown.</span></h2></div>
+      <dl class="eag" style="margin:0">
+        <div><dt>Implied promise</dt><dd style="margin:0">Earlier detection will extend life.</dd></div>
+        <div><dt>Proof needed</dt><dd style="margin:0">Fewer deaths or other meaningful health benefits in people who were scanned, compared with people who were not.</dd></div>
+        <div><dt>Evidence</dt><dd style="margin:0">No demonstrated benefit on deaths in people without symptoms and without high inherited risk.</dd></div>
+        <div><dt>Trade-offs</dt><dd style="margin:0">More tests and procedures, cost, worry, possible false reassurance.</dd></div>
+      </dl>
+
+      <div class="head" style="margin-top:12px"><div class="eyebrow">The detail</div><h2>Four questions. <span class="s">Open any one.</span></h2></div>
+      <div>
+        <details class="depth">
+          <summary><span class="n">01</span><span class="sq"><h3>What is promised, and to whom?</h3><span class="ans">One scan finds disease early, so you live longer. Sold to healthy adults.</span></span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="body">
+            <p>Private clinics offer whole-body MRI to healthy adults as a way to find cancer and other disease early, before symptoms. The scan has no radiation, takes about an hour and is usually paid out of pocket.</p>
+            <p>The expectation behind it, as buyers understand it, is bigger than the scan: find it early, and live longer. That is what we test here.</p>
+          </div>
+        </details>
+        <details class="depth">
+          <summary><span class="n">02</span><span class="sq"><h3>How can the result be checked?</h3><span class="ans">Two similar groups, scanned and not scanned, followed for years.</span></span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="body">
+            <p>Finding something is not the goal. The goal is fewer deaths and better health. To show that, you need two similar groups of healthy people. One gets the scan, one does not. Both are followed for years. Then you compare deaths and serious illness.</p>
+            <p>You also count the harms: extra scans, biopsies, operations, worry. A test that finds more but does not change the outcome has not done its job.</p>
+          </div>
+        </details>
+        <details class="depth">
+          <summary><span class="n">03</span><span class="sq"><h3>What is proven in people?</h3><span class="ans">Findings are common. A benefit on deaths has not been shown.</span></span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="body">
+            <ul>
+              <li>There are no randomized trials comparing people who had the scan with people who did not. There are no reliable data showing fewer deaths from routine whole-body MRI in low-risk people without symptoms.<sup class="c"><a href="#s1">1</a>,<a href="#s2">2</a></sup></li>
+              <li>A 2026 meta-analysis reported at least one finding in 78% of people. 14.8% had a non-cancer finding that needed follow-up; of them, 58% went on to more tests and 21% to a procedure. 1.4% had a confirmed cancer, calculated in a subgroup of 4,463 people. The studies differed in populations and scan protocols, and only some described participants explicitly as without symptoms.<sup class="c"><a href="#s1">1</a></sup></li>
+              <li>Earlier reviews, with different studies and definitions, came to similar conclusions: a confirmed cancer in about 1 to 1.6 out of 100 people, and no data on long-term outcomes.<sup class="c"><a href="#s2">2</a>,<a href="#s3">3</a></sup></li>
+              <li>Some cancers found by screening may never become clinically important. For whole-body MRI, how often this happens is still unknown.<sup class="c"><a href="#s1">1</a>,<a href="#s4">4</a></sup></li>
+              <li>The American College of Radiology, the Canadian Association of Radiologists and the American Academy of Family Physicians do not recommend whole-body screening for people without symptoms or risk factors.<sup class="c"><a href="#s5">5</a>,<a href="#s6">6</a>,<a href="#s7">7</a></sup></li>
+              <li>The exception is real. For people with Li-Fraumeni syndrome, an inherited TP53 mutation with a very high lifetime cancer risk, a yearly rapid whole-body MRI is recommended.<sup class="c"><a href="#s9">9</a></sup></li>
+            </ul>
+          </div>
+        </details>
+        <details class="depth">
+          <summary><span class="n">04</span><span class="sq"><h3>What is the cost of being wrong?</h3><span class="ans">More tests and procedures, cost, worry, false reassurance.</span></span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="body">
+            <ul>
+              <li><b class="k">Follow-up.</b> A finding leads to more tests, and sometimes to a procedure. Each step has its own risk.<sup class="c"><a href="#s1">1</a>,<a href="#s5">5</a></sup></li>
+              <li><b class="k">Worry.</b> Weeks of waiting for an answer about something that may never have been a problem.</li>
+              <li><b class="k">False reassurance.</b> A clean scan can make people skip checks that are proven.<sup class="c"><a href="#s8">8</a></sup></li>
+              <li><b class="k">Money.</b> Usually not covered by insurance. Follow-up tests add more.</li>
+            </ul>
+          </div>
+        </details>
+        <details class="depth" id="a-sources">
+          <summary><span class="n">§</span><span class="sq"><h3>Sources</h3><span class="ans">9 sources: meta-analyses, reviews, medical society statements and expert commentary.</span></span><span class="plus" aria-hidden="true"></span></summary>
+          <div class="body">
+            <ol class="sources">
+              <li id="s1">Ahsan MD, Frontera N, Gurram A, et al. The diagnostic yield of whole-body MRI as a multi-disease screening modality: a systematic review and meta-analysis. J Gen Intern Med. 2026. <a href="https://link.springer.com/article/10.1007/s11606-026-10802-y">doi.org/10.1007/s11606-026-10802-y</a></li>
+              <li id="s2">Martins da Fonseca J, et al. Whole-body MRI for opportunistic cancer detection in asymptomatic individuals: a systematic review and meta-analysis. Eur Radiol. 2026;36(3):1813–1823. <a href="https://pubmed.ncbi.nlm.nih.gov/40884613/">PubMed 40884613</a></li>
+              <li id="s3">Zugni F, et al. Whole-body MRI for cancer screening in asymptomatic subjects of the general population: review and recommendations. Cancer Imaging. 2020;20:34. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7216394/">PMC7216394</a></li>
+              <li id="s4">Davenport MS, Reeder SB. Elective MRI screening of the general public: buyer beware. JAMA. May 2026. <a href="https://www.eurekalert.org/news-releases/1127135">Summary</a></li>
+              <li id="s5">American College of Radiology. ACR statement on screening total body MRI. April 2023. <a href="https://www.acr.org/News-and-Publications/Media-Center/2023/ACR-Statement-on-Screening-Total-Body-MRI">acr.org</a></li>
+              <li id="s6">Canadian Association of Radiologists. Whole-body MRI screening in asymptomatic individuals: policy statement. 2025. <a href="https://car.ca/wp-content/uploads/2025/09/CAR-Policy-Statement-Whole-Body-MRI-Screening-in-Asymptomatic-Individuals.pdf">car.ca</a></li>
+              <li id="s7">American Academy of Family Physicians, Choosing Wisely. Don't use whole-body scans for early tumor detection in asymptomatic patients. <a href="https://www.aafp.org/pubs/afp/collections/choosing-wisely/250.html">aafp.org</a></li>
+              <li id="s8">Orenstein BW. Looking for trouble: radiologists question benefits of preventive whole-body MRI scans. Radiology Today. 2024;25(1):10. <a href="https://www.radiologytoday.net/archive/rt_JF24p10.shtml">radiologytoday.net</a></li>
+              <li id="s9">Li-Fraumeni Syndrome Association. Consensus statement on whole-body MRI surveillance. 2022. Kratz CP, et al. Clin Cancer Res. 2017;23(11):e38–e45. <a href="https://www.lfsassociation.org/whole-body-mri/">lfsassociation.org</a></li>
+            </ol>
+          </div>
+        </details>
+      </div>
+      <div class="disclose">
+        <p><b class="k">Disclosure.</b> The author declares no conflict of interest. On the date of this review, I have no financial interest in whole-body MRI.</p>
+        <p class="muted small">Education only. Not medical advice. It does not replace a consultation with your own doctor.</p>
+        <div class="subscribe follow">
+        <div class="sub-t"><b>A new verdict every week.</b> <span>Follow on Instagram, where each one is announced first.</span></div>
+        <div class="sub-f"><a class="fbtn" href="https://www.instagram.com/dr.shagov/">Follow @dr.shagov</a></div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="author-card">
+        <img class="avatar" src="img/avatar.webp" alt="Yevgen Shagov" width="76" height="76">
+        <div class="stack">
+          <div class="eyebrow">About the author</div>
+          <p><b class="k">Yevgen Shagov, MD, PhD.</b> Physician since 2003. Healthcare founder since 2009. Associate Professor at Kyiv Medical University.</p>
+          <p><a class="link" href="#about">About me →</a> &nbsp;&nbsp; <a class="link" href="#verdict">All verdicts →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- =================== ABOUT =================== -->
+<div class="view" id="v-about">
+  <section class="dial" style="--cx: 75%; --cy: 30%;">
+    <div class="wrap split" style="padding-top:48px">
+      <div class="copy">
+        <div class="eyebrow">About</div>
+        <h1 class="name">Yevgen <b>SHAGOV</b><small>MD, PhD</small></h1>
+        <p class="lead muted">Physician · Healthcare founder · Systems architect</p>
+        <p class="muted">Associate Professor, Kyiv Medical University</p>
+      </div>
+      <figure class="cut"><img src="img/portrait-arms.webp" alt="Yevgen Shagov, MD, PhD" width="820" height="1180"></figure>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap narrow stack">
+      <p class="lead">I have worked in medicine since 2003 and have been building medical businesses since 2009.</p>
+      <p>My work has included clinical services, physician networks, preventive medicine and medical education. Across these projects, I have focused on one recurring challenge: how to turn medical expertise into systems that deliver consistent, measurable value beyond the work of one physician.</p>
+      <p>Since 2018, I have also followed the health of hundreds of people over the years, including my own. This experience shaped the question that now defines my work:</p>
+      <p class="keyq">Does an intervention actually help people live longer or live better, and how can we know?</p>
+      <p>Through SHAGOV | VERDICT, I examine the evidence behind the promises of longevity medicine, preventive health and performance optimization.</p>
+      <p class="muted">Longevity promises more years. Biohacking promises better ones. Both deserve the same question: where is the evidence?</p>
+    </div>
+  </section>
+
+  <section class="sec paper">
+    <div class="wrap stack-lg">
+      <div class="head"><div class="eyebrow">Track record</div><h2>Professional record</h2></div>
+      <div class="facts-tbl">
+        <div><span class="y">2003</span><span><b>Medicine.</b> Medical degree. Physician.</span></div>
+        <div><span class="y">2009</span><span><b>Healthcare ventures.</b> First clinic. Since then, five clinics, my own and with partners, a physician network and medical education.</span></div>
+        <div><span class="y">2018</span><span><b>Health over time.</b> Following individual health over the years, including my own.</span></div>
+        <div><span class="y">2021–2023</span><span><b>National level.</b> Two years advising at the national level. Concept of a national prevention program.</span></div>
+        <div><span class="y">2024</span><span><b>Academic role.</b> Associate Professor at Kyiv Medical University. Co-author of a preventive medicine course at Shupyk National Healthcare University of Ukraine.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec dial" style="--cx: 85%; --cy: 40%;">
+    <div class="wrap narrow stack">
+      <div class="eyebrow">My field</div>
+      <h2>LONGEVITY &amp; HEALTHSPAN. <span class="s">More years. Better years.</span></h2>
+      <p class="muted">My principle is three words.</p>
+      <div class="fav3">
+        <div><b>Forecast.</b><span>Before we start, we write down what should change and by when.</span></div>
+        <div><b>Act.</b><span>We do the agreed plan.</span></div>
+        <div><b>Verify.</b><span>We check what really changed. Also when the result is weaker than expected.</span></div>
+      </div>
+      <p class="iv" style="font-family:var(--serif);font-size:21px">A forecast is not a promise. It is a promise to check.</p>
+      <p class="muted">My work focuses on making the results of preventive care measurable, transparent and open to verification across clinicians and settings.</p>
+    </div>
+  </section>
+
+  <section class="sec paper">
+    <div class="wrap narrow stack">
+      <div class="eyebrow">Contact</div>
+      <h2>For professional requests</h2>
+      <p><a class="link" href="#work">Explore partnerships →</a></p>
+      <p><a href="mailto:yevgen@shagov.pro" style="font-weight:700;color:var(--chrome)">yevgen@shagov.pro</a></p>
+      <p>Instagram <a href="https://www.instagram.com/dr.shagov/">@dr.shagov</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/shgv">LinkedIn</a></p>
+      <p class="muted small">I do not see patients at the moment and do not give personal consultations.</p>
+    </div>
+  </section>
+</div>
+
+
+<!-- =================== WORK =================== -->
+<div class="view" id="v-work">
+  <section class="sec dial" style="--cx: 80%; --cy: 20%;">
+    <div class="wrap narrow stack">
+      <div class="eyebrow">Partnerships</div>
+      <h1 class="h1s">Building healthcare <span class="iv">systems.</span></h1>
+      <p class="lead muted">I am a physician, healthcare founder and systems architect. Since 2009, I have built medical businesses, physician networks and professional education across Ukraine.</p>
+      <p class="muted">My focus is not only delivering medical services. It is creating systems that other physicians can use, with clear clinical standards and measurable outcomes. My work focuses on three areas of healthcare development. I welcome international partnerships to advance them.</p>
+    </div>
+  </section>
+  <section class="sec">
+    <div class="wrap narrow stack-lg">
+      <div class="pcards">
+        <div class="pc"><span class="n">01</span><h3>Clinical technology</h3><p class="t">Software for physicians and clinics.</p><p>I am developing clinical software for physicians and clinics, with a focus on making health outcomes measurable, transparent and open to verification. Open to founder-level partnerships with investors, healthcare operators and technology teams.</p></div>
+        <div class="pc"><span class="n">02</span><h3>International clinic networks</h3><p class="t">Evidence-led medicine, delivered through reproducible clinical systems.</p><p>Preventive and longevity medicine with consistent clinical standards, trained medical teams and accountable patient outcomes. Interested in partnerships that go beyond a single clinic to scalable models of care.</p></div>
+        <div class="pc"><span class="n">03</span><h3>Population health systems</h3><p class="t">Prevention as long-term national infrastructure.</p><p>I am open to working with governments, public health institutions and national partners to develop long-term preventive-health systems that connect clinical expertise, physician education, technology and verified outcomes, to serve populations, not only individual patients.</p></div>
+      </div>
+      <div class="pc pc2">
+        <div class="eyebrow">Also available for</div><h3>Speaking &amp; scientific leadership</h3>
+        <p>Keynotes, scientific program development and expert panels on longevity, healthspan, preventive medicine and evidence-based healthcare.</p>
+      </div>
+      <div class="contact-box dial">
+        <div class="eyebrow">Discuss a partnership</div>
+        <h3>Let&rsquo;s build it together.</h3>
+        <p>Investors, healthcare operators, public institutions and conference organizers: please include your organization, country and objectives.</p>
+        <p><a class="fbtn" href="mailto:yevgen@shagov.pro?subject=Partnership">Write to yevgen@shagov.pro</a></p>
+        <p class="muted small">I do not provide individual medical consultations. VERDICT reviews follow a separate editorial method and cannot be commissioned. Relevant commercial interests are disclosed.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="site dial">
+  <div class="wrap">
+    <div class="fav-row">
+      <div class="fav">Forecast. Act. Verify.</div>
+      <svg class="dots" viewBox="0 0 160 20" aria-hidden="true"><line x1="8" y1="10" x2="152" y2="10" stroke="#D9B56C" stroke-width="1.5"></line><circle cx="8" cy="10" r="6" fill="#0C1838" stroke="#D9B56C" stroke-width="1.8"></circle><circle cx="80" cy="10" r="6" fill="#0C1838" stroke="#D9B56C" stroke-width="1.8"></circle><circle cx="152" cy="10" r="7" fill="#D9B56C"></circle></svg>
+    </div>
+    <div class="hs2">Longevity · Healthspan</div>
+    <nav class="fnav" aria-label="Footer"><a href="#home">Home</a><a href="#verdict">Verdicts</a><a href="#how-i-check">Method</a><a href="#about">About</a><a href="#work">Partnerships</a><a href="#" class="totop" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a></nav>
+    <div class="fine">
+      <span>Education only. Not medical advice. © 2026 Yevgen Shagov</span>
+      <span class="links"><a href="https://www.instagram.com/dr.shagov/">Instagram</a><a href="https://www.linkedin.com/in/shgv">LinkedIn</a><a href="mailto:yevgen@shagov.pro">yevgen@shagov.pro</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var views = ['home', 'verdict', 'how-i-check', 'verdict-001', 'about', 'work'];
+  function show() {
+    var h = (location.hash || '').replace('#', '');
+    var target = null;
+    if (views.indexOf(h) === -1) {
+      target = h ? document.getElementById(h) : null;
+      var host = target ? target.closest('.view') : null;
+      h = host ? host.id.replace('v-', '') : 'home';
+    }
+    views.forEach(function (v) {
+      var el = document.getElementById('v-' + v);
+      if (el) el.classList.toggle('on', v === h);
+    });
+    document.querySelectorAll('nav.main a').forEach(function (a) {
+      var n = a.getAttribute('data-nav');
+      a.classList.toggle('on', n === h || (n === 'verdict' && h === 'verdict-001'));
+    });
+    if (target) {
+      var d = target.tagName === 'DETAILS' ? target : target.closest('details');
+      if (d) d.open = true;
+      target.scrollIntoView();
+    } else { window.scrollTo(0, 0); }
+  }
+  window.addEventListener('hashchange', show);
+  show();
+})();
+</script>
+<script>
+(function(){var h=document.querySelector('header.site'),y=0;window.addEventListener('scroll',function(){var n=window.scrollY;if(n>y&&n>80)h.classList.add('hide');else h.classList.remove('hide');y=n;},{passive:true});})();
+</script>
+</body>
+</html>
