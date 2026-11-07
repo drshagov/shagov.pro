@@ -163,6 +163,22 @@ section.sec { padding: 72px 0; }
 .vc .read { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: var(--chrome); }
 .vc.ghost { background: transparent; border-style: dashed; color: var(--tantalum); justify-content: center; align-items: flex-start; }
 .vc.ghost::before { display: none; }
+/* In-review cards: not clickable, no colour, no date */
+.vc.soon { background: transparent; border: 1px dashed rgba(110,122,140,.55); color: var(--ink-2); }
+.vc.soon::before { display: none; }
+.vc.soon:hover { border-color: rgba(110,122,140,.55); }
+.vc.soon h3 { color: var(--ink-2); }
+.vc.soon .q { font-size: 16px; color: var(--ink-2); }
+.vc .q { font-size: 16px; }
+.vc .note { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: var(--tantalum); }
+.stamp.s-ir { color: var(--tantalum); border-style: dashed; transform: none; }
+.stamp.s-ir .in { border-style: dashed; }
+.stamp.s-ir .band { background: transparent; border-bottom: 1.5px dashed currentColor; }
+.stamp.s-ir .band b { color: var(--tantalum); }
+.pill.s-ir { color: var(--tantalum); border-style: dashed; }
+.row.soon { cursor: default; }
+.row.soon .rt { color: var(--ink-2); }
+.row.soon:hover .rt { color: var(--ink-2); }
 
 /* ---------- Questions grid ---------- */
 .q4 { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); border-top: 1px solid var(--ink); }
@@ -319,7 +335,8 @@ footer.site { padding: 52px 0 36px; --cx: 50%; --cy: 0%; }
   .portrait { justify-self: center; max-width: 320px; }
   .years { grid-template-columns: 1fr; }
   .years > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--hair-light); }
-  .strip { grid-auto-columns: 78%; }
+  .strip { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: 1fr; overflow: visible; }
+  .vc { min-height: 0; }
   .about-strip { grid-template-columns: 1fr; gap: 24px; }
   .about-strip .portrait { max-width: 300px; justify-self: center !important; }
   .about-strip .stack-lg { padding: 8px 0 52px !important; }
@@ -479,8 +496,9 @@ h2.name2 small { font-family: var(--sans); font-size: 12px; letter-spacing: 2.5p
 .hs2 { margin-top: 14px; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; color: var(--gold); }
 .eyebrow { letter-spacing: 2.6px; }
 .dial .eyebrow { color: #B5BFCE; }
-.strip { display:block; }
-.strip .vc { max-width: 560px; }
+.strip { display:grid; grid-auto-flow: row; grid-template-columns: repeat(3, minmax(0,1fr)); overflow: visible; }
+.strip .vc { max-width: none; }
+@media (max-width: 820px) { .strip { grid-template-columns: 1fr; } .strip .vc { max-width: 560px; } }
 .cut { max-width: 300px !important; }
 .sys .conn svg path { stroke-opacity: .55; }
 @media (max-width: 820px) {
@@ -629,8 +647,8 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
 
   <section class="sec">
     <div class="wrap stack-lg">
-      <div class="head"><div class="eyebrow">Verdicts</div><h2>Every verdict has a number <span class="s">and a date.</span></h2></div>
-      <div class="strip" aria-label="Published verdicts">
+      <div class="head"><div class="eyebrow">Verdict library</div><h2>Published findings. <span class="s">Questions under review.</span></h2></div>
+      <div class="strip" aria-label="Verdict library">
         <a class="vc" href="#verdict-001">
           <div class="top"><span class="date">001</span><span>7 Nov 2026 · Diagnostics</span></div>
           <h3>Whole-body MRI: will it help healthy people live longer?</h3>
@@ -638,6 +656,20 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
           <span class="stamp s-nj"><span class="in"><span class="band"><b>SHAGOV | VERDICT.</b></span><span class="word">Not justified.</span></span></span>
           <span class="read">Read the review →</span>
         </a>
+        <div class="vc soon" aria-label="VERDICT 002, in review">
+          <div class="top"><span class="date">002</span><span>Infusions</span></div>
+          <h3>NAD+ IV drips</h3>
+          <p class="q">Do they slow aging?</p>
+          <span class="stamp s-ir"><span class="in"><span class="band"><b>SHAGOV | VERDICT.</b></span><span class="word">In review</span></span></span>
+          <span class="note">Review in progress</span>
+        </div>
+        <div class="vc soon" aria-label="VERDICT 003, in review">
+          <div class="top"><span class="date">003</span><span>Lab tests</span></div>
+          <h3>Lipoprotein(a)</h3>
+          <p class="q">Can a single test tell you about a lifetime of heart risk?</p>
+          <span class="stamp s-ir"><span class="in"><span class="band"><b>SHAGOV | VERDICT.</b></span><span class="word">In review</span></span></span>
+          <span class="note">Review in progress</span>
+        </div>
       </div>
       <p><a class="link" href="#verdict">All verdicts →</a></p>
 
@@ -695,6 +727,18 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
           <span class="pill s-nj">Not justified</span>
           <span class="rd rd2">7 Nov 2026</span>
         </a>
+        <div class="row soon">
+          <span class="date">002</span>
+          <span><span class="rt">NAD+ IV drips: do they slow aging?</span><br><span class="rd">Infusions · Review in progress</span></span>
+          <span class="pill s-ir">In review</span>
+          <span class="rd rd2"></span>
+        </div>
+        <div class="row soon">
+          <span class="date">003</span>
+          <span><span class="rt">Lipoprotein(a): can a single test tell you about a lifetime of heart risk?</span><br><span class="rd">Lab tests · Review in progress</span></span>
+          <span class="pill s-ir">In review</span>
+          <span class="rd rd2"></span>
+        </div>
       </div>
       <div class="defs">
         <div class="def s-p"><span class="pill">Proven</span><p>Enough evidence that the promised benefit is real for this goal and this group of people, with an acceptable balance of benefit and risk.</p></div>
