@@ -596,6 +596,15 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
 .stamp { width: max-content; max-width: 100%; align-self: flex-start; }
 .stamp .in { flex: 1 1 auto; min-width: 0; }
 @media (max-width: 820px) { .stamp.lg .word { font-size: 28px; padding: 12px 16px 6px; } .stamp.lg .band { letter-spacing: 3px; } }
+
+.strip.lib { grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); align-items: start; }
+.upcoming { border-top: 1px solid var(--ink); }
+.up-h { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; color: var(--tantalum); padding: 14px 0 6px; }
+.up { padding: 14px 0; border-bottom: 1px dashed rgba(110,122,140,.5); }
+.up-t { display:flex; align-items:center; gap: 8px; flex-wrap: wrap; font-weight: 700; font-size: 17px; color: var(--ink); }
+.up-t .ir { margin-left: auto; font-size: 10.5px; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; color: var(--tantalum); border: 1px dashed var(--tantalum); padding: 3px 8px; }
+.up p { margin: 6px 0 0; color: var(--ink-2); font-size: 15px; }
+@media (max-width: 820px) { .strip.lib { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -648,7 +657,7 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
   <section class="sec">
     <div class="wrap stack-lg">
       <div class="head"><div class="eyebrow">Verdict library</div><h2>Published findings. <span class="s">Questions under review.</span></h2></div>
-      <div class="strip" aria-label="Verdict library">
+      <div class="strip lib" aria-label="Verdict library">
         <a class="vc" href="#verdict-001">
           <div class="top"><span class="date">001</span><span>7 Nov 2026 · Diagnostics</span></div>
           <h3>Whole-body MRI: will it help healthy people live longer?</h3>
@@ -656,19 +665,10 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
           <span class="stamp s-nj"><span class="in"><span class="band"><b>SHAGOV | VERDICT.</b></span><span class="word">Not justified.</span></span></span>
           <span class="read">Read the review →</span>
         </a>
-        <div class="vc soon" aria-label="VERDICT 002, in review">
-          <div class="top"><span class="date">002</span><span>Infusions</span></div>
-          <h3>NAD+ IV drips</h3>
-          <p class="q">Can a drip slow aging?</p>
-          <span class="stamp s-ir"><span class="in"><span class="band"><b>SHAGOV | VERDICT.</b></span><span class="word">In review</span></span></span>
-          <span class="note">Review in progress</span>
-        </div>
-        <div class="vc soon" aria-label="VERDICT 003, in review">
-          <div class="top"><span class="date">003</span><span>Lab tests</span></div>
-          <h3>Lipoprotein(a)</h3>
-          <p class="q">Can normal cholesterol hide an inherited heart risk?</p>
-          <span class="stamp s-ir"><span class="in"><span class="band"><b>SHAGOV | VERDICT.</b></span><span class="word">In review</span></span></span>
-          <span class="note">Review in progress</span>
+        <div class="upcoming" aria-label="Upcoming reviews">
+          <div class="up-h">Upcoming reviews</div>
+          <div class="up"><div class="up-t"><b>002</b> · NAD+ IV drips<span class="ir">In review</span></div><p>Can a drip slow aging?</p></div>
+          <div class="up"><div class="up-t"><b>003</b> · Lipoprotein(a)<span class="ir">In review</span></div><p>Can normal cholesterol hide an inherited heart risk?</p></div>
         </div>
       </div>
       <p><a class="link" href="#verdict">All verdicts →</a></p>
