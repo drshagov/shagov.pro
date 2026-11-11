@@ -837,6 +837,33 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
 .refs li { overflow-wrap: anywhere; }
 h1 .nt { text-transform: none; }
 .dial .cites, .dial .cites a { color: var(--on-dial-3); border-bottom-color: rgba(198,206,221,.3); }
+/* v1.1: blind spot + accordion */
+.blind { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px; max-width: 900px; }
+.lab-sheet { background: var(--paper); border: 1px solid var(--hair-light); padding: 22px 24px; position: relative; }
+.lab-sheet::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--metal); }
+.ls-k { font-size: 10.5px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 800; color: var(--tantalum); margin-bottom: 8px; }
+.ls-r { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--hair-light); font-size: 16px; }
+.ls-r b { color: var(--emerald); }
+.ls-r.miss { border: 1.5px dashed #A8853F; border-radius: 2px; padding: 11px 12px; margin-top: 10px; background: rgba(217,181,108,.10); }
+.ls-r.miss span { font-weight: 800; }
+.ls-r.miss b { color: #A8853F; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 800; align-self: center; }
+.particle { margin: 0; background: var(--paper); border: 1px solid var(--hair-light); padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; justify-content: center; }
+.particle svg { width: 100%; height: auto; }
+.particle .pl1 { font: 600 14px Inter, sans-serif; fill: var(--ink-2); }
+.particle .pl2 { font: 700 15px Inter, sans-serif; fill: #A8853F; }
+.particle figcaption { font-size: 14px; color: var(--ink-2); }
+.acc { border-top: 1px solid var(--ink); }
+.acc details.depth:first-of-type { border-top: 0; }
+.acc details.depth .body { padding-right: 0; }
+.acc details.depth .body > p, .acc details.depth .body > h4, .acc details.depth .body > ol, .acc details.depth .body > ul, .acc details.depth .body > .means { max-width: 760px; }
+.acc details.depth summary h3 { font-size: 21px; }
+.acc details.depth summary:hover h3 { color: var(--chrome); }
+.acc details.depth .body .scheme { margin-top: 8px; }
+@media (max-width: 820px) {
+  .blind { grid-template-columns: 1fr; }
+
+  .acc details.depth summary h3 { font-size: 18px; }
+}
 </style>
 </head>
 <body>
@@ -861,12 +888,13 @@ h1 .nt { text-transform: none; }
       <p class="lead">Cholesterol gets checked dozens of times in a lifetime. <b>Lp(a)? Often not even once.</b> One test that can change how heart attack and stroke risk is assessed.</p>
       <p class="kicker">The claim · The evidence · The price of error</p>
       <div class="meta">
+        <span>Verdict <b>10 November 2026</b></span>
         <span>Published <b>17 November 2026</b></span>
-        <span>Evidence reviewed <b>17 November 2026</b></span>
+        <span>Evidence reviewed <b>10 November 2026</b></span>
       </div>
       <nav class="toc" aria-label="Explore">
         <span class="toc-k">Explore</span>
-        <a href="#the-marker">The Marker</a><a href="#the-evidence">The Evidence</a><a href="#the-price-of-error">The Price of Error</a><a href="#the-test">The Test</a>
+        <a href="#the-blind-spot">The Blind Spot</a><a href="#the-numbers">The Numbers</a><a href="#what-changes">What Changes</a><a href="#the-detail">Four Questions</a><a href="#sources">Sources</a>
       </nav>
     </div>
     <figure class="hero-img">
@@ -923,18 +951,44 @@ h1 .nt { text-transform: none; }
   </div>
 </section>
 
-<!-- ============ 01 THE MARKER ============ -->
-<section class="sec" id="the-marker">
+<!-- ============ 01 THE BLIND SPOT ============ -->
+<section class="sec" id="the-blind-spot">
   <div class="wrap stack-lg">
-    <div class="head"><div class="eyebrow">01 · The Marker</div><h2>What Lp(a) is <span class="s">— and why a standard test misses it.</span></h2></div>
+    <div class="head"><div class="eyebrow">01 · The Blind Spot</div><h2>Normal cholesterol <span class="s">does not tell the whole story.</span></h2></div>
+    <div class="blind">
+      <div class="lab-sheet" aria-label="A typical lipid panel">
+        <div class="ls-k">Typical lipid panel</div>
+        <div class="ls-r"><span>Total cholesterol</span><b>✓</b></div>
+        <div class="ls-r"><span>LDL cholesterol</span><b>✓</b></div>
+        <div class="ls-r"><span>HDL cholesterol</span><b>✓</b></div>
+        <div class="ls-r"><span>Triglycerides</span><b>✓</b></div>
+        <div class="ls-r miss"><span>Lp(a)</span><b>Not included</b></div>
+      </div>
+      <figure class="particle">
+        <svg viewBox="0 0 380 210" role="img" aria-label="Schematic Lp(a): an LDL-like particle with an attached apo(a) protein">
+          <circle cx="132" cy="109" r="74" fill="none" stroke="#D9B56C" stroke-width="3"/>
+          <circle cx="132" cy="109" r="37" fill="none" stroke="#6E7A8C" stroke-width="2"/>
+          <g fill="#9AA6B8"><circle cx="132" cy="45" r="4"/><circle cx="171" cy="57" r="4"/><circle cx="193" cy="91" r="4"/><circle cx="181" cy="149" r="4"/><circle cx="132" cy="174" r="4"/><circle cx="86" cy="149" r="4"/><circle cx="70" cy="102" r="4"/><circle cx="92" cy="61" r="4"/></g>
+          <path d="M192 62 Q220 18 248 49 T300 51 T353 25" stroke="#D9B56C" stroke-width="3" fill="none"/>
+          <g stroke="#D9B56C" stroke-width="3" fill="#FFFFFF"><circle cx="211" cy="43" r="12"/><circle cx="240" cy="36" r="12"/><circle cx="269" cy="54" r="12"/><circle cx="299" cy="42" r="12"/><circle cx="330" cy="35" r="12"/></g>
+          <text x="132" y="114" class="pl1" text-anchor="middle">LDL-like</text>
+          <text x="300" y="112" class="pl2" text-anchor="middle">apo(a)</text>
+        </svg>
+        <figcaption><b>Lp(a)</b> is an LDL-like particle with one extra protein, apo(a). Schematic, not to scale.</figcaption>
+      </figure>
+    </div>
     <div class="narrow stack">
-      <p class="lead">Lp(a) is a cholesterol-carrying particle similar to LDL, with one extra protein attached: apolipoprotein(a).</p>
-      <p>Its level is set mainly by your genes. According to the European guidelines, more than 90% of it is inherited. <span class="cites">(<a href="#esc-eas-2025">ESC/EAS, 2025</a>)</span> Diet and exercise usually change Lp(a) itself very little. That does not make them less useful: they still work on LDL, blood pressure and the other risk factors you can change.</p>
-      <p>A standard lipid panel measures total cholesterol, LDL, HDL and triglycerides. It does not give an Lp(a) value. That takes a separate test. <span class="cites">(<a href="#acc-aha-2026">ACC/AHA, 2026</a>)</span></p>
-      <p>Levels differ between people by orders of magnitude. Elevated Lp(a) is a causal risk factor for atherosclerotic events and for calcific aortic valve stenosis. The link is strongest for coronary events. For ischemic stroke it is also established, but weaker on average.</p>
+      <p class="lead">A routine lipid panel checks cholesterol. It does not measure Lp(a). That takes a separate blood test. <span class="cites">(<a href="#acc-aha-2026">ACC/AHA, 2026</a>)</span></p>
+      <p>Lp(a) is set mainly by your genes. Diet and exercise usually change it very little, but they still matter for LDL, blood pressure and the rest of your risk. <span class="cites">(<a href="#esc-eas-2025">ESC/EAS, 2025</a>)</span></p>
       <p class="keyq">So a person can have normal cholesterol at every check-up and still carry an inherited risk that none of those tests could show.</p>
     </div>
+  </div>
+</section>
 
+<!-- ============ 02 THE NUMBERS ============ -->
+<section class="sec paper" id="the-numbers">
+  <div class="wrap stack-lg">
+    <div class="head"><div class="eyebrow">02 · The Numbers</div><h2>Common risk. <span class="s">Uncommon testing.</span></h2></div>
     <figure class="scheme dial" aria-label="The gap">
       <div class="scheme-h"><div class="eyebrow">The gap</div><p>Many people have it. Few have been tested.</p></div>
       <div class="gap2">
@@ -943,62 +997,8 @@ h1 .nt { text-transform: none; }
       </div>
       <p class="scheme-note">The first figure is an estimate of how common elevated Lp(a) is. The second is an international expert estimate of how rarely the test is done, not a result from a single sample. They are not two parts of one survey. <span class="cites">(<a href="#brussels-2025">Brussels International Declaration, 2025</a>; <a href="#acc-aha-2026">ACC/AHA, 2026</a>)</span></p>
     </figure>
-
-    <div class="narrow stack">
-      <h4>The scale of the problem</h4>
-      <p>Heart attacks and strokes caused an estimated 17 million deaths in 2022. This is our own calculation from WHO data: 19.8 million cardiovascular deaths, about 85% of them from heart attack and stroke. <span class="cites">(<a href="#who-cvd-2025">WHO, 2025</a>)</span> It is the background, not a number attributed to Lp(a). Most of these deaths have many causes.</p>
-      <p>In the United States, a database covering about 300 million patient records found Lp(a) tests recorded for 728,550 people between 2015 and 2024. The authors estimate this at about 0.2% of the US population. It is not a population survey, and it may miss tests done outside the network. <span class="cites">(<a href="#ramsis-2025">Ramsis et al., 2025</a>)</span></p>
-      <div class="means">
-        <div class="means-k">What this means</div>
-        <p>Elevated Lp(a) is common, largely inherited and invisible on a routine cholesterol test. Testing for it is rare.</p>
-        <p class="eq">Evidence quality: prevalence — high. Testing rates — estimates with different denominators.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 02 THE EVIDENCE ============ -->
-<section class="sec paper" id="the-evidence">
-  <div class="wrap stack-lg">
-    <div class="head"><div class="eyebrow">02 · The Evidence</div><h2>Three checks <span class="s">behind the verdict.</span></h2></div>
-    <div class="narrow stack">
-      <p>The claim stands only if three things hold. Elevated Lp(a) must add risk on its own. One measurement must be enough for most people. And the result must be able to change what is done, with measures that work.</p>
-    </div>
-
-    <!-- CHECK 1 -->
-    <article class="check" id="check-1">
-      <div class="check-h">
-        <div class="eyebrow">Check 1 · Risk</div>
-        <p class="pitch"><i>The claim</i>Elevated Lp(a) is an independent risk factor for heart attack and ischemic stroke, including when LDL is normal.</p>
-        <h3 class="verdict-line">The check: Confirmed. Evidence quality: high.</h3>
-      </div>
-      <div class="etab">
-        <div><span class="s1">Erqou et al., 2009<small>36 prospective studies · 126,634 people</small></span><span class="s2">After adjusting for lipids and other factors, each standard deviation of Lp(a) was linked to higher risk of coronary heart disease (×1.13) and ischemic stroke (×1.10). The link is continuous, independent and moderate. <span class="cites">(<a href="#erqou-2009">ERFC</a>)</span><i>Moderate on average across the population.</i></span></div>
-        <div><span class="s1">Kamstrup et al., 2009<small>Genetic study</small></span><span class="s2">Genetically higher Lp(a): ×1.22 risk of heart attack for each doubling of the level. This supports a causal role. <span class="cites">(<a href="#kamstrup-2009">Kamstrup et al.</a>)</span><i>Genetics shows cause. It does not show what happens if the level is lowered with drugs.</i></span></div>
-        <div><span class="s1">UK Biobank, 2021<small>460,506 people · 11.2 years</small></span><span class="s2">Risk rose in a straight line: ×1.11 for every 50 nmol/L. 12.2% of people without heart disease had 150 nmol/L or more, with about 1.5 times the risk. <span class="cites">(<a href="#patel-2021">Patel et al.</a>)</span><i>Observational data.</i></span></div>
-        <div><span class="s1">Bhatia et al., 2025<small>6 statin trials · 27,658 people</small></span><span class="s2">Even in the group with the lowest LDL achieved, Lp(a) above 50 mg/dL carried higher risk: ×1.38. Lowering LDL does not fully cancel the risk from Lp(a). <span class="cites">(<a href="#bhatia-2025-circ">Bhatia et al.</a>)</span><i>Lp(a) was measured with different methods in different trials.</i></span></div>
-        <div><span class="s1">Women's Health Study, 2024<small>27,939 women · 30 years</small></span><span class="s2">The top fifth of Lp(a) had 33% higher risk. One baseline measurement predicted risk three decades ahead. <span class="cites">(<a href="#ridker-2024">Ridker et al.</a>)</span><i>Women only.</i></span></div>
-        <div><span class="s1">Mayo Clinic, 2026<small>35,622 adults · median age 46</small></span><span class="s2">Men aged 18–50 and women aged 18–60 without diagnosed coronary disease. Lp(a) of 50 mg/dL or more was associated with premature coronary artery disease: ×1.40 overall, ×1.67 in people with LDL below 100 mg/dL. <span class="cites">(<a href="#mayo-2026">Bawahab &amp; Vasile</a>)</span><i>Retrospective. People referred for testing, not a random sample.</i></span></div>
-      </div>
-
-      <figure class="scheme light bars" aria-label="Mayo Clinic: Lp(a) and premature coronary artery disease in people with LDL below 100 mg/dL">
-        <div class="scheme-h"><div class="eyebrow">Mayo Clinic · LDL below 100 mg/dL</div><p>Cholesterol "normal". Lp(a) still made a difference.</p>
-          <div class="bars-h"><span><b>10,949</b> adults with LDL below 100 mg/dL</span><span>Median age <b>46</b></span><span>Follow-up <b>6 years</b></span></div>
-        </div>
-        <svg viewBox="0 0 760 230" role="img" aria-label="Among people with LDL below 100 mg/dL: Lp(a) not elevated, times 1.0; Lp(a) 50 mg/dL or more, times 1.67, for premature coronary artery disease.">
-          <text x="40" y="34" class="bl">Lp(a) not elevated</text>
-          <rect x="40" y="46" width="260" height="38" fill="#C7CDD6"/>
-          <text x="316" y="76" class="bv">×1.0</text>
-          <text x="40" y="134" class="bl">Lp(a) 50 mg/dL or more</text>
-          <rect x="40" y="146" width="434" height="38" fill="#D9B56C"/>
-          <text x="490" y="176" class="bv g">×1.67</text>
-          <line x1="300" y1="42" x2="300" y2="90" class="ref"/><line x1="300" y1="142" x2="300" y2="200" class="ref"/>
-          <text x="300" y="220" class="bs" text-anchor="middle">reference</text>
-        </svg>
-        <p class="src-note">Relative risk of premature coronary artery disease with Lp(a) ≥50 mg/dL, compared with people without elevated Lp(a), among those with LDL below 100 mg/dL. HR 1.67 (95% CI 1.15–2.43). An association in a retrospective study of people referred for testing, not a prediction of a heart attack for any one person. Bawahab &amp; Vasile, J Clin Lipidol, 2026.</p>
-      </figure>
-
-      <figure class="scheme light scale" aria-label="Lp(a) risk scale">
+    <div class="head"><h2>The higher the Lp(a), <span class="s">the higher the risk.</span></h2><p class="muted">Large observational and genetic studies support a causal role for Lp(a) in atherosclerotic disease. <span class="cites">(<a href="#erqou-2009">Erqou et al., 2009</a>; <a href="#kamstrup-2009">Kamstrup et al., 2009</a>)</span></p></div>
+    <figure class="scheme light scale" aria-label="Lp(a) risk scale">
         <div class="scheme-h"><div class="eyebrow">The risk scale</div><p>Risk rises steadily with Lp(a). There is no biological jump at any threshold.</p></div>
         <svg viewBox="0 0 760 200" role="img" aria-label="Relative risk compared with the median of 20 nmol/L: 125 nmol/L times 1.4, 250 times 2, 350 times 3, 430 times 4.">
           <text x="70" y="52" class="rr" text-anchor="middle">×1</text>
@@ -1023,51 +1023,31 @@ h1 .nt { text-transform: none; }
         </svg>
         <p class="src-note">Relative risk of atherosclerotic cardiovascular disease compared with the median, 20 nmol/L. Between 75 and 124 nmol/L the estimate is about ×1.2. ACC/AHA 2026 estimates based on UK Biobank; they may differ in other populations. Not a personal probability of a heart attack or stroke: absolute risk depends on all your other factors.</p>
       </figure>
-
-      <div class="narrow stack">
-        <h4>Why this matters at 35–50</h4>
-        <p>The guidelines recommend a one-time measurement for all adults, including this age group. <span class="cites">(<a href="#acc-aha-2026">ACC/AHA, 2026</a>; <a href="#esc-eas-2025">ESC/EAS, 2025</a>)</span> The Mayo Clinic study adds direct data on younger and middle-aged adults: elevated Lp(a) was linked to coronary disease that started early. So the case for this age group is not just borrowed from older people.</p>
-        <p>What is still missing: a randomized trial showing that testing everyone in this age group reduces heart attacks and strokes. The practical benefit rests on the general evidence for prevention and on the guidelines.</p>
-        <div class="means">
-          <div class="means-k">What this means</div>
-          <p>Elevated Lp(a) adds risk independently and causally, including when LDL is low. On average the effect is moderate; it grows as the level rises. It is not "the main risk factor". It is an important, inherited one that a routine cholesterol test cannot see.</p>
-          <p class="eq">A relative risk of ×1.4 does not mean a 40% chance of a heart attack.</p>
+    <div class="head"><h2>Even with LDL <span class="s">below 100 mg/dL.</span></h2><p class="muted">In a Mayo Clinic cohort of 35,622 adults (median age 46), elevated Lp(a) was associated with coronary artery disease that started early. <span class="cites">(<a href="#mayo-2026">Bawahab &amp; Vasile, 2026</a>)</span></p></div>
+    <figure class="scheme light bars" aria-label="Mayo Clinic: Lp(a) and premature coronary artery disease in people with LDL below 100 mg/dL">
+        <div class="scheme-h"><div class="eyebrow">Mayo Clinic · LDL below 100 mg/dL</div><p>Cholesterol "normal". Lp(a) still made a difference.</p>
+          <div class="bars-h"><span><b>10,949</b> adults with LDL below 100 mg/dL</span><span>Median age <b>46</b></span><span>Follow-up <b>6 years</b></span></div>
         </div>
-      </div>
-    </article>
+        <svg viewBox="0 0 760 230" role="img" aria-label="Among people with LDL below 100 mg/dL: Lp(a) not elevated, times 1.0; Lp(a) 50 mg/dL or more, times 1.67, for premature coronary artery disease.">
+          <text x="40" y="34" class="bl">Lp(a) not elevated</text>
+          <rect x="40" y="46" width="260" height="38" fill="#C7CDD6"/>
+          <text x="316" y="76" class="bv">×1.0</text>
+          <text x="40" y="134" class="bl">Lp(a) 50 mg/dL or more</text>
+          <rect x="40" y="146" width="434" height="38" fill="#D9B56C"/>
+          <text x="490" y="176" class="bv g">×1.67</text>
+          <line x1="300" y1="42" x2="300" y2="90" class="ref"/><line x1="300" y1="142" x2="300" y2="200" class="ref"/>
+          <text x="300" y="220" class="bs" text-anchor="middle">reference</text>
+        </svg>
+        <p class="src-note">Relative risk of premature coronary artery disease with Lp(a) ≥50 mg/dL, compared with people without elevated Lp(a), among those with LDL below 100 mg/dL. HR 1.67 (95% CI 1.15–2.43). An association in a retrospective study of people referred for testing, not a prediction of a heart attack for any one person. Bawahab &amp; Vasile, J Clin Lipidol, 2026.</p>
+      </figure>
+  </div>
+</section>
 
-    <!-- CHECK 2 -->
-    <article class="check" id="check-2">
-      <div class="check-h">
-        <div class="eyebrow">Check 2 · Once</div>
-        <p class="pitch"><i>The claim</i>One measurement is usually enough. A repeat is needed for some people, not for all.</p>
-        <h3 class="verdict-line">The check: Confirmed, with exceptions.</h3>
-      </div>
-      <div class="narrow stack">
-        <p><b class="k">The guidelines.</b> The American guideline: measure at least once in every adult; repeating is usually unnecessary because the level is mostly inherited. <span class="cites">(<a href="#acc-aha-2026">ACC/AHA, 2026</a>)</span> The European guideline: at least once in a lifetime, ideally with the first lipid test. <span class="cites">(<a href="#esc-eas-2025">ESC/EAS, 2025</a>)</span> The US National Lipid Association: at least once in all adults, with a repeat possibly justified, especially after an intermediate result. <span class="cites">(<a href="#nla-2026">NLA, 2026</a>)</span></p>
-        <p><b class="k">The data.</b> In UK Biobank, about 12,000 people were measured twice, about 4.4 years apart. The two results correlated at 0.94. Of those who started low, only 0.2% moved to the high category. Of those in the intermediate range, 29.5% moved up and 9.0% moved down. <span class="cites">(<a href="#ghouse-2025">Ghouse et al., 2025</a>)</span></p>
-        <p>In 715 people measured on one platform about three years apart, 91.6% stayed in their original category. <span class="cites">(<a href="#koller-2025">Koller et al., 2025</a>)</span> In Norway, across 922,304 measurements, first and last results correlated at 0.94–0.96. Most of the variation came from the laboratory system, not from the body. <span class="cites">(<a href="#vajeeston-2026">Vajeeston et al., 2026</a>, conference abstract)</span></p>
-        <p>Concentration can change without changing the category. In a Polish cohort of cardiology patients, 44.3% had a change of 20% or more, yet 93.8% stayed in their original risk category. <span class="cites">(<a href="#star-lpa-2025">STAR-Lp(a), 2025</a>)</span> In a German university clinic, 11.3% changed category over a median of 13 months; many were patients with heart disease, and some changed treatment. <span class="cites">(<a href="#seidel-2026">Seidel et al., 2026</a>)</span></p>
-        <p>Some situations do shift the level. After menopause, women as a group have higher Lp(a): about 27% in a Danish population. That is a group comparison, not a guaranteed rise for each woman. <span class="cites">(<a href="#simony-2022">Copenhagen General Population Study, 2022</a>)</span> Pregnancy, some kidney diseases and inflammation can also change it, in different directions and by different amounts. <span class="cites">(<a href="#eas-2022">EAS consensus, 2022</a>)</span></p>
-        <h4>mg/dL and nmol/L</h4>
-        <p>Lp(a) is reported in two units. There is no exact formula to convert one into the other for a given person: the ratio depends on the size of the particle. nmol/L is preferred. A result in mg/dL is still valid. Read it in the units the lab used.</p>
-        <div class="means">
-          <div class="means-k">What this means</div>
-          <p>For most adults, one good measurement is enough. A repeat helps when the result is near a threshold and could change a decision, or when the first test was taken in unusual circumstances.</p>
-          <p class="eq">Evidence quality: high for stability in categories; a repeat is a decision, not a routine.</p>
-        </div>
-      </div>
-    </article>
-
-    <!-- CHECK 3 -->
-    <article class="check" id="check-3">
-      <div class="check-h">
-        <div class="eyebrow">Check 3 · Action</div>
-        <p class="pitch"><i>The claim</i>A high Lp(a) shows who should manage other risk factors earlier and more closely. Those measures are proven, and they work when Lp(a) is high.</p>
-        <h3 class="verdict-line">The check: Confirmed. There is no direct trial of "test → change → fewer events", and a diagnostic test does not need one.</h3>
-      </div>
-
-      <figure class="scheme dial" aria-label="From one test to a plan">
+<!-- ============ 03 WHAT CHANGES ============ -->
+<section class="sec" id="what-changes">
+  <div class="wrap stack-lg">
+    <div class="head"><div class="eyebrow">03 · What Changes</div><h2>Knowing the number <span class="s">can change the plan.</span></h2></div>
+    <figure class="scheme dial" aria-label="From one test to a plan">
         <div class="scheme-h"><div class="eyebrow">From one test to a plan</div><p>A high result is not an automatic prescription. It is information for the next decisions.</p></div>
         <ol class="chain c5">
           <li><span class="ck">01</span><span class="pt">One measurement</span><span class="cc">A separate blood test, usually done once.</span></li>
@@ -1077,56 +1057,48 @@ h1 .nt { text-transform: none; }
           <li><span class="ck">05</span><span class="pt">Relatives are offered a test</span><span class="cc">Parents, brothers, sisters, children.</span></li>
         </ol>
       </figure>
-
-      <div class="narrow stack">
-        <h4>A. The result changes the risk estimate</h4>
-        <p>In more than 314,000 people without heart disease, Lp(a) of 125 nmol/L or more meant about 30% higher risk. Adding Lp(a) to the PREVENT risk calculator modestly improved prediction, most of all in people at low estimated risk. <span class="cites">(<a href="#bhatia-2025-jama-cardiol">Bhatia et al., 2025</a>)</span> The European guideline uses Lp(a) above 105 nmol/L to refine risk in people at moderate risk or near a treatment threshold. <span class="cites">(<a href="#esc-eas-2025">ESC/EAS, 2025</a>)</span></p>
-        <h4>B. The result changes decisions, for some people</h4>
-        <p>When overall risk is borderline or intermediate, Lp(a) of 125 nmol/L or more is a reason to start or intensify statin therapy. For people with low overall risk, one high Lp(a) does not mean pills. <span class="cites">(<a href="#acc-aha-2026">ACC/AHA, 2026</a>)</span></p>
-        <p>At 125 nmol/L or more, the American guideline calls for early, optimal control of modifiable risk factors, and recommends testing first-degree relatives. <span class="cites">(<a href="#acc-aha-2026">ACC/AHA, 2026</a>; <a href="#nla-2026">NLA, 2026</a>)</span></p>
-        <h4>C. The chosen actions lower risk, also with high Lp(a)</h4>
-        <p>In the JUPITER trial, rosuvastatin reduced cardiovascular events both in people with Lp(a) above the median and in those below it, with no difference in effect. Lp(a) remained a source of residual risk on the statin. This was a subgroup analysis of a randomized trial, not a trial of a testing strategy. <span class="cites">(<a href="#khera-2014">Khera et al., 2014</a>)</span></p>
-        <p>In 6,676 adults without heart disease, good cardiovascular health on seven basic measures (Life's Simple 7) was linked to lower risk at every level of Lp(a). Among people with Lp(a) of 50 mg/dL or more, the risk was about a third of that with poor scores. These are associations from an observational study. <span class="cites">(<a href="#razavi-2025">Razavi et al., 2025</a>)</span></p>
-        <p>The benefit of lowering LDL, controlling blood pressure and not smoking is established by randomized trials. It is the common base of prevention.</p>
-        <div class="means">
-          <div class="means-k">What this means</div>
-          <p>The result sharpens the estimate of risk, changes decisions for some people, and points to measures with proven benefit. No trial has tested the whole chain from test to fewer events, and none is required to judge the value of a diagnostic test.</p>
-          <p class="pull2">One number does not dictate treatment. It helps inform prevention.</p>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- ============ 03 THE PRICE OF ERROR ============ -->
-<section class="sec" id="the-price-of-error">
-  <div class="wrap stack-lg">
-    <div class="head"><div class="eyebrow">03 · The Price of Error</div><h2>Five ways to get it wrong <span class="s">— with or without the test.</span></h2></div>
     <div class="narrow stack">
-      <ol class="errs">
-        <li><b>Not measuring it</b><span>Elevated Lp(a) does not show on a standard lipid panel. A person with normal cholesterol may carry an extra risk that neither they nor their doctor knows about. Overall risk is underestimated. Prevention is decided without important information. Relatives do not learn that they should be tested. We cannot say that skipping the test causes a specific number of heart attacks or strokes.</span></li>
-        <li><b>Taking a high result as a diagnosis</b><span>Lp(a) is a risk factor, not a diagnosis of atherosclerosis and not a personal forecast. Absolute risk depends on age, LDL, blood pressure, smoking, diabetes and family history. A high result can cause anxiety. In an online survey of 1,001 people who reported elevated Lp(a), 71.7% had minimal anxiety and 70.7% did not regret being tested; this was a self-selected sample. <span class="cites">(<a href="#eversole-2025">Eversole et al., 2025</a>)</span> Patients with heart disease worried about high results but found testing acceptable and were motivated to reduce their risk. <span class="cites">(<a href="#interaspire-2025">INTERASPIRE, 2025</a>)</span> Anxiety is a possible cost, not an inevitable one.</span></li>
-        <li><b>Taking a low result as a guarantee</b><span>Low Lp(a) does not add the risk that comes with elevated Lp(a). It does not mean zero cardiovascular risk, and it does not cancel the risk of high LDL, high blood pressure, diabetes or smoking. It is not a reason to stop prevention or treatment.</span></li>
-        <li><b>Measuring or comparing it wrongly</b><span>The lab method, the units and your state of health all matter. Converting mg/dL to nmol/L with a fixed factor is not valid. Near a threshold, different methods can put the same person in different categories.</span></li>
-        <li><b>Turning a risk into a shopping list</b><span>A high Lp(a) on its own is not a general reason for medication, extra imaging, invasive procedures or regular lab monitoring. These bring costs, overdiagnosis and side effects of unneeded treatment, and they distract from prevention with proven benefit. Be careful with offers to "fix" a lab number without evidence that this improves health outcomes.</span></li>
-      </ol>
-      <h4>The cost of the test itself</h4>
-      <p>One blood draw, usually together with a lipid panel. The price depends on the country, the lab and how care is paid for. The physical risks are those of any routine blood test.</p>
-      <div class="means">
-        <div class="means-k">What this means</div>
-        <p>The balance favors testing. The benefit is clearest when the result is used to assess overall risk, not as a diagnosis on its own and not as an automatic reason to treat.</p>
-      </div>
+      <p><b class="k">The important distinction.</b> Proven prevention — lowering LDL, controlling blood pressure, not smoking — reduces cardiovascular events, including in people with high Lp(a). No trial has tested the whole strategy "test everyone → change care → fewer events". That is a limit of the direct evidence, not proof that the result has no value. <span class="cites">(<a href="#khera-2014">Khera et al., 2014</a>)</span></p>
+      <p class="pull">One number does not dictate treatment. It helps inform prevention.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ 04 THE TEST ============ -->
-<section class="sec paper" id="the-test">
+<!-- ============ THE DETAIL ============ -->
+<section class="sec paper" id="the-detail">
   <div class="wrap stack-lg">
-    <div class="head"><div class="eyebrow">04 · The Test</div><h2>How to take it <span class="s">and how to read it.</span></h2></div>
-    <div class="narrow stack">
-      <h4>Who</h4>
-      <p>Every adult, at least once, whatever their usual cholesterol. Especially without delay if relatives had an early heart attack or stroke, if there is familial high cholesterol, or if a close relative is known to have high Lp(a).</p>
+    <div class="head"><div class="eyebrow">The detail</div><h2>Four questions. <span class="s">Open any one.</span></h2></div>
+    <div class="acc">
+      <details class="depth" id="q-promise">
+        <summary><span class="n">01</span><span class="sq"><h3>What is promised, and to whom?</h3><span class="ans">One test reveals an inherited heart and stroke risk that a lipid panel misses. For every adult.</span></span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="lead">The promise: one Lp(a) test in an adult reveals an inherited risk of heart attack and stroke that a standard lipid panel does not show, and helps adjust prevention if needed.</p>
+          <p class="lead">Lp(a) is a cholesterol-carrying particle similar to LDL, with one extra protein attached: apolipoprotein(a).</p>
+      <p>Its level is set mainly by your genes. According to the European guidelines, more than 90% of it is inherited. <span class="cites">(<a href="#esc-eas-2025">ESC/EAS, 2025</a>)</span> Diet and exercise usually change Lp(a) itself very little. That does not make them less useful: they still work on LDL, blood pressure and the other risk factors you can change.</p>
+      <p>A standard lipid panel measures total cholesterol, LDL, HDL and triglycerides. It does not give an Lp(a) value. That takes a separate test. <span class="cites">(<a href="#acc-aha-2026">ACC/AHA, 2026</a>)</span></p>
+      <p>Levels differ between people by orders of magnitude. Elevated Lp(a) is a causal risk factor for atherosclerotic events and for calcific aortic valve stenosis. The link is strongest for coronary events. For ischemic stroke it is also established, but weaker on average.</p>
+          <h4>The scale of the problem</h4>
+      <p>Heart attacks and strokes caused an estimated 17 million deaths in 2022. This is our own calculation from WHO data: 19.8 million cardiovascular deaths, about 85% of them from heart attack and stroke. <span class="cites">(<a href="#who-cvd-2025">WHO, 2025</a>)</span> It is the background, not a number attributed to Lp(a). Most of these deaths have many causes.</p>
+      <p>In the United States, a database covering about 300 million patient records found Lp(a) tests recorded for 728,550 people between 2015 and 2024. The authors estimate this at about 0.2% of the US population. It is not a population survey, and it may miss tests done outside the network. <span class="cites">(<a href="#ramsis-2025">Ramsis et al., 2025</a>)</span></p>
+        </div>
+      </details>
+      <details class="depth" id="q-check">
+        <summary><span class="n">02</span><span class="sq"><h3>How can the result be checked?</h3><span class="ans">A separate blood test, ideally in nmol/L, read with your other risk factors. Once is enough for most.</span></span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <h4>Is one measurement enough?</h4>
+          <p><b class="k">The guidelines.</b> The American guideline: measure at least once in every adult; repeating is usually unnecessary because the level is mostly inherited. <span class="cites">(<a href="#acc-aha-2026">ACC/AHA, 2026</a>)</span> The European guideline: at least once in a lifetime, ideally with the first lipid test. <span class="cites">(<a href="#esc-eas-2025">ESC/EAS, 2025</a>)</span> The US National Lipid Association: at least once in all adults, with a repeat possibly justified, especially after an intermediate result. <span class="cites">(<a href="#nla-2026">NLA, 2026</a>)</span></p>
+        <p><b class="k">The data.</b> In UK Biobank, about 12,000 people were measured twice, about 4.4 years apart. The two results correlated at 0.94. Of those who started low, only 0.2% moved to the high category. Of those in the intermediate range, 29.5% moved up and 9.0% moved down. <span class="cites">(<a href="#ghouse-2025">Ghouse et al., 2025</a>)</span></p>
+        <p>In 715 people measured on one platform about three years apart, 91.6% stayed in their original category. <span class="cites">(<a href="#koller-2025">Koller et al., 2025</a>)</span> In Norway, across 922,304 measurements, first and last results correlated at 0.94–0.96. Most of the variation came from the laboratory system, not from the body. <span class="cites">(<a href="#vajeeston-2026">Vajeeston et al., 2026</a>, conference abstract)</span></p>
+        <p>Concentration can change without changing the category. In a Polish cohort of cardiology patients, 44.3% had a change of 20% or more, yet 93.8% stayed in their original risk category. <span class="cites">(<a href="#star-lpa-2025">STAR-Lp(a), 2025</a>)</span> In a German university clinic, 11.3% changed category over a median of 13 months; many were patients with heart disease, and some changed treatment. <span class="cites">(<a href="#seidel-2026">Seidel et al., 2026</a>)</span></p>
+        <p>Some situations do shift the level. After menopause, women as a group have higher Lp(a): about 27% in a Danish population. That is a group comparison, not a guaranteed rise for each woman. <span class="cites">(<a href="#simony-2022">Copenhagen General Population Study, 2022</a>)</span> Pregnancy, some kidney diseases and inflammation can also change it, in different directions and by different amounts. <span class="cites">(<a href="#eas-2022">EAS consensus, 2022</a>)</span></p>
+        <h4>mg/dL and nmol/L</h4>
+        <p>Lp(a) is reported in two units. There is no exact formula to convert one into the other for a given person: the ratio depends on the size of the particle. nmol/L is preferred. A result in mg/dL is still valid. Read it in the units the lab used.</p>
+          <div class="means">
+            <div class="means-k">What this means</div>
+            <p>For most adults, one good measurement is enough. A repeat helps when the result is near a threshold and could change a decision, or when the first test was taken in unusual circumstances.</p>
+          </div>
+          <h4 id="the-test">The test, step by step</h4>
+          <p><b class="k">Who.</b> Every adult, at least once, whatever their usual cholesterol. Especially without delay if relatives had an early heart attack or stroke, if there is familial high cholesterol, or if a close relative is known to have high Lp(a).</p>
       <h4>How to take it</h4>
       <ol class="howto">
         <li>Ask for a separate test: "Lipoprotein(a), Lp(a)". A standard lipid panel does not replace it.</li>
@@ -1137,14 +1109,12 @@ h1 .nt { text-transform: none; }
         <li>A genetic test is not needed for a routine risk assessment.</li>
       </ol>
       <h4>How to read it</h4>
-    </div>
     <div class="rtab">
       <div><span class="v">below 75</span><span class="c">Low</span><span class="m">A meaningful increase in risk from Lp(a) is unlikely. Your other risk factors still matter.</span></div>
       <div><span class="v">75–124</span><span class="c">Intermediate</span><span class="m">Consider it as part of overall risk. In some situations, a repeat test may be considered.</span></div>
       <div class="hi"><span class="v">125 and above</span><span class="c">Elevated</span><span class="m">A reason to assess overall risk more carefully and to control modifiable risk factors earlier.</span></div>
       <div class="hi"><span class="v">250 and above</span><span class="c">Markedly elevated</span><span class="m">About twice the relative risk compared with the median. Calls for an especially careful individual assessment.</span></div>
     </div>
-    <div class="narrow stack">
       <p class="src-note">Lp(a) in nmol/L. NLA 2024 and 2026, ACC/AHA 2026. Risk rises continuously; there is no jump at a threshold. The European guideline uses above 50 mg/dL (about 105 nmol/L) as a risk-enhancing factor; the US guidance uses 125 nmol/L or more. These are different accepted criteria, not one threshold written two ways. <span class="cites">(<a href="#nla-2024">NLA, 2024</a>; <a href="#nla-2026">NLA, 2026</a>; <a href="#esc-eas-2025">ESC/EAS, 2025</a>)</span></p>
 
       <h4>If it is high</h4>
@@ -1170,9 +1140,67 @@ h1 .nt { text-transform: none; }
         <li>Should the control of my LDL, blood pressure and other factors become more intensive?</li>
         <li>Which of my relatives should check their Lp(a)?</li>
       </ol>
-    </div>
-
-    <figure class="scheme light" aria-label="Cardiovascular risk check plan">
+        </div>
+      </details>
+      <details class="depth" id="q-shown">
+        <summary><span class="n">03</span><span class="sq"><h3>What has been shown in people?</h3><span class="ans">An independent, causal risk factor, also with low LDL. The result changes decisions for some people.</span></span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <p class="lead">Two checks here: elevated Lp(a) adds risk on its own, and the result can change what is done, with measures that work. (The third — that one measurement is enough — is under question 02.)</p>
+          <h4>Risk · Confirmed, evidence quality high</h4>
+          <div class="etab">
+        <div><span class="s1">Erqou et al., 2009<small>36 prospective studies · 126,634 people</small></span><span class="s2">After adjusting for lipids and other factors, each standard deviation of Lp(a) was linked to higher risk of coronary heart disease (×1.13) and ischemic stroke (×1.10). The link is continuous, independent and moderate. <span class="cites">(<a href="#erqou-2009">ERFC</a>)</span><i>Moderate on average across the population.</i></span></div>
+        <div><span class="s1">Kamstrup et al., 2009<small>Genetic study</small></span><span class="s2">Genetically higher Lp(a): ×1.22 risk of heart attack for each doubling of the level. This supports a causal role. <span class="cites">(<a href="#kamstrup-2009">Kamstrup et al.</a>)</span><i>Genetics shows cause. It does not show what happens if the level is lowered with drugs.</i></span></div>
+        <div><span class="s1">UK Biobank, 2021<small>460,506 people · 11.2 years</small></span><span class="s2">Risk rose in a straight line: ×1.11 for every 50 nmol/L. 12.2% of people without heart disease had 150 nmol/L or more, with about 1.5 times the risk. <span class="cites">(<a href="#patel-2021">Patel et al.</a>)</span><i>Observational data.</i></span></div>
+        <div><span class="s1">Bhatia et al., 2025<small>6 statin trials · 27,658 people</small></span><span class="s2">Even in the group with the lowest LDL achieved, Lp(a) above 50 mg/dL carried higher risk: ×1.38. Lowering LDL does not fully cancel the risk from Lp(a). <span class="cites">(<a href="#bhatia-2025-circ">Bhatia et al.</a>)</span><i>Lp(a) was measured with different methods in different trials.</i></span></div>
+        <div><span class="s1">Women's Health Study, 2024<small>27,939 women · 30 years</small></span><span class="s2">The top fifth of Lp(a) had 33% higher risk. One baseline measurement predicted risk three decades ahead. <span class="cites">(<a href="#ridker-2024">Ridker et al.</a>)</span><i>Women only.</i></span></div>
+        <div><span class="s1">Mayo Clinic, 2026<small>35,622 adults · median age 46</small></span><span class="s2">Men aged 18–50 and women aged 18–60 without diagnosed coronary disease. Lp(a) of 50 mg/dL or more was associated with premature coronary artery disease: ×1.40 overall, ×1.67 in people with LDL below 100 mg/dL. <span class="cites">(<a href="#mayo-2026">Bawahab &amp; Vasile</a>)</span><i>Retrospective. People referred for testing, not a random sample.</i></span></div>
+      </div>
+          <h4>Why this matters at 35–50</h4>
+        <p>The guidelines recommend a one-time measurement for all adults, including this age group. <span class="cites">(<a href="#acc-aha-2026">ACC/AHA, 2026</a>; <a href="#esc-eas-2025">ESC/EAS, 2025</a>)</span> The Mayo Clinic study adds direct data on younger and middle-aged adults: elevated Lp(a) was linked to coronary disease that started early. So the case for this age group is not just borrowed from older people.</p>
+        <p>What is still missing: a randomized trial showing that testing everyone in this age group reduces heart attacks and strokes. The practical benefit rests on the general evidence for prevention and on the guidelines.</p>
+          <div class="means">
+            <div class="means-k">What this means</div>
+            <p>Elevated Lp(a) adds risk independently and causally, including when LDL is low. On average the effect is moderate; it grows as the level rises. It is not "the main risk factor". It is an important, inherited one that a routine cholesterol test cannot see.</p>
+            <p class="eq">A relative risk of ×1.4 does not mean a 40% chance of a heart attack.</p>
+          </div>
+          <h4>Action · Confirmed</h4>
+          <h4>A. The result changes the risk estimate</h4>
+        <p>In more than 314,000 people without heart disease, Lp(a) of 125 nmol/L or more meant about 30% higher risk. Adding Lp(a) to the PREVENT risk calculator modestly improved prediction, most of all in people at low estimated risk. <span class="cites">(<a href="#bhatia-2025-jama-cardiol">Bhatia et al., 2025</a>)</span> The European guideline uses Lp(a) above 105 nmol/L to refine risk in people at moderate risk or near a treatment threshold. <span class="cites">(<a href="#esc-eas-2025">ESC/EAS, 2025</a>)</span></p>
+        <h4>B. The result changes decisions, for some people</h4>
+        <p>When overall risk is borderline or intermediate, Lp(a) of 125 nmol/L or more is a reason to start or intensify statin therapy. For people with low overall risk, one high Lp(a) does not mean pills. <span class="cites">(<a href="#acc-aha-2026">ACC/AHA, 2026</a>)</span></p>
+        <p>At 125 nmol/L or more, the American guideline calls for early, optimal control of modifiable risk factors, and recommends testing first-degree relatives. <span class="cites">(<a href="#acc-aha-2026">ACC/AHA, 2026</a>; <a href="#nla-2026">NLA, 2026</a>)</span></p>
+        <h4>C. The chosen actions lower risk, also with high Lp(a)</h4>
+        <p>In the JUPITER trial, rosuvastatin reduced cardiovascular events both in people with Lp(a) above the median and in those below it, with no difference in effect. Lp(a) remained a source of residual risk on the statin. This was a subgroup analysis of a randomized trial, not a trial of a testing strategy. <span class="cites">(<a href="#khera-2014">Khera et al., 2014</a>)</span></p>
+        <p>In 6,676 adults without heart disease, good cardiovascular health on seven basic measures (Life's Simple 7) was linked to lower risk at every level of Lp(a). Among people with Lp(a) of 50 mg/dL or more, the risk was about a third of that with poor scores. These are associations from an observational study. <span class="cites">(<a href="#razavi-2025">Razavi et al., 2025</a>)</span></p>
+        <p>The benefit of lowering LDL, controlling blood pressure and not smoking is established by randomized trials. It is the common base of prevention.</p>
+          <div class="means">
+            <div class="means-k">What this means</div>
+            <p>The result sharpens the estimate of risk, changes decisions for some people, and points to measures with proven benefit. No trial has tested the whole chain from test to fewer events, and none is required to judge the value of a diagnostic test.</p>
+          </div>
+        </div>
+      </details>
+      <details class="depth" id="q-cost">
+        <summary><span class="n">04</span><span class="sq"><h3>What does a mistake cost?</h3><span class="ans">Not testing: a hidden risk. Misreading it: anxiety, false reassurance, unneeded treatment.</span></span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+          <ol class="errs">
+        <li><b>Not measuring it</b><span>Elevated Lp(a) does not show on a standard lipid panel. A person with normal cholesterol may carry an extra risk that neither they nor their doctor knows about. Overall risk is underestimated. Prevention is decided without important information. Relatives do not learn that they should be tested. We cannot say that skipping the test causes a specific number of heart attacks or strokes.</span></li>
+        <li><b>Taking a high result as a diagnosis</b><span>Lp(a) is a risk factor, not a diagnosis of atherosclerosis and not a personal forecast. Absolute risk depends on age, LDL, blood pressure, smoking, diabetes and family history. A high result can cause anxiety. In an online survey of 1,001 people who reported elevated Lp(a), 71.7% had minimal anxiety and 70.7% did not regret being tested; this was a self-selected sample. <span class="cites">(<a href="#eversole-2025">Eversole et al., 2025</a>)</span> Patients with heart disease worried about high results but found testing acceptable and were motivated to reduce their risk. <span class="cites">(<a href="#interaspire-2025">INTERASPIRE, 2025</a>)</span> Anxiety is a possible cost, not an inevitable one.</span></li>
+        <li><b>Taking a low result as a guarantee</b><span>Low Lp(a) does not add the risk that comes with elevated Lp(a). It does not mean zero cardiovascular risk, and it does not cancel the risk of high LDL, high blood pressure, diabetes or smoking. It is not a reason to stop prevention or treatment.</span></li>
+        <li><b>Measuring or comparing it wrongly</b><span>The lab method, the units and your state of health all matter. Converting mg/dL to nmol/L with a fixed factor is not valid. Near a threshold, different methods can put the same person in different categories.</span></li>
+        <li><b>Turning a risk into a shopping list</b><span>A high Lp(a) on its own is not a general reason for medication, extra imaging, invasive procedures or regular lab monitoring. These bring costs, overdiagnosis and side effects of unneeded treatment, and they distract from prevention with proven benefit. Be careful with offers to "fix" a lab number without evidence that this improves health outcomes.</span></li>
+      </ol>
+      <h4>The cost of the test itself</h4>
+      <p>One blood draw, usually together with a lipid panel. The price depends on the country, the lab and how care is paid for. The physical risks are those of any routine blood test.</p>
+          <div class="means">
+              <div class="means-k">What this means</div>
+              <p>The balance favors testing. The benefit is clearest when the result is used to assess overall risk, not as a diagnosis on its own and not as an automatic reason to treat.</p>
+            </div>
+        </div>
+      </details>
+      <details class="depth" id="q-plan">
+        <summary><span class="n">+</span><span class="sq"><h3>Cardiovascular risk check plan</h3><span class="ans">Which checks repeat, which are done once, and which are not for everyone.</span></span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+<figure class="scheme light" aria-label="Cardiovascular risk check plan">
       <div class="scheme-h"><div class="eyebrow">Cardiovascular risk check plan</div><p>Adults without symptoms or known cardiovascular disease. Most checks repeat. Lp(a) is the one most people need only once — and the one most often missing.</p></div>
       <div class="ptab">
         <div><span class="t">Blood pressure</span><span class="m">Age 18–39 with normal pressure and low risk: every 3–5 years. From 40, or at higher risk: every year. With hypertension: an individual plan.</span><span class="s">USPSTF, 2021</span></div>
@@ -1185,51 +1213,12 @@ h1 .nt { text-transform: none; }
       </div>
       <p class="src-note">An example based on US guidance. Age criteria and intervals differ between countries. This plan does not replace an individual risk assessment, and no set of tests guarantees protection from a heart attack or stroke. <span class="cites">(<a href="#uspstf-htn-2021">USPSTF, 2021</a>; <a href="#uspstf-dm-2021">USPSTF, 2021</a>; <a href="#uspstf-ecg-2018">USPSTF, 2018</a>; <a href="#acc-aha-2026">ACC/AHA, 2026</a>)</span></p>
     </figure>
-  </div>
-</section>
-
-<!-- ============ EVIDENCE AT A GLANCE ============ -->
-<section class="sec" id="evidence-at-a-glance">
-  <div class="wrap stack-lg">
-    <div class="head"><div class="eyebrow">Evidence at a glance</div><h2>The four questions <span class="s">every VERDICT asks.</span></h2></div>
-    <div class="qtable">
-      <div><span class="n">01</span><span class="t">What is promised, and to whom?</span><span class="m">That a one-time Lp(a) test in an adult reveals an inherited risk of heart attack and stroke that a standard lipid panel does not show, and helps adjust prevention if needed.</span></div>
-      <div><span class="n">02</span><span class="t">How could the result be checked?</span><span class="m">Measure Lp(a), preferably in nmol/L, and read it with the other risk factors. Check whether the result changes the risk estimate and prevention decisions. One measurement is enough for most; there are exceptions.</span></div>
-      <div><span class="n">03</span><span class="t">What has been shown in people?</span><span class="m">Lp(a) is independently and causally linked to atherosclerotic events, including when LDL is low. Adding it modestly improves prediction and changes decisions for some people. Lowering LDL reduces events when Lp(a) is high. No trial has tested the whole testing strategy.</span></div>
-      <div><span class="n">04</span><span class="t">What does a mistake cost?</span><span class="m">Not testing: an inherited risk factor can go unnoticed, for you and your relatives. Testing: a routine blood draw; the possible costs are anxiety, false reassurance, confused units, and unneeded treatment or purchases.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FINAL VERDICT ============ -->
-<section class="sec" id="the-verdict" style="padding-top:0">
-  <div class="wrap stack-lg">
-    <div class="glance">
-      <span class="stamp lg s-p"><span class="in"><span class="band"><b>SHAGOV &nbsp;|&nbsp; VERDICT.</b></span><span class="word">Proven.</span><span class="cap">Verified · 17.11.2026</span></span></span>
-      <div class="stack">
-        <div class="eyebrow">The verdict</div>
-        <p class="bottom">Yes. Every adult should have Lp(a) measured at least once. The test can reveal an inherited cardiovascular risk that a standard lipid panel misses. If it is elevated, it can inform earlier, more intensive management of LDL cholesterol and other modifiable risk factors.</p>
-        <p class="muted small">PROVEN refers to the value of the test for assessing risk and making prevention decisions. It is not a promise that the test itself prevents a heart attack or stroke. Evidence reviewed: 17 November 2026. The verdict may change if convincing new evidence emerges.</p>
-      </div>
-    </div>
-    <div class="next">
-      <span class="ir">Separate VERDICT</span>
-      <p><b class="k">Should Lp(a) itself be lowered?</b> Whether lowering Lp(a) prevents heart attacks and strokes is a different question. It is not covered here and will get its own VERDICT. For now, the main step is to assess overall risk and to control LDL, blood pressure and other factors earlier, together with your doctor.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ DISCLOSURE / SOURCES / LOG ============ -->
-<section class="sec paper" id="disclosure">
-  <div class="wrap stack-lg">
-    <div class="disclose">
-      <div class="eyebrow">Author's disclosure</div>
-      <p><b class="k">Disclosure:</b> I work in preventive medicine and develop paid programs for health risk assessment and management.</p>
-    </div>
-
-    <div id="sources">
-      <div class="head"><div class="eyebrow">Sources</div><h2>28 sources <span class="s">— guidelines, consensus statements, cohort studies, trials and surveys.</span></h2></div>
-      <ul class="sources refs">
+        </div>
+      </details>
+      <details class="depth" id="sources">
+        <summary><span class="n">§</span><span class="sq"><h3>Sources</h3><span class="ans">28 sources: guidelines, consensus statements, cohort studies, trials and surveys.</span></span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+<ul class="sources refs">
         <li id="acc-aha-2026">Blumenthal RS, Morris PB, Gaudino M, et al. 2026 ACC/AHA/AACVPR/ABC/ACPM/ADA/AGS/APhA/ASPC/NLA/PCNA Guideline on the Management of Dyslipidemia. J Am Coll Cardiol. 2026;87(19):2624–2757. <a href="https://doi.org/10.1016/j.jacc.2025.11.016">doi.org/10.1016/j.jacc.2025.11.016</a></li>
         <li id="bhatia-2025-circ">Bhatia HS, Wandel S, Willeit P, et al. Independence of lipoprotein(a) and LDL cholesterol–mediated cardiovascular risk: a participant-level meta-analysis. Circulation. 2025;151:312–321. <a href="https://doi.org/10.1161/CIRCULATIONAHA.124.069556">doi.org/10.1161/CIRCULATIONAHA.124.069556</a></li>
         <li id="bhatia-2025-jama-cardiol">Bhatia HS, Ambrosio M, Razavi AC, et al. AHA PREVENT equations and lipoprotein(a) for cardiovascular disease risk: insights from MESA and the UK Biobank. JAMA Cardiol. 2025. <a href="https://doi.org/10.1001/jamacardio.2025.1603">doi.org/10.1001/jamacardio.2025.1603</a></li>
@@ -1259,16 +1248,53 @@ h1 .nt { text-transform: none; }
         <li id="vajeeston-2026">Vajeeston Y, et al. Intra-individual variability in lipoprotein(a): insights from 922,304 measurements. Eur Heart J. 2026. ESC Congress abstract. <a href="https://doi.org/10.1093/eurheartj/ehag785.3261">doi.org/10.1093/eurheartj/ehag785.3261</a></li>
         <li id="who-cvd-2025">World Health Organization. Cardiovascular diseases (CVDs). Fact sheet, 31 July 2025. <a href="https://www.who.int/news-room/fact-sheets/detail/cardiovascular-diseases-(cvds)">who.int</a></li>
       </ul>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL VERDICT ============ -->
+<section class="sec" id="the-verdict" style="padding-top:0">
+  <div class="wrap stack-lg">
+    <div class="glance">
+      <span class="stamp lg s-p"><span class="in"><span class="band"><b>SHAGOV &nbsp;|&nbsp; VERDICT.</b></span><span class="word">Proven.</span><span class="cap">Verified · 17.11.2026</span></span></span>
+      <div class="stack">
+        <div class="eyebrow">The verdict</div>
+        <p class="bottom">Yes. Every adult should have Lp(a) measured at least once. The test can reveal an inherited cardiovascular risk that a standard lipid panel misses. If it is elevated, it can inform earlier, more intensive management of LDL cholesterol and other modifiable risk factors.</p>
+        <p class="muted small">PROVEN refers to the value of the test for assessing risk and making prevention decisions. It is not a promise that the test itself prevents a heart attack or stroke. Evidence reviewed: 10 November 2026. The verdict may change if convincing new evidence emerges.</p>
+      </div>
+    </div>
+    <div class="next">
+      <span class="ir">Separate VERDICT</span>
+      <p><b class="k">Should Lp(a) itself be lowered?</b> Whether lowering Lp(a) prevents heart attacks and strokes is a different question. It is not covered here and will get its own VERDICT. For now, the main step is to assess overall risk and to control LDL, blood pressure and other factors earlier, together with your doctor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DISCLOSURE / SOURCES / LOG ============ -->
+<section class="sec paper" id="disclosure">
+  <div class="wrap stack-lg">
+    <div class="disclose">
+      <div class="eyebrow">Author's disclosure</div>
+      <p><b class="k">Disclosure:</b> I work in preventive medicine and develop paid programs for health risk assessment and management.</p>
+      <p class="muted small">This VERDICT evaluates the value of measuring Lp(a), not the effectiveness of lowering Lp(a) itself. No clinic, laboratory, program or test brand is recommended here.</p>
     </div>
 
     <div class="disclose" id="revision-history">
       <div class="eyebrow">Revision history</div>
       <p class="muted small">Each change is published as a new version with its date and reason. Earlier versions are kept.</p>
-      <p><b class="k">Version 1.0 · 17 November 2026.</b> First publication. Verdict: PROVEN. Evidence reviewed: 17 November 2026.</p>
+      <p><b class="k">Version 1.0 · 17 November 2026.</b> First publication. Verdict: PROVEN, issued 10 November 2026. Evidence reviewed: 10 November 2026.</p>
       <p class="muted small">Education only. Not medical advice. It does not replace a consultation with your own doctor.</p>
     </div>
   </div>
 </section>
+
+<script>
+(function(){function openTo(id){var t=document.getElementById(id);if(!t)return;var d=t.closest('details');while(d){d.open=true;d=d.parentElement&&d.parentElement.closest('details');}if(t.tagName==='DETAILS')t.open=true;}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(id){openTo(id);}});
+if(location.hash)openTo(location.hash.slice(1));})();
+</script>
 
 </main>
 
