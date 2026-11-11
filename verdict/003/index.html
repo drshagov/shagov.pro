@@ -779,6 +779,15 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
   .chain .cc { border-top: 0; padding-top: 0; }
   .glance > .stamp { justify-self: center; }
 }
+/* shared accordion (as 001/003) */
+.acc { border-top: 1px solid var(--ink); }
+.acc details.depth:first-of-type { border-top: 0; }
+.acc details.depth .body { padding-right: 0; }
+.acc details.depth .body > p, .acc details.depth .body > h4, .acc details.depth .body > ol, .acc details.depth .body > ul { max-width: 760px; }
+.acc details.depth summary h3 { font-size: 21px; }
+.acc details.depth .body .scheme, .acc details.depth .body .check { margin-top: 8px; }
+.refs li { overflow-wrap: anywhere; }
+@media (max-width: 820px) { .acc details.depth summary h3 { font-size: 18px; } }
 
 /* ===== VERDICT 003 page ===== */
 .art3 { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap: 40px; align-items: center; }
@@ -937,7 +946,8 @@ h1 .nt { text-transform: none; }
       <div class="stack">
         <p class="bottom">Yes. Every adult should have Lp(a) measured at least once. The test can reveal an inherited cardiovascular risk that a standard lipid panel misses. If it is elevated, it can inform earlier, more intensive management of LDL cholesterol and other modifiable risk factors.</p>
         <dl class="facts">
-          <dt>The claim we tested</dt><dd>Every adult should have Lp(a) measured at least once. It can reveal an inherited risk of heart attack and stroke that a standard lipid panel does not show.</dd>
+          <dt>Promise checked</dt><dd>Every adult should have Lp(a) measured at least once. It can reveal an inherited risk of heart attack and stroke that a standard lipid panel does not show.</dd>
+          <dt>Checked for</dt><dd>Adults, including those whose cholesterol is normal.</dd>
         </dl>
         <div class="bounds">
           <div class="bounds-k">What this verdict does not mean</div>
@@ -959,12 +969,13 @@ h1 .nt { text-transform: none; }
         <div class="eyebrow">Take this with you</div>
         <h2>What to do</h2>
       </div>
-      <div class="stack">
-        <p>Ask for a separate test: lipoprotein(a), Lp(a). A standard lipid panel does not include it. One measurement is usually enough for life.</p>
-        <p class="muted">No fasting is needed for Lp(a). Ideally, take it when you are well: not during an acute illness and, if possible, not during pregnancy. Keep the result with its date, units and laboratory.</p>
-        <p class="muted">Do not put it off if close relatives had an early heart attack or stroke, if you have familial high cholesterol, or if a relative is known to have high Lp(a).</p>
-        <p class="pull">The goal is not a good-looking number. It is a better-informed plan for your heart and blood vessels.</p>
-      </div>
+      <ol class="steps">
+        <li><b>Ask for a separate test: Lp(a).</b><span>A standard lipid panel does not include it. For most people, once is enough for life.</span></li>
+        <li><b>No fasting needed.</b><span>Take it when you are well: not during an acute illness and, if possible, not during pregnancy.</span></li>
+        <li><b>Keep the result.</b><span>With its date, units and laboratory. Do not convert the units yourself.</span></li>
+        <li><b>Do not put it off if it runs in the family.</b><span>Early heart attack or stroke in close relatives, familial high cholesterol, or a relative with high Lp(a).</span></li>
+        <li><b>If it is high, look at the whole picture.</b><span>Review LDL, blood pressure and other risk factors with your doctor. One number does not dictate treatment.</span></li>
+      </ol>
       <div class="ask">
         <div class="ask-k">Three questions before the test</div>
         <ol>
@@ -1091,7 +1102,14 @@ h1 .nt { text-transform: none; }
 <!-- ============ THE DETAIL ============ -->
 <section class="sec paper" id="the-detail">
   <div class="wrap stack-lg">
-    <div class="head"><div class="eyebrow">The detail</div><h2>Four questions. <span class="s">Open any one.</span></h2></div>
+    <div class="head"><div class="eyebrow">Evidence at a glance</div><h2>What was promised, <span class="s">and what was shown.</span></h2></div>
+    <dl class="eag" style="margin:0">
+      <div><dt>Implied promise</dt><dd style="margin:0">One Lp(a) test reveals an inherited risk of heart attack and stroke that a standard lipid panel misses, and helps adjust prevention.</dd></div>
+      <div><dt>Proof needed</dt><dd style="margin:0">Lp(a) adds risk on its own, one measurement is enough for most people, and the result changes decisions with measures that work.</dd></div>
+      <div><dt>Evidence</dt><dd style="margin:0">An independent, causal risk factor, also with low LDL. Stable in most people over years. Changes decisions for some people. No trial has tested universal testing directly.</dd></div>
+      <div><dt>Trade-offs</dt><dd style="margin:0">One routine blood draw. Possible anxiety, false reassurance from a low result, confused units, unneeded treatment.</dd></div>
+    </dl>
+    <div class="head" style="margin-top:12px"><div class="eyebrow">The detail</div><h2>Four questions. <span class="s">Open any one.</span></h2></div>
     <div class="acc">
       <details class="depth" id="q-promise">
         <summary><span class="n">01</span><span class="sq"><h3>What is promised, and to whom?</h3><span class="ans">One test reveals an inherited heart and stroke risk that a lipid panel misses. For every adult.</span></span><span class="plus" aria-hidden="true"></span></summary>
@@ -1301,44 +1319,37 @@ h1 .nt { text-transform: none; }
         </div>
       </details>
     </div>
-  </div>
-</section>
-
-<!-- ============ FINAL VERDICT ============ -->
-<section class="sec" id="the-verdict" style="padding-top:0">
-  <div class="wrap stack-lg">
-    <div class="glance">
-      <span class="stamp lg s-p"><span class="in"><span class="band"><b>SHAGOV &nbsp;|&nbsp; VERDICT.</b></span><span class="word">Proven.</span><span class="cap">Verified · 17.11.2026</span></span></span>
-      <div class="stack">
-        <div class="eyebrow">The verdict</div>
-        <p class="bottom">Yes. Every adult should have Lp(a) measured at least once. The test can reveal an inherited cardiovascular risk that a standard lipid panel misses. If it is elevated, it can inform earlier, more intensive management of LDL cholesterol and other modifiable risk factors.</p>
-        <p class="muted small">PROVEN refers to the value of the test for assessing risk and making prevention decisions. It is not a promise that the test itself prevents a heart attack or stroke. Evidence reviewed: 17 November 2026. The verdict may change if convincing new evidence emerges.</p>
-      </div>
-    </div>
-    <div class="next">
-      <span class="ir">Separate VERDICT</span>
-      <p><b class="k">Should Lp(a) itself be lowered?</b> Whether lowering Lp(a) prevents heart attacks and strokes is a different question. It is not covered here and will get its own VERDICT. For now, the main step is to assess overall risk and to control LDL, blood pressure and other factors earlier, together with your doctor.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ DISCLOSURE / SOURCES / LOG ============ -->
-<section class="sec paper" id="disclosure">
-  <div class="wrap stack-lg">
-    <div class="disclose">
-      <div class="eyebrow">Author's disclosure</div>
+    <div class="disclose" id="disclosure">
       <p><b class="k">Disclosure:</b> I work in preventive medicine and develop paid programs for health risk assessment and management.</p>
       <p class="muted small">This VERDICT evaluates the value of measuring Lp(a), not the effectiveness of lowering Lp(a) itself. No clinic, laboratory, program or test brand is recommended here.</p>
-    </div>
-
-    <div class="disclose" id="revision-history">
-      <div class="eyebrow">Revision history</div>
-      <p class="muted small">Each change is published as a new version with its date and reason. Earlier versions are kept.</p>
-      <p><b class="k">Version 1.0 · 17 November 2026.</b> First publication. Verdict: PROVEN. Evidence reviewed: 17 November 2026.</p>
+      <p class="muted small"><b>Update log.</b> 17 Nov 2026: first publication. Verdict: PROVEN. Updates that change the verdict will be dated here.</p>
       <p class="muted small">Education only. Not medical advice. It does not replace a consultation with your own doctor.</p>
+      <div class="subscribe follow">
+        <div class="sub-t"><b>A new verdict every week.</b> <span>Follow on Instagram, where each one is announced first.</span></div>
+        <div class="sub-f"><a class="fbtn" href="https://www.instagram.com/dr.shagov/">Follow @dr.shagov</a></div>
+      </div>
     </div>
   </div>
 </section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="author-card">
+      <img class="avatar" src="/img/avatar.webp" alt="Yevgen Shagov" width="76" height="76">
+      <div class="stack">
+        <div class="eyebrow">About the author</div>
+        <p><b class="k">Yevgen Shagov, MD, PhD</b></p>
+        <p>Physician and healthcare founder. Since 2009, I have built clinics, physician networks and medical education programs. Associate Professor at Kyiv Medical University.</p>
+        <p>SHAGOV | VERDICT is my series examining public health claims against the available scientific evidence.</p>
+        <p class="muted small">The views expressed are my own and do not represent those of the institutions with which I am affiliated.</p>
+        <p><a class="link" href="/#about">About me →</a> &nbsp;&nbsp; <a class="link" href="/#verdict">All verdicts →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 <script>
 (function(){function openTo(id){var t=document.getElementById(id);if(!t)return;var d=t.closest('details');while(d){d.open=true;d=d.parentElement&&d.parentElement.closest('details');}if(t.tagName==='DETAILS')t.open=true;}

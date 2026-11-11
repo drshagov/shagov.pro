@@ -778,6 +778,15 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
   .chain .cc { border-top: 0; padding-top: 0; }
   .glance > .stamp { justify-self: center; }
 }
+/* shared accordion (as 001/003) */
+.acc { border-top: 1px solid var(--ink); }
+.acc details.depth:first-of-type { border-top: 0; }
+.acc details.depth .body { padding-right: 0; }
+.acc details.depth .body > p, .acc details.depth .body > h4, .acc details.depth .body > ol, .acc details.depth .body > ul { max-width: 760px; }
+.acc details.depth summary h3 { font-size: 21px; }
+.acc details.depth .body .scheme, .acc details.depth .body .check { margin-top: 8px; }
+.refs li { overflow-wrap: anywhere; }
+@media (max-width: 820px) { .acc details.depth summary h3 { font-size: 18px; } }
 </style>
 </head>
 <body>
@@ -804,7 +813,7 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
       <span>Evidence last reviewed <b>8 Nov 2026</b></span>
     </div>
     <nav class="toc" aria-label="On this page">
-      <a href="#a-verdict">Verdict</a><a href="#a-do">What to do</a><a href="#the-biology">Evidence</a><a href="#the-safety-record">Safety</a><a href="#sources">Sources</a>
+      <a href="#a-verdict">Verdict</a><a href="#a-do">What to do</a><a href="#a-numbers">Key numbers</a><a href="#a-evidence">Evidence</a><a href="#sources">Sources</a>
     </nav>
   </div>
 </section>
@@ -817,7 +826,8 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
       <div class="stack">
         <p class="bottom">IV NAD+ has not been shown to slow aging in healthy adults. On current evidence, routine commercial infusions for this purpose are not justified. This is not a finding that NAD+ is ineffective for every medical use.</p>
         <dl class="facts">
-          <dt>The claim we tested</dt><dd>A course of IV NAD+ can slow aging in an otherwise healthy adult. The promise often comes with attractive extras: more cellular energy, better DNA repair, sharper thinking. But how much of that promise survives clinical testing?</dd>
+          <dt>Promise checked</dt><dd>A course of IV NAD+ can slow aging in an otherwise healthy adult. The promise often comes with attractive extras: more cellular energy, better DNA repair, sharper thinking. But how much of that promise survives clinical testing?</dd>
+          <dt>Checked for</dt><dd>Adults without a specific medical indication for NAD+.</dd>
         </dl>
         <div class="bounds">
           <div class="bounds-k">What this verdict does not mean</div>
@@ -856,21 +866,10 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
   </div>
 </section>
 
-<!-- ============ 01 THE BIOLOGY ============ -->
-<section class="sec" id="the-biology">
+<!-- ============ KEY NUMBERS ============ -->
+<section class="sec" id="a-numbers">
   <div class="wrap stack-lg">
-    <div class="head"><div class="eyebrow">01 · The Biology</div><h2>Why NAD+ matters <span class="s">— and why more isn't necessarily better.</span></h2></div>
-    <div class="narrow stack">
-      <p class="lead">NAD+ is not just another molecule marketed for longevity. It is essential to life.</p>
-      <p>Together with NADH, it participates in reactions that make cellular energy metabolism possible. It is also used by enzymes involved in DNA repair, cellular regulation and stress responses — including PARPs and sirtuins.</p>
-      <p>This is established biology. And it explains why scientists have spent decades studying NAD+.</p>
-      <p>The body does not have one universal NAD+ reservoir. Its metabolism differs between blood, muscles, brain and other tissues — and even between compartments within the same cell. <span class="cites">(<a href="#nikiforov-2011">Nikiforov et al., 2011</a>)</span></p>
-      <p>A higher concentration in blood does not automatically mean more NAD+ where it is needed. And even a higher concentration inside a cell does not automatically mean better function.</p>
-      <p>The question is not whether our cells need NAD+. They do.</p>
-      <p class="keyq">The question is whether giving more NAD+ intravenously makes healthy humans function better — or age more slowly.</p>
-      <p>That is where the clinical evidence must take over from the biological theory.</p>
-    </div>
-
+    <div class="head"><div class="eyebrow">Key numbers</div><h2>Four steps of the sales story. <span class="s">Where it breaks.</span></h2></div>
     <figure class="scheme dial" aria-label="The evidence chain">
       <div class="scheme-h"><div class="eyebrow">The evidence chain</div><p>The biology is real. The commercial story behind the drip has four steps. We checked each one.</p></div>
       <ol class="chain">
@@ -883,6 +882,37 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
       <p class="scheme-note">This chain is a map for testing the sales story, not a rule that every step must be proven before a benefit can exist. A strong clinical trial could show benefit even with an incomplete mechanism. For this claim, no such trial exists.</p>
       <p class="scheme-end">The biology is real. The promised result is not demonstrated.</p>
     </figure>
+  </div>
+</section>
+
+<!-- ============ EVIDENCE ============ -->
+<section class="sec paper" id="a-evidence">
+  <div class="wrap stack-lg">
+    <div class="head"><div class="eyebrow">Evidence at a glance</div><h2>What was promised, <span class="s">and what was shown.</span></h2></div>
+    <dl class="eag" style="margin:0">
+      <div><dt>Implied promise</dt><dd style="margin:0">That a course of IV NAD+ slows aging in otherwise healthy adults, often with more energy, better DNA repair and sharper thinking.</dd></div>
+      <div><dt>Proof needed</dt><dd style="margin:0">Controlled trials in healthy adults, comparing IV NAD+ with placebo on outcomes people care about: function, disease, healthy years. A change in a biomarker alone would not be enough.</dd></div>
+      <div><dt>Evidence</dt><dd style="margin:0">Plasma NAD+ rises after infusion; levels in target tissues have not been measured. No convincing evidence of better energy, thinking or performance in healthy adults. Preliminary cardiac findings in patients, at 10–50 mg. No eligible controlled trial has demonstrated slower aging in healthy adults.</dd></div>
+      <div><dt>Trade-offs</dt><dd style="margin:0">Infusion reactions in small studies. Documented serious reactions linked to a contaminated product. Hundreds to thousands of dollars per course. Unknown long-term safety of repeated high-dose infusions.</dd></div>
+    </dl>
+
+    <div class="head" style="margin-top:12px"><div class="eyebrow">The detail</div><h2>Four parts. <span class="s">Open any one.</span></h2></div>
+    <div class="acc">
+      <details class="depth" id="the-biology">
+        <summary><span class="n">01</span><span class="sq"><h3>The biology</h3><span class="ans">NAD+ is essential to life. More in the blood does not mean more where it is needed.</span></span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+    <div class="narrow stack">
+      <p class="lead">NAD+ is not just another molecule marketed for longevity. It is essential to life.</p>
+      <p>Together with NADH, it participates in reactions that make cellular energy metabolism possible. It is also used by enzymes involved in DNA repair, cellular regulation and stress responses — including PARPs and sirtuins.</p>
+      <p>This is established biology. And it explains why scientists have spent decades studying NAD+.</p>
+      <p>The body does not have one universal NAD+ reservoir. Its metabolism differs between blood, muscles, brain and other tissues — and even between compartments within the same cell. <span class="cites">(<a href="#nikiforov-2011">Nikiforov et al., 2011</a>)</span></p>
+      <p>A higher concentration in blood does not automatically mean more NAD+ where it is needed. And even a higher concentration inside a cell does not automatically mean better function.</p>
+      <p>The question is not whether our cells need NAD+. They do.</p>
+      <p class="keyq">The question is whether giving more NAD+ intravenously makes healthy humans function better — or age more slowly.</p>
+      <p>That is where the clinical evidence must take over from the biological theory.</p>
+    </div>
+
+    
 
     <!-- CHECK 1 -->
     <article class="check" id="check-1">
@@ -965,14 +995,12 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
         </div>
       </div>
     </article>
-  </div>
-</section>
-
-<!-- ============ 02 THE HUMAN STUDIES ============ -->
-<section class="sec paper" id="the-human-studies">
-  <div class="wrap stack-lg">
-    <div class="head"><div class="eyebrow">02 · The Human Studies</div><h2>Trial results, doses <span class="s">and limitations.</span></h2></div>
-
+  
+        </div>
+      </details>
+      <details class="depth" id="the-human-studies">
+        <summary><span class="n">02</span><span class="sq"><h3>The human studies</h3><span class="ans">No convincing clinical evidence in healthy adults. Preliminary findings in heart disease, at much lower doses.</span></span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
     <article class="check" id="check-3">
       <div class="check-h">
         <div class="eyebrow">Check 3 · Function</div>
@@ -1084,13 +1112,12 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
         </div>
       </div>
     </article>
-  </div>
-</section>
-
-<!-- ============ 03 THE SAFETY RECORD ============ -->
-<section class="sec" id="the-safety-record">
-  <div class="wrap stack-lg">
-    <div class="head"><div class="eyebrow">03 · The Safety Record</div><h2>Documented harm, infusion reactions <span class="s">and the cost of uncertainty.</span></h2></div>
+  
+        </div>
+      </details>
+      <details class="depth" id="the-safety-record">
+        <summary><span class="n">03</span><span class="sq"><h3>The safety record</h3><span class="ans">Infusion reactions, one documented contaminated product, unknown long-term safety.</span></span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
     <div class="narrow stack">
       <p class="lead">Three different things are often mixed together. We keep them apart: documented harm from a contaminated product, reactions observed during infusions, and what is still unknown.</p>
       <h4>1. A contaminated batch</h4>
@@ -1126,15 +1153,13 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
         <p class="eq">Evidence quality: reactions and quality failures — confirmed by individual studies and regulatory documents. How often they occur — unknown.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ 04 THE MONEY ============ -->
-<section class="sec paper" id="the-money-behind-the-science">
-  <div class="wrap stack-lg">
-    <div class="head"><div class="eyebrow">04 · The Money Behind the Science</div><h2>Who funded the research <span class="s">— and why it matters.</span></h2></div>
+  
+        </div>
+      </details>
+      <details class="depth" id="the-money-behind-the-science">
+        <summary><span class="n">$</span><span class="sq"><h3>Who paid for the evidence?</h3><span class="ans">Funders and author ties of the key studies, named on both sides.</span></span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
     <div class="narrow stack">
-      <h3>Who paid for the evidence?</h3>
       <p>One striking feature of the IV NAD+ evidence base is how often commercial interests appear.</p>
       <p>Some studies were supported by companies selling NAD+ infusions. Others were funded by companies developing competing NAD-related products. Several cardiac trials received funding or study drugs from pharmaceutical manufacturers.</p>
       <p>That does not make their results wrong.</p>
@@ -1173,47 +1198,13 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
       <p class="pull">No independently replicated clinical evidence has established that IV NAD+ slows aging in healthy adults.</p>
       <p class="muted">My own previous paid work with IV NAD+ is disclosed separately <a href="#disclosure">below</a>.</p>
     </div>
-  </div>
-</section>
-
-<!-- ============ EVIDENCE AT A GLANCE ============ -->
-<section class="sec" id="evidence-at-a-glance">
-  <div class="wrap stack-lg">
-    <div class="head"><div class="eyebrow">Evidence at a glance</div><h2>The four questions <span class="s">every VERDICT asks.</span></h2></div>
-    <div class="qtable">
-      <div><span class="n">01</span><span class="t">What is promised, and to whom?</span><span class="m">That a course of IV NAD+ slows aging in otherwise healthy adults, often with more energy, better DNA repair and sharper thinking.</span></div>
-      <div><span class="n">02</span><span class="t">How could the result be checked?</span><span class="m">Controlled trials in healthy adults, comparing IV NAD+ with placebo on outcomes people care about: function, disease, healthy years. A change in a biomarker alone would not be enough.</span></div>
-      <div><span class="n">03</span><span class="t">What has been shown in people?</span><span class="m">Plasma NAD+ rises after infusion; levels in target tissues have not been measured. No convincing evidence of better energy, thinking or performance in healthy adults. Preliminary cardiac findings in patients, at 10–50 mg. No eligible controlled trial has demonstrated slower aging in healthy adults.</span></div>
-      <div><span class="n">04</span><span class="t">What does a mistake cost?</span><span class="m">Infusion reactions in small studies. Documented serious reactions linked to a contaminated product. Hundreds to thousands of dollars per course. Unknown long-term safety of repeated high-dose infusions.</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FINAL VERDICT ============ -->
-<section class="sec" id="the-verdict" style="padding-top:0">
-  <div class="wrap">
-    <div class="glance">
-      <span class="stamp lg s-nj"><span class="in"><span class="band"><b>SHAGOV &nbsp;|&nbsp; VERDICT.</b></span><span class="word">Not justified.</span><span class="cap">Issued · 13.11.2026</span></span></span>
-      <div class="stack">
-        <div class="eyebrow">The verdict</div>
-        <p class="bottom">IV NAD+ has not been shown to slow aging in healthy adults. On current evidence, routine commercial infusions for this purpose are not justified. This is not a finding that NAD+ is ineffective for every medical use.</p>
-        <p class="muted small">Evidence reviewed: 8 November 2026. This verdict will be reconsidered when stronger clinical evidence becomes available.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ DISCLOSURE / SOURCES / LOG ============ -->
-<section class="sec paper" id="disclosure">
-  <div class="wrap stack-lg">
-    <div class="disclose">
-      <div class="eyebrow">Author's disclosure</div>
-      <p><b class="k">Disclosure:</b> I have prescribed IV NAD+ in clinical practice and provided paid training to physicians on its use.</p>
-    </div>
-
-    <div id="sources">
-      <div class="head"><div class="eyebrow">Sources</div><h2>33 sources <span class="s">— studies, reviews, preprints, regulatory documents and a trial registry.</span></h2></div>
-      <ul class="sources refs">
+  
+        </div>
+      </details>
+      <details class="depth" id="sources">
+        <summary><span class="n">§</span><span class="sq"><h3>Sources</h3><span class="ans">33 sources: studies, reviews, preprints, regulatory documents and a trial registry.</span></span><span class="plus" aria-hidden="true"></span></summary>
+        <div class="body">
+<ul class="sources refs">
         <li id="bagga-2020">Bagga P, et al. Single-voxel ¹H MR spectroscopy of cerebral nicotinamide adenine dinucleotide (NAD+) in humans at 7T using a 32-channel volume coil. Magn Reson Med. 2020;83:806–814. <a href="https://doi.org/10.1002/mrm.27971">doi.org/10.1002/mrm.27971</a></li>
         <li id="braidy-2018">Braidy N. Intravenous NAD+ effectively increased the NAD metabolome, reduced oxidative stress and inflammation, and increased expression of longevity genes safely in elderly humans. J Cell Neurosci Oxid Stress. 2018;10(3):779. Conference abstract. <a href="https://dergipark.org.tr/en/pub/jcnos/article/610084">dergipark.org.tr</a></li>
         <li id="bruzzone-2001">Bruzzone S, et al. Connexin 43 hemichannels mediate Ca2+-regulated transmembrane NAD+ fluxes in intact cells. FASEB J. 2001;15:10–12. <a href="https://doi.org/10.1096/fj.00-0566fje">doi.org/10.1096/fj.00-0566fje</a></li>
@@ -1248,13 +1239,17 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
         <li id="yu-2026-stemi">Yu, et al. Effect of intravenous NAD on left ventricular function after primary PCI in STEMI: a randomized controlled trial. Am J Cardiovasc Drugs. 2026. <a href="https://doi.org/10.1007/s40256-026-00826-4">doi.org/10.1007/s40256-026-00826-4</a></li>
         <li id="zhu-2015">Zhu XH, et al. In vivo NAD assay reveals the intracellular NAD contents and redox state in healthy human brain and their age dependences. PNAS. 2015;112:2876–2881. <a href="https://doi.org/10.1073/pnas.1417921112">doi.org/10.1073/pnas.1417921112</a></li>
       </ul>
+        </div>
+      </details>
     </div>
-
-    <div class="disclose" id="revision-history">
-      <div class="eyebrow">Revision history</div>
-      <p class="muted small">Each change is published as a new version with its date and reason. Earlier versions are kept.</p>
-      <p><b class="k">Version 1.0 · 13 November 2026.</b> First publication. Verdict: NOT JUSTIFIED. Evidence reviewed: 8 November 2026.</p>
+    <div class="disclose" id="disclosure">
+      <p><b class="k">Disclosure:</b> I have prescribed IV NAD+ in clinical practice and provided paid training to physicians on its use.</p>
+      <p class="muted small"><b>Update log.</b> 13 Nov 2026: first publication. Verdict: NOT JUSTIFIED, issued 8 Nov 2026. Updates that change the verdict will be dated here.</p>
       <p class="muted small">Education only. Not medical advice. It does not replace a consultation with your own doctor.</p>
+      <div class="subscribe follow">
+        <div class="sub-t"><b>A new verdict every week.</b> <span>Follow on Instagram, where each one is announced first.</span></div>
+        <div class="sub-f"><a class="fbtn" href="https://www.instagram.com/dr.shagov/">Follow @dr.shagov</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -1272,13 +1267,14 @@ h4 { margin: 18px 0 0; font-size: 13px; letter-spacing: 2.4px; text-transform: u
         <p><a class="link" href="/#about">About me →</a> &nbsp;&nbsp; <a class="link" href="/#verdict">All verdicts →</a></p>
       </div>
     </div>
-    <div class="subscribe follow">
-      <div class="sub-t"><b>A new verdict every week.</b> <span>Follow on Instagram, where each one is announced first.</span></div>
-      <div class="sub-f"><a class="fbtn" href="https://www.instagram.com/dr.shagov/">Follow @dr.shagov</a></div>
-    </div>
   </div>
 </section>
 
+<script>
+(function(){function openTo(id){var t=document.getElementById(id);if(!t)return;var d=t.closest('details');while(d){d.open=true;d=d.parentElement&&d.parentElement.closest('details');}}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);if(id)openTo(id);});
+if(location.hash)openTo(location.hash.slice(1));})();
+</script>
 </main>
 
 <footer class="site dial">
