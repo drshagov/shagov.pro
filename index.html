@@ -374,7 +374,8 @@ footer.site { padding: 52px 0 36px; --cx: 50%; --cy: 0%; }
 .photo img { display:block; width:100%; height:auto; }
 .about-strip { grid-template-columns: 340px minmax(0,1fr); align-items:center; padding-top: 64px; padding-bottom: 64px; }
 .about-strip .photo { justify-self:start; }
-.years { grid-template-columns: repeat(4, minmax(0,1fr)); }
+.years { grid-template-columns: repeat(5, minmax(0,1fr)); }
+@media (min-width: 821px) { .years > div + div { padding-left: 16px; } .years > div { padding-right: 12px; } .years b { font-size: 30px; } }
 .years i { display:block; font-style:normal; margin-top:10px; font-size:11px; letter-spacing:2px; text-transform:uppercase; font-weight:700; color: var(--gold); }
 .years span { margin-top:6px; font-size:14px; }
 .facts-tbl b { font-weight:700; }
@@ -382,7 +383,7 @@ footer.site { padding: 52px 0 36px; --cx: 50%; --cy: 0%; }
   .about-strip { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 48px; gap: 28px; }
   .about-strip .photo, .split .photo { max-width: 100%; justify-self: stretch; }
   .years { grid-template-columns: 1fr 1fr; }
-  .years > div:nth-child(3) { padding-left:0; border-left:0; }
+  .years > div:nth-child(2n+3) { padding-left:0; border-left:0; }
   .years > div:nth-child(n+3) { border-top:1px solid var(--hair-dark); }
   .sys { gap: 10px; }
   .promise .big { font-size: 26px; }
@@ -696,8 +697,8 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
     <div class="wrap narrow stack">
       <div class="eyebrow">Beyond the verdicts</div>
       <h2>Checking promises is half the work. <span class="s">The other half is building.</span></h2>
-      <p class="muted">My current work explores how clinical expertise and technology can help physicians make health outcomes more measurable and accountable.</p>
-      <p class="links2"><a class="link" href="#about">About me →</a><a class="link" href="#work">Explore partnerships →</a></p>
+      <p class="muted">After years of building clinics and physician networks, I am now developing Human Biology Navigation: an approach in which a person&rsquo;s health goal becomes a measurable cycle, and the outcome is evaluated against criteria set before it begins. Its first product is Trajectories, a system for physicians and clinics, currently in pilot.</p>
+      <p class="links2"><a class="link" href="https://trajectories.health" target="_blank" rel="noopener">Visit trajectories.health →</a><a class="link" href="#work">Explore partnerships →</a></p>
     </div>
   </section>
 
@@ -711,6 +712,7 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
           <div><b>2009</b><i>Healthcare ventures</i><span>Building clinics, physician networks and medical education</span></div>
           <div><b>2018</b><i>Health over time</i><span>Long-term observation of individual health, including my own</span></div>
           <div><b>2024</b><i>Academic role</i><span>Associate Professor · Kyiv Medical University</span></div>
+          <div><b>2026</b><i>Human Biology Navigation</i><span>Founding Trajectories</span></div>
         </div>
         <p><a class="link" href="#about">About me →</a></p>
       </div>
@@ -1078,7 +1080,7 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
   <section class="sec">
     <div class="wrap narrow stack-lg">
       <div class="pcards">
-        <div class="pc"><span class="n">01</span><h3>Clinical technology</h3><p class="t">Software for physicians and clinics.</p><p>I am developing clinical software for physicians and clinics, with a focus on making health outcomes measurable, transparent and open to verification. Open to founder-level partnerships with investors, healthcare operators and technology teams.</p></div>
+        <div class="pc"><span class="n">01</span><h3>Trajectories</h3><p class="t">A system for physicians and clinics. Currently in pilot.</p><p>Trajectories is the first product built around Human Biology Navigation, an approach I am developing: a health goal becomes a measurable cycle, with the outcome evaluated against criteria set before it starts. Open to founder-level partnerships with investors, healthcare operators and technology teams.</p><p><a class="link" href="https://trajectories.health" target="_blank" rel="noopener">trajectories.health →</a></p></div>
         <div class="pc"><span class="n">02</span><h3>International clinic networks</h3><p class="t">Evidence-led medicine, delivered through reproducible clinical systems.</p><p>Preventive and longevity medicine with consistent clinical standards, trained medical teams and accountable patient outcomes. Interested in partnerships that go beyond a single clinic to scalable models of care.</p></div>
         <div class="pc"><span class="n">03</span><h3>Population health systems</h3><p class="t">Prevention as long-term national infrastructure.</p><p>I am open to working with governments, public health institutions and national partners to develop long-term preventive-health systems that connect clinical expertise, physician education, technology and verified outcomes, to serve populations, not only individual patients.</p></div>
       </div>
