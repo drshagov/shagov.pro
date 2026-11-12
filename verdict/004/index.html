@@ -925,6 +925,17 @@ h1 .nt { text-transform: none; }
 .closing .stamp { grid-row: span 2; }
 .closing .bottom { margin: 0; font-weight: 700; font-size: 17px; line-height: 1.45; }
 @media (max-width: 720px) { .closing { grid-template-columns: 1fr; } .closing .stamp { grid-row: auto; justify-self: start; } }
+/* 004 layout fixes */
+.art-head h1 { line-height: 1.02; }
+.art-head h1 .nt { display: block; }
+.art-head h1 .iv { display: block; font-size: .6em; line-height: 1.12; letter-spacing: -.3px; margin-top: .22em; }
+.take > .pull { align-self: start; }
+@media (min-width: 721px) {
+  .glance { align-items: start; }
+  .glance > .stamp { position: sticky; top: 104px; }
+}
+.take > .ask { grid-column: 1 / -1; }
+@media (min-width: 900px) { .take > .ask ol { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; } }
 </style>
 </head>
 <body>
@@ -998,6 +1009,7 @@ h1 .nt { text-transform: none; }
       <div class="stack">
         <p>First, plainly: on current evidence, a course of hyperbaric oxygen for biological rejuvenation is not justified.</p>
         <p class="muted">What follows is for anyone who is considering a chamber anyway. It is not a guide to getting an unproven result safely, and it is not an endorsement of a course for this purpose.</p>
+        <p class="pull">The size, price and look of a chamber do not replace a check of the equipment and the staff.</p>
       </div>
       <ol class="steps">
         <li><b>If you have a medical indication, decide with your doctor.</b><span>A wound that does not heal or an injury after radiation therapy is a different question. There, HBOT can be ordinary, necessary treatment. This verdict does not cover it.</span></li>
@@ -1006,7 +1018,6 @@ h1 .nt { text-transform: none; }
         <li><b>Count the sessions.</b><span>Temporary nearsightedness grows with the number of sessions, and in studies it was smaller with a mask than with a hood. That is a difference in risk, not a safe setup. For long packages and repeated courses, no safe number of sessions has been established.</span></li>
         <li><b>Ask about the people and the room.</b><span>Trained staff, someone watching you for the whole session, fire-safety rules followed. <span class="cites">(<a href="#fda-2025">FDA, 2025</a>)</span></span></li>
       </ol>
-      <p class="pull">The size, price and look of a chamber do not replace a check of the equipment and the staff.</p>
       <div class="ask">
         <div class="ask-k">One question before you pay</div>
         <p class="ask-q">What exactly am I paying for, and how will you show that I received the promised result?</p>
