@@ -799,10 +799,10 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
     } catch (e) {}
   }
   q.value = st.q;
-  q.addEventListener('input', function () { st.q = q.value.trim(); apply(true); });
+  q.addEventListener('input', function () { st.q = q.value.trim(); if (st.q) { st.g = ''; st.t = ''; } apply(true); });
   function pair(g, t) { return rows.some(function (r) { return r.getAttribute('data-g') === g && r.getAttribute('data-t') === t; }); }
-  document.getElementById('vg-goal').addEventListener('click', function (e) { var c = e.target.closest('.chip'); if (c) { st.g = c.getAttribute('data-g'); st.t = ''; apply(true); } });
-  document.getElementById('vg-tool').addEventListener('click', function (e) { var c = e.target.closest('.chip'); if (c) { st.t = c.getAttribute('data-t'); st.g = ''; apply(true); } });
+  document.getElementById('vg-goal').addEventListener('click', function (e) { var c = e.target.closest('.chip'); if (c) { st.g = c.getAttribute('data-g'); st.t = ''; st.q = ''; q.value = ''; apply(true); } });
+  document.getElementById('vg-tool').addEventListener('click', function (e) { var c = e.target.closest('.chip'); if (c) { st.t = c.getAttribute('data-t'); st.g = ''; st.q = ''; q.value = ''; apply(true); } });
   document.getElementById('vclear').addEventListener('click', function () { st.q = ''; st.t = ''; st.g = ''; q.value = ''; apply(true); });
   apply(false);
 })();
