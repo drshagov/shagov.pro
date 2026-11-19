@@ -924,7 +924,8 @@ h1 .nt { text-transform: none; }
 .closing { margin-top: 36px; padding: 28px; background: var(--paper); border: 1px solid var(--hair-light); display: grid; grid-template-columns: auto minmax(0,1fr); gap: 10px 28px; align-items: center; }
 .closing .stamp { grid-row: span 2; }
 .closing .bottom { margin: 0; font-weight: 700; font-size: 17px; line-height: 1.45; }
-@media (max-width: 720px) { .closing { grid-template-columns: 1fr; } .closing .stamp { grid-row: auto; justify-self: start; } }
+.closing > :not(.stamp) { grid-column: 2; }
+@media (max-width: 720px) { .closing { grid-template-columns: 1fr; } .closing .stamp { grid-row: auto; justify-self: start; } .closing > :not(.stamp) { grid-column: auto; } }
 /* 004 layout fixes */
 .art-head h1 { line-height: 1.02; }
 .art-head h1 .nt { display: block; }
