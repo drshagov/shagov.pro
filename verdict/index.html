@@ -637,6 +637,7 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
 .chip { font: inherit; font-size: 13px; font-weight: 600; color: var(--ink-2); background: var(--paper); border: 1px solid var(--hair-light); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
 .chip:hover { border-color: var(--tantalum); }
 .chip.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+.chip.dim { opacity: .42; }
 .row.vx { grid-template-columns: 72px minmax(0,1fr) auto; row-gap: 6px; }
 .row.vx .date { grid-column: 1; grid-row: 1 / span 2; align-self: center; }
 .row.vx .vb { grid-column: 2; grid-row: 1; }
@@ -781,6 +782,7 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
   var q = document.getElementById('vq'), rows = [].slice.call(document.querySelectorAll('.row.vx')), soonBox = document.getElementById('vsoon'),
       empty = document.getElementById('vempty'), count = document.getElementById('vcount'), st = { q: '', t: '', g: '' };
   try { var p = new URLSearchParams(location.search); st.q = p.get('q') || ''; st.t = p.get('t') || ''; st.g = p.get('g') || ''; } catch (e) {}
+  function pair(g, t) { return rows.some(function (r) { return r.getAttribute('data-g') === g && r.getAttribute('data-t') === t; }); }
   function apply(push) {
     var words = st.q.toLowerCase().split(/\s+/).filter(Boolean), n = 0, ns = 0;
     rows.forEach(function (r) {
@@ -791,8 +793,8 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
     });
     empty.hidden = (n + ns) !== 0; soonBox.hidden = ns === 0;
     count.textContent = (st.q || st.t || st.g) ? (n === 0 && ns > 0 ? 'Not published yet · coming next' : (n + (n === 1 ? ' published verdict' : ' published verdicts'))) : '4 published verdicts';
-    document.querySelectorAll('#vg-goal .chip').forEach(function (c) { c.classList.toggle('on', c.getAttribute('data-g') === st.g); });
-    document.querySelectorAll('#vg-tool .chip').forEach(function (c) { c.classList.toggle('on', c.getAttribute('data-t') === st.t); });
+    document.querySelectorAll('#vg-goal .chip').forEach(function (c) { var g = c.getAttribute('data-g'); c.classList.toggle('on', g === st.g); c.classList.toggle('dim', !!(g && st.t && !pair(g, st.t))); });
+    document.querySelectorAll('#vg-tool .chip').forEach(function (c) { var t = c.getAttribute('data-t'); c.classList.toggle('on', t === st.t); c.classList.toggle('dim', !!(t && st.g && !pair(st.g, t))); });
     if (push) try {
       var u = new URLSearchParams(); if (st.q) u.set('q', st.q); if (st.t) u.set('t', st.t); if (st.g) u.set('g', st.g);
       var qs = u.toString(); history.replaceState(null, '', qs ? '?' + qs : location.pathname);
@@ -800,9 +802,8 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
   }
   q.value = st.q;
   q.addEventListener('input', function () { st.q = q.value.trim(); if (st.q) { st.g = ''; st.t = ''; } apply(true); });
-  function pair(g, t) { return rows.some(function (r) { return r.getAttribute('data-g') === g && r.getAttribute('data-t') === t; }); }
-  document.getElementById('vg-goal').addEventListener('click', function (e) { var c = e.target.closest('.chip'); if (c) { st.g = c.getAttribute('data-g'); st.t = ''; st.q = ''; q.value = ''; apply(true); } });
-  document.getElementById('vg-tool').addEventListener('click', function (e) { var c = e.target.closest('.chip'); if (c) { st.t = c.getAttribute('data-t'); st.g = ''; st.q = ''; q.value = ''; apply(true); } });
+  document.getElementById('vg-goal').addEventListener('click', function (e) { var c = e.target.closest('.chip'); if (c) { st.g = c.getAttribute('data-g'); if (st.g && st.t && !pair(st.g, st.t)) st.t = ''; st.q = ''; q.value = ''; apply(true); } });
+  document.getElementById('vg-tool').addEventListener('click', function (e) { var c = e.target.closest('.chip'); if (c) { st.t = c.getAttribute('data-t'); if (st.g && st.t && !pair(st.g, st.t)) st.g = ''; st.q = ''; q.value = ''; apply(true); } });
   document.getElementById('vclear').addEventListener('click', function () { st.q = ''; st.t = ''; st.g = ''; q.value = ''; apply(true); });
   apply(false);
 })();
