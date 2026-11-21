@@ -33,7 +33,7 @@
  },
  {
   "id": "005",
-  "status": "review",
+  "status": "live",
   "method": "Testosterone",
   "claim": "Low sexual desire",
   "question": "Can testosterone therapy improve low sexual desire?",
@@ -44,7 +44,7 @@
   "issued": "21 Nov 2026",
   "evidence": "12 Nov 2026",
   "url": "/verdict/005/",
-  "also": "testosterone trt hormone hormones libido sexual desire sex drive hypogonadism men тестостерон либидо лібідо гормоны гормони гипогонадизм гіпогонадизм",
+  "also": "testosterone trt hormone hormones libido sexual desire sex drive hypogonadism men тестостерон либидо лібідо гормоны гормони гипогонадизм гіпогонадизм low t low testosterone testosterone replacement therapy testosterone therapy andropause male menopause mens health men's health desire низкий тестостерон низький тестостерон влечение половое влечение сексуальное желание статевий потяг потяг бажання мужское здоровье чоловіче здоров'я заместительная терапия замісна терапія тзт андропауза",
   "tool": "Testosterone",
   "who": "Men with low sexual desire and confirmed hypogonadism."
  },
