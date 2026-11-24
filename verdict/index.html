@@ -700,19 +700,27 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
           <button type="button" class="chip" data-g="Know your risk">Know your risk</button>
           <button type="button" class="chip" data-g="Slow aging">Slow aging</button>
           <button type="button" class="chip" data-g="Hormones &amp; sexual health">Hormones &amp; sexual health</button>
+          <button type="button" class="chip" data-g="Detox &amp; cleansing">Detox &amp; cleansing</button>
         </div>
         <div class="vgrp" id="vg-tool"><span class="gl">By method</span>
           <button type="button" class="chip on" data-t="">All</button>
           <button type="button" class="chip" data-t="Hyperbaric oxygen (HBOT)">Hyperbaric oxygen (HBOT)</button>
           <button type="button" class="chip" data-t="Lp(a) test">Lp(a) test</button>
+          <button type="button" class="chip" data-t="Microplastic detox">Microplastic detox</button>
           <button type="button" class="chip" data-t="NAD+ IV">NAD+ IV</button>
           <button type="button" class="chip" data-t="Testosterone">Testosterone</button>
           <button type="button" class="chip" data-t="Whole-body MRI">Whole-body MRI</button>
         </div>
       </div>
       <div>
-        <p class="vcount" id="vcount" aria-live="polite">5 published verdicts</p>
+        <p class="vcount" id="vcount" aria-live="polite">6 published verdicts</p>
         <div class="rowlist" id="vlist">
+        <a class="row vx" href="/verdict/006/" data-g="Detox &amp; cleansing" data-t="Microplastic detox" data-s="006 microplastic detox microplastic detox clearing the body can you really clear microplastics from your body? healthy adults seeking to clear microplastics from the body. detox &amp; cleansing devices &amp; procedures microplastic microplastics detox cleansing blood cleansing plasma exchange plasmapheresis apheresis filtration chitosan sauna микропластик мікропластик детокс плазмаферез очищение крови очищення крові nanoplastics plastic particles plastics blood filtration blood cleaning double filtration dfpp therapeutic plasma exchange tpe sorbent toxins detoxification cleanse нанопластик пластик в крови очистка крови фильтрация крови детоксикация токсины сорбенты хитозан сауна пластик у крові фільтрація крові детоксикація токсини сорбенти хітозан мікропластик not justified">
+          <span class="date">006</span>
+          <span class="vb"><span class="vn">VERDICT.006</span><span class="vt">Microplastic detox</span><span class="rt">Can you really clear microplastics from your body?</span><span class="vw">Healthy adults seeking to clear microplastics from the body.</span></span>
+          <span class="pill s-nj">Not justified</span>
+          <span class="rd">Detox &amp; cleansing · Issued 24 Nov 2026 · Evidence reviewed 14 Nov 2026</span>
+        </a>
         <a class="row vx" href="/verdict/005/" data-g="Hormones &amp; sexual health" data-t="Testosterone" data-s="005 testosterone testosterone low sexual desire can testosterone therapy improve low sexual desire? men with low sexual desire and confirmed hypogonadism. hormones &amp; sexual health medicines &amp; peptides testosterone trt hormone hormones libido sexual desire sex drive hypogonadism men тестостерон либидо лібідо гормоны гормони гипогонадизм гіпогонадизм low t low testosterone testosterone replacement therapy testosterone therapy andropause male menopause mens health men&#x27;s health desire низкий тестостерон низький тестостерон влечение половое влечение сексуальное желание статевий потяг потяг бажання мужское здоровье чоловіче здоров&#x27;я заместительная терапия замісна терапія тзт андропауза proven">
           <span class="date">005</span>
           <span class="vb"><span class="vn">VERDICT.005</span><span class="vt">Testosterone</span><span class="rt">Can testosterone therapy improve low sexual desire?</span><span class="vw">Men with low sexual desire and confirmed hypogonadism.</span></span>
@@ -748,12 +756,6 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
         <div id="vsoon">
           <div class="vsoon-h">Coming next</div>
           <div class="rowlist" id="vlist2">
-        <div class="row vx soon" data-g="Detox &amp; cleansing" data-t="Microplastic detox" data-s="006 microplastic detox microplastic detox clearing the body can you really clear microplastics from your body? healthy adults seeking to clear microplastics from the body. detox &amp; cleansing devices &amp; procedures microplastic microplastics detox cleansing blood cleansing plasma exchange plasmapheresis apheresis filtration chitosan sauna микропластик мікропластик детокс плазмаферез очищение крови очищення крові ">
-          <span class="date">006</span>
-          <span class="vb"><span class="vn">VERDICT.006</span><span class="vt">Microplastic detox</span><span class="rt">Can you really clear microplastics from your body?</span><span class="vw">Healthy adults seeking to clear microplastics from the body.</span></span>
-          <span class="pill s-ir">Coming 24 Nov</span>
-          <span class="rd">Detox &amp; cleansing · Review complete</span>
-        </div>
         <div class="row vx soon" data-g="Recover &amp; perform" data-t="BPC-157" data-s="007 bpc-157 bpc-157 tendon healing does it help injured tendons heal faster? adults with a confirmed partial tendon tear, treated without surgery. recover &amp; perform medicines &amp; peptides bpc bpc157 bpc 157 wolverine peptide peptides injury tendon tendons ligament recovery sport sports пептид пептиды пептиди сухожилия сухожилля травма восстановление відновлення ">
           <span class="date">007</span>
           <span class="vb"><span class="vn">VERDICT.007</span><span class="vt">BPC-157</span><span class="rt">Does it help injured tendons heal faster?</span><span class="vw">Adults with a confirmed partial tendon tear, treated without surgery.</span></span>
@@ -804,7 +806,7 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
       r.hidden = !ok; if (ok) { if (r.classList.contains('soon')) ns++; else n++; }
     });
     empty.hidden = (n + ns) !== 0; soonBox.hidden = ns === 0;
-    count.textContent = (st.q || st.t || st.g) ? (n === 0 && ns > 0 ? 'Not published yet · coming next' : (n + (n === 1 ? ' published verdict' : ' published verdicts'))) : '5 published verdicts';
+    count.textContent = (st.q || st.t || st.g) ? (n === 0 && ns > 0 ? 'Not published yet · coming next' : (n + (n === 1 ? ' published verdict' : ' published verdicts'))) : '6 published verdicts';
     document.querySelectorAll('#vg-goal .chip').forEach(function (c) { var g = c.getAttribute('data-g'); c.classList.toggle('on', g === st.g); c.classList.toggle('dim', !!(g && st.t && !pair(g, st.t))); });
     document.querySelectorAll('#vg-tool .chip').forEach(function (c) { var t = c.getAttribute('data-t'); c.classList.toggle('on', t === st.t); c.classList.toggle('dim', !!(t && st.g && !pair(st.g, t))); });
     if (push) try {
