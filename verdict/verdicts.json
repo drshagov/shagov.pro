@@ -1,5 +1,17 @@
 [
  {
+  "id": "008",
+  "status": "review",
+  "method": "Creatine",
+  "claim": "Extra strength gains",
+  "question": "Does it add extra strength gains to resistance training after 40?",
+  "goal": "",
+  "type": "Supplements",
+  "also": "creatine creatine monohydrate monohydrate supplement strength muscle resistance training strength training креатин моногидрат моногідрат добавка сила мышцы м'язи силовые тренировки силові тренування",
+  "tool": "Creatine",
+  "who": ""
+ },
+ {
   "id": "007",
   "status": "review",
   "method": "BPC-157",

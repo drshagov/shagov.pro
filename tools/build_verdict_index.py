@@ -27,14 +27,20 @@ for v in data:
         meta = 'Issued ' + v['issued'] + (' · Evidence reviewed ' + v['evidence'] if v.get('evidence') else '')
         tag, href, cls = 'a', f' href="{v["url"]}"', 'row vx'
     else:
-        pill = '<span class="pill s-ir">Coming ' + E(v['issued'].rsplit(' ', 1)[0]) + '</span>'
-        meta = 'Review complete'
+        if v.get('issued'):  # review finished, release date set
+            pill = '<span class="pill s-ir">Coming ' + E(v['issued'].rsplit(' ', 1)[0]) + '</span>'
+            meta = 'Review complete'
+        else:  # review still in progress: no date, no promise
+            pill = '<span class="pill s-ir">In review</span>'
+            meta = 'Review in progress'
         tag, href, cls = 'div', '', 'row vx soon'
+    who = f'<span class="vw">{E(v["who"])}</span>' if v['who'] else ''
+    rd = (E(v['goal']) + ' · ' if v['goal'] else '') + E(meta)
     (rows if live else soon).append(f'''        <{tag} class="{cls}"{href} data-g="{E(v['goal'])}" data-t="{E(v['tool'])}" data-s="{E(hay)}">
           <span class="date">{v['id']}</span>
-          <span class="vb"><span class="vn">VERDICT.{v['id']}</span><span class="vt">{E(v['tool'])}</span><span class="rt">{E(v['question'])}</span><span class="vw">{E(v['who'])}</span></span>
+          <span class="vb"><span class="vn">VERDICT.{v['id']}</span><span class="vt">{E(v['tool'])}</span><span class="rt">{E(v['question'])}</span>{who}</span>
           {pill}
-          <span class="rd">{E(v['goal'])} · {E(meta)}</span>
+          <span class="rd">{rd}</span>
         </{tag}>''')
 tchips = '\n'.join(f'          <button type="button" class="chip" data-t="{E(t)}">{E(t)}</button>' for t in tools)
 chips = '\n'.join(f'          <button type="button" class="chip" data-g="{E(g)}">{E(g)}</button>' for g in goals)
