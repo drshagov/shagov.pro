@@ -172,6 +172,25 @@ section { padding: 44px 0; }
   .halo { display: none; }
 }
 @media (min-width: 640px) { .nums { grid-template-columns: repeat(4, 1fr); } }
+
+.fav3 { margin-top: 30px; border-radius: 22px; padding: 24px 22px 22px; background: linear-gradient(180deg, #0E1B40 0%, #08112A 100%); box-shadow: inset 0 0 0 1px var(--line); }
+.rail { display: block; width: 100%; height: auto; overflow: visible; margin-bottom: 8px; }
+.rail .fill { stroke-dasharray: 276; stroke-dashoffset: 276; }
+.rail .d { fill: #08112A; stroke: rgba(217,181,108,.35); stroke-width: 2; transition: fill .4s, stroke .4s; }
+.fav3.in .rail .fill { animation: draw 2.4s .3s cubic-bezier(.45,.05,.25,1) forwards; }
+.fav3.in .d1 { animation: lit .4s .3s forwards; } .fav3.in .d2 { animation: lit .4s 1.5s forwards; } .fav3.in .d3 { animation: lit3 .5s 2.7s forwards; }
+@keyframes lit { to { stroke: #D9B56C; } }
+@keyframes lit3 { to { stroke: #D9B56C; fill: #D9B56C; } }
+.st { display: grid; grid-template-columns: 30px minmax(0,1fr); gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); opacity: .35; transition: opacity .6s; }
+.fav3.in .s1 { animation: on .6s .3s forwards; } .fav3.in .s2 { animation: on .6s 1.5s forwards; } .fav3.in .s3 { animation: on .6s 2.7s forwards; }
+@keyframes on { to { opacity: 1; } }
+.st .k { font-family: var(--mono); font-size: 12px; color: var(--ink-3); padding-top: 7px; }
+.st b { display: block; font-size: 26px; font-weight: 700; letter-spacing: -.03em; line-height: 1.1; }
+.st b.gold { color: var(--gold); }
+.st p { font-size: 15px; color: var(--ink-2); margin-top: 4px; line-height: 1.4; }
+.promise { font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.35; color: var(--gold); margin-top: 18px; opacity: 0; }
+.fav3.in .promise { animation: on .8s 3.3s forwards; }
+@media (prefers-reduced-motion: reduce) { .st, .promise { opacity: 1 !important; animation: none !important; } .rail .fill { stroke-dashoffset: 0; } .rail .d { stroke: #D9B56C; } .rail .d3 { fill: #D9B56C; } }
 </style>
 </head>
 <body>
@@ -190,21 +209,16 @@ section { padding: 44px 0; }
     <h1 class="thesis">Longevity needs more than promises. <span>It needs measurable results.</span></h1>
     <p class="lead">I am building a system that turns scientific evidence into clinical practice — where health outcomes are <b>forecast, measured and verified</b>.</p>
 
-    <div class="viz" role="img" aria-label="Illustration: a forecast corridor, the measured path inside it, and the verified result.">
-      <svg viewBox="0 0 340 170">
-        <g stroke="rgba(255,255,255,.06)" stroke-width="1"><line x1="0" y1="40" x2="340" y2="40"/><line x1="0" y1="85" x2="340" y2="85"/><line x1="0" y1="130" x2="340" y2="130"/></g>
-        <defs><linearGradient id="fan" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#D9B56C" stop-opacity=".05"/><stop offset="1" stop-color="#D9B56C" stop-opacity=".2"/></linearGradient></defs>
-        <path class="band" d="M18,135 C110,130 200,78 322,22 L322,74 C200,102 110,140 18,139 Z" fill="url(#fan)"/>
-        <path class="real" d="M18,137 C50,141 80,136 112,127 C150,116 168,104 200,96 C240,85 270,62 322,46" fill="none" stroke="#D9B56C" stroke-width="2.6" stroke-linecap="round"/>
-        <circle class="node n1" cx="18" cy="137" r="5.5" fill="#08112A" stroke="#D9B56C" stroke-width="2"/>
-        <circle class="node n2" cx="200" cy="96" r="5.5" fill="#08112A" stroke="#D9B56C" stroke-width="2"/>
-        <circle class="halo" cx="322" cy="46" r="6" fill="none" stroke="#D9B56C" stroke-width="1.5"/>
-        <circle class="node n3" cx="322" cy="46" r="7" fill="#D9B56C"/>
-        <text class="lbl l1" x="10" y="164">FORECAST</text>
-        <text class="lbl l2" x="200" y="122" text-anchor="middle">ACT</text>
-        <text class="lbl l3" x="330" y="20" text-anchor="end">VERIFY</text>
+    <div class="fav3 rv" aria-label="Forecast. Act. Verify.">
+      <svg class="rail" viewBox="0 0 300 24" aria-hidden="true">
+        <line x1="12" y1="12" x2="288" y2="12" stroke="rgba(217,181,108,.22)" stroke-width="2"/>
+        <line class="fill" x1="12" y1="12" x2="288" y2="12" stroke="#D9B56C" stroke-width="2"/>
+        <circle class="d d1" cx="12" cy="12" r="7"/><circle class="d d2" cx="150" cy="12" r="7"/><circle class="d d3" cx="288" cy="12" r="9"/>
       </svg>
-      <div class="cap"><span><b>Forecast. Act. Verify.</b></span><span>Illustration, not patient data</span></div>
+      <div class="st s1"><span class="k">01</span><div><b>Forecast.</b><p>Before we start, we write down what should change and by when.</p></div></div>
+      <div class="st s2"><span class="k">02</span><div><b>Act.</b><p>We do the agreed plan.</p></div></div>
+      <div class="st s3"><span class="k">03</span><div><b class="gold">Verify.</b><p>We check what really changed. Also when the result is weaker than expected.</p></div></div>
+      <p class="promise">A forecast is not a promise.<br>It is a promise to check.</p>
     </div>
   </div>
 </header>
