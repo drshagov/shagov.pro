@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Shagov;Yevgen;;;MD, PhD
+FN:Yevgen Shagov, MD, PhD
+TITLE:Physician · Healthcare Founder
+TEL;TYPE=CELL,VOICE:+971504958978
+TEL;TYPE=CELL,VOICE:+447346867995
+EMAIL;TYPE=INTERNET,WORK:yevgen@shagov.pro
+URL:https://shagov.pro/meet/
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/shgv
+END:VCARD

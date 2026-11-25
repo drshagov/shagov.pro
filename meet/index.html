@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="Yevgen Shagov, MD, PhD. Physician and healthcare founder. Build. Rebuild. Scale.">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Yevgen Shagov">
+<meta property="og:title" content="Yevgen Shagov, MD, PhD — Physician · Healthcare Founder">
+<meta property="og:description" content="I build health systems that deliver measurable results — and hold up under pressure.">
+<meta property="og:url" content="https://shagov.pro/meet/">
+<meta property="og:image" content="https://shagov.pro/img/og.jpg">
+<title>Yevgen Shagov, MD, PhD — Meet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=PT+Serif:ital@0;1&display=swap">
+<style>
+:root {
+  --dial: #0C1838; --dial-deep: #060C1F; --dial-light: #1E3878;
+  --tantalum: #6E7A8C; --gold: #D9B56C; --ivory: #E0BE7A; --chrome: #2B4C9E;
+  --white: #F5F6F8; --paper: #FFFFFF; --ink: #0B132B; --ink-2: #3A4459;
+  --on-dial: #FFFFFF; --on-dial-2: #C6CEDD; --on-dial-3: #A3AEC0;
+  --crimson-light: #E06473;
+  --hair-dark: rgba(220,225,232,.18); --hair-light: rgba(11,19,43,.12);
+  --metal: linear-gradient(135deg, #F4F6F9 0%, #BFC6D0 38%, #EEF1F5 52%, #8F99A8 100%);
+  --serif: 'PT Serif', Georgia, serif; --sans: Inter, 'Helvetica Neue', Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--white); color: var(--ink); font-family: var(--sans); font-size: 17px; line-height: 1.6; }
+a { color: inherit; }
+p { margin: 0; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 22px; }
+
+.dial { position: relative; isolation: isolate; overflow: hidden; color: var(--on-dial);
+  background: radial-gradient(80% 90% at var(--cx, 50%) var(--cy, 20%), var(--dial-light) 0%, var(--dial) 48%, var(--dial-deep) 100%); }
+.dial::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: repeating-conic-gradient(from 0deg at var(--cx, 50%) var(--cy, 20%), rgba(255,255,255,.03) 0deg .2deg, rgba(255,255,255,0) .2deg .75deg);
+  -webkit-mask-image: radial-gradient(90% 100% at var(--cx, 50%) var(--cy, 20%), #000 0%, rgba(0,0,0,.3) 70%, transparent 100%);
+          mask-image: radial-gradient(90% 100% at var(--cx, 50%) var(--cy, 20%), #000 0%, rgba(0,0,0,.3) 70%, transparent 100%); }
+
+.eyebrow { display: flex; align-items: center; gap: 12px; font-size: 11.5px; letter-spacing: 3.5px; text-transform: uppercase; font-weight: 700; color: var(--tantalum); }
+.dial .eyebrow { color: var(--gold); }
+.eyebrow::before { content: ""; width: 4px; height: 16px; border-radius: 1px; background: var(--metal); flex: none; }
+
+/* Hero */
+.hero { padding: 44px 0 48px; text-align: center; }
+.hero .wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.ava { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 2px #E9ECF1, 0 0 0 3px #8F99A8; }
+.name { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 6vw, 40px); letter-spacing: 3px; line-height: 1.15; }
+.name b { font-weight: 700; }
+.cred { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; color: var(--gold); }
+.thesis { font-size: clamp(20px, 4.6vw, 26px); font-weight: 700; line-height: 1.3; max-width: 560px; margin-top: 6px; }
+
+/* Journey */
+.journey { padding: 0 0 52px; }
+.brs { font-size: clamp(22px, 5.4vw, 32px); font-weight: 800; letter-spacing: 3px; text-align: center; margin-bottom: 26px; }
+.brs span { color: var(--gold); }
+.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; border-left: 1.5px solid rgba(217,181,108,.55); margin-left: 8px; }
+.steps li { position: relative; padding: 0 0 26px 26px; }
+.steps li:last-child { padding-bottom: 0; }
+.steps li::before { content: ""; position: absolute; left: -8px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--dial); border: 1.8px solid var(--gold); }
+.steps li:last-child::before { background: var(--gold); }
+.steps .y { font-size: 12px; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; color: var(--on-dial-3); }
+.steps .y b { color: var(--on-dial); }
+.steps p { color: var(--on-dial-2); margin-top: 4px; }
+.facts { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.facts li { padding: 0 0 0 26px !important; color: var(--on-dial-2); }
+.facts li::before { content: "—" !important; position: absolute; left: 0 !important; top: 0 !important; width: auto !important; height: auto !important; border: 0 !important; background: none !important; color: var(--gold); }
+.facts b { color: var(--on-dial); font-weight: 700; }
+.story { display: inline-block; margin-top: 30px; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; text-decoration: none; color: var(--gold); border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+
+/* Levels */
+.sec { padding: 52px 0; }
+.sec .head { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+.sec h2 { font-size: clamp(24px, 5vw, 32px); font-weight: 700; line-height: 1.15; letter-spacing: -.3px; }
+.levels { display: grid; gap: 14px; }
+.lvl { background: var(--paper); border: 1px solid var(--hair-light); border-radius: 2px; padding: 22px 22px 20px; position: relative; display: flex; flex-direction: column; gap: 6px; }
+.lvl::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--metal); }
+.lvl .n { font-size: 11px; letter-spacing: 3px; font-weight: 700; color: var(--tantalum); text-transform: uppercase; }
+.lvl h3 { font-size: 22px; font-weight: 800; letter-spacing: .5px; }
+.lvl h3.v { color: #C23F4E; }
+.lvl .role { font-family: var(--serif); font-style: italic; color: var(--ink-2); font-size: 17px; }
+.lvl p.d { color: var(--ink-2); }
+.lvl .st { font-size: 11px; letter-spacing: 2px; font-weight: 700; text-transform: uppercase; color: var(--tantalum); }
+.lvl a.go { align-self: flex-start; margin-top: 6px; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; text-decoration: none; color: var(--chrome); border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+
+/* Partnership */
+.partner { display: grid; gap: 12px; }
+.prow { display: grid; grid-template-columns: 130px minmax(0,1fr); gap: 16px; padding: 16px 0; border-top: 1px solid var(--hair-light); }
+.prow:last-child { border-bottom: 1px solid var(--hair-light); }
+.prow b { font-weight: 800; letter-spacing: .5px; }
+.prow span { color: var(--ink-2); }
+
+/* Connect */
+.connect { padding: 48px 0 40px; --cy: 0%; }
+.btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 22px; }
+.btn { display: flex; align-items: center; justify-content: center; min-height: 54px; padding: 12px 14px; border-radius: 2px; text-decoration: none; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; border: 1px solid rgba(217,181,108,.55); color: var(--on-dial); text-align: center; }
+.btn.primary { grid-column: 1 / -1; background: var(--gold); color: var(--dial-deep); border-color: var(--gold); }
+.fav-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(217,181,108,.35); }
+.fav { font-size: 15px; font-weight: 500; letter-spacing: 3.5px; text-transform: uppercase; }
+.dots { width: 120px; height: 20px; flex: none; }
+.fine { margin-top: 18px; font-size: 13px; color: var(--on-dial-3); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.fine a { text-decoration: none; color: var(--on-dial-2); }
+
+@media (max-width: 420px) {
+  .prow { grid-template-columns: 1fr; gap: 4px; }
+  .fav { font-size: 13px; letter-spacing: 2.5px; }
+  .dots { width: 90px; }
+}
+</style>
+</head>
+<body>
+
+<header class="hero dial">
+  <div class="wrap">
+    <img class="ava" src="/img/avatar.webp" width="120" height="120" alt="Yevgen Shagov">
+    <h1 class="name">Yevgen <b>SHAGOV</b>, MD, PhD</h1>
+    <div class="cred">Physician · PhD · Healthcare Founder</div>
+    <p class="thesis">I build health systems that deliver measurable results — and hold up under pressure.</p>
+  </div>
+</header>
+
+<section class="journey dial" style="--cy:-10%">
+  <div class="wrap">
+    <div class="brs">BUILD<span>.</span> REBUILD<span>.</span> SCALE<span>.</span></div>
+    <ol class="steps">
+      <li>
+        <div class="y"><b>2009</b> · Build</div>
+        <p>First clinics.</p>
+      </li>
+      <li>
+        <div class="y"><b>2014</b> · Rebuild</div>
+        <p>War took everything I had built. I started again from zero and built a larger healthcare ecosystem:</p>
+        <ul class="facts">
+          <li><b>5+ clinics</b> and a physician network</li>
+          <li><b>Over 1,000 physicians</b> trained through university and professional programmes</li>
+          <li><b>Eight years</b> of long-term patient follow-up in longevity practice</li>
+          <li>Energy and recovery programmes for people under extreme load, including military personnel</li>
+          <li>Two years advising at the national level</li>
+        </ul>
+      </li>
+      <li>
+        <div class="y"><b>2026</b> · Scale</div>
+        <p>Taking it international, from Dubai.</p>
+      </li>
+    </ol>
+    <a class="story" href="/#about">My story →</a>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">What I am building</div>
+      <h2>One standard. Three levels.</h2>
+    </div>
+    <div class="levels">
+      <div class="lvl">
+        <span class="n">01</span>
+        <h3 class="v">VERDICT</h3>
+        <span class="role">Checking the claims.</span>
+        <p class="d">Independent evidence reviews of what the longevity market promises.</p>
+        <a class="go" href="/verdict/">Explore VERDICT →</a>
+      </div>
+      <div class="lvl">
+        <span class="n">02</span>
+        <h3>Trajectories</h3>
+        <span class="role">The standard.</span>
+        <p class="d">A system that lets physicians and clinics forecast, act on and verify each patient's health outcomes.</p>
+        <a class="go" href="https://trajectories.health">trajectories.health →</a>
+      </div>
+      <div class="lvl">
+        <span class="n">03</span>
+        <h3>STATUS</h3>
+        <span class="role">The reference network.</span>
+        <p class="d">A network of medical clinics for men 30–45, built on Trajectories. Starting in the UAE.</p>
+        <span class="st">In development</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec paper" style="padding-top:8px">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Partnership</div>
+    </div>
+    <div class="partner">
+      <div class="prow"><b>Trajectories</b><span>Seeking technology and capital partners to scale the platform.</span></div>
+      <div class="prow"><b>STATUS</b><span>Seeking operating and capital partners to build the network.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="connect dial">
+  <div class="wrap">
+    <div class="eyebrow">Let's talk</div>
+    <div class="btns">
+      <a class="btn primary" href="/meet/yevgen-shagov.vcf" download>Save contact</a>
+      <a class="btn" href="https://wa.me/447346867995">WhatsApp</a>
+      <a class="btn" href="https://www.linkedin.com/in/shgv">LinkedIn</a>
+      <a class="btn" href="mailto:yevgen@shagov.pro">Email</a>
+      <a class="btn" href="tel:+971504958978">Call</a>
+    </div>
+    <div class="fav-row">
+      <div class="fav">Forecast. Act. Verify.</div>
+      <svg class="dots" viewBox="0 0 160 20" aria-hidden="true"><line x1="8" y1="10" x2="152" y2="10" stroke="#D9B56C" stroke-width="1.5"></line><circle cx="8" cy="10" r="6" fill="#0C1838" stroke="#D9B56C" stroke-width="1.8"></circle><circle cx="80" cy="10" r="6" fill="#0C1838" stroke="#D9B56C" stroke-width="1.8"></circle><circle cx="152" cy="10" r="7" fill="#D9B56C"></circle></svg>
+    </div>
+    <div class="fine">
+      <span>© 2026 Yevgen Shagov</span>
+      <a href="/">shagov.pro</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
