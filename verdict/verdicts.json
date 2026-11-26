@@ -13,7 +13,7 @@
  },
  {
   "id": "007",
-  "status": "review",
+  "status": "live",
   "method": "BPC-157",
   "claim": "Tendon healing",
   "question": "Does it help injured tendons heal faster?",
@@ -23,7 +23,7 @@
   "issued": "26 Nov 2026",
   "evidence": "16 Nov 2026",
   "url": "/verdict/007/",
-  "also": "bpc bpc157 bpc 157 wolverine peptide peptides injury tendon tendons ligament recovery sport sports пептид пептиды пептиди сухожилия сухожилля травма восстановление відновлення",
+  "also": "bpc bpc157 bpc 157 wolverine peptide peptides injury tendon tendons ligament recovery sport sports пептид пептиды пептиди сухожилия сухожилля травма восстановление відновлення bpc-157 body protection compound pentadecapeptide wolverine stack tb-500 injectable peptide peptide therapy tendon tear tendon injury tendinopathy tendonitis healing regeneration росомаха пептид росомахи пептидная терапия инъекции пептидов разрыв сухожилия связки заживление регенерация тендинит пептидна терапія ін'єкції пептидів розрив сухожилля зв'язки загоєння регенерація тендиніт",
   "tool": "BPC-157",
   "who": "Adults with a confirmed partial tendon tear, treated without surgery."
  },
