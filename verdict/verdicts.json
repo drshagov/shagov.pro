@@ -1,5 +1,21 @@
 [
  {
+  "id": "009",
+  "status": "review",
+  "method": "Semaglutide",
+  "tool": "Semaglutide",
+  "type": "Medicines & peptides",
+  "goal": "Lose weight",
+  "claim": "15% weight loss",
+  "question": "Can it help adults with obesity lose an average of 15% of their body weight while on treatment?",
+  "who": "Adults with obesity without diabetes.",
+  "verdict": "",
+  "issued": "",
+  "evidence": "",
+  "url": "",
+  "also": "semaglutide ozempic wegovy glp-1 glp1 weight loss obesity fat loss weight-loss injection семаглутид оземпик оземпік вегови вегові похудение схуднення ожирение ожиріння уколы для похудения уколи для схуднення"
+ },
+ {
   "id": "008",
   "status": "live",
   "method": "Creatine",
