@@ -1,15 +1,19 @@
 [
  {
   "id": "008",
-  "status": "review",
+  "status": "live",
   "method": "Creatine",
   "claim": "Extra strength gains",
   "question": "Does it add extra strength gains to resistance training after 40?",
-  "goal": "",
+  "verdict": "np",
+  "goal": "Recover & perform",
   "type": "Supplements",
-  "also": "creatine creatine monohydrate monohydrate supplement strength muscle resistance training strength training креатин моногидрат моногідрат добавка сила мышцы м'язи силовые тренировки силові тренування",
+  "issued": "28 Nov 2026",
+  "evidence": "25 Nov 2026",
+  "url": "/verdict/008/",
+  "also": "creatine creatine monohydrate monohydrate supplement strength muscle resistance training strength training креатин моногидрат моногідрат добавка сила мышцы м'язи силовые тренировки силові тренування strength after 40 over 40 sarcopenia sports nutrition сила после 40 сила після 40 саркопения саркопенія спортивное питание спортивне харчування",
   "tool": "Creatine",
-  "who": ""
+  "who": "Adults aged 40 and over who do regular resistance training."
  },
  {
   "id": "007",

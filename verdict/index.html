@@ -517,6 +517,7 @@ h2.name2 small { font-family: var(--sans); font-size: 12px; letter-spacing: 2.5p
 .latest3 .l2 { grid-area:b; font-size: 21px; font-weight: 700; }
 .latest3 .l4 { grid-area:c; font-size: 12px; letter-spacing: 2.2px; text-transform: uppercase; font-weight: 800; color: var(--crimson); }
 .latest3 .l4.p { color: var(--emerald); }
+.latest3 .l4.np { color: var(--amber); }
 .stamp .onlyif { position: absolute; top: -28px; right: -58px; display: flex; align-items: center; gap: 4px; color: var(--crimson-light); transform: rotate(9deg); pointer-events: none; }
 .stamp .onlyif svg { width: 15px; height: 40px; flex: none; }
 .stamp .onlyif .oi-l { background: var(--crimson-light); color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 2px; padding: 6px 9px 5px; border-radius: 3px; white-space: nowrap; }
@@ -707,6 +708,7 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
         <div class="vgrp" id="vg-tool"><span class="gl">By method</span>
           <button type="button" class="chip on" data-t="">All</button>
           <button type="button" class="chip" data-t="BPC-157">BPC-157</button>
+          <button type="button" class="chip" data-t="Creatine">Creatine</button>
           <button type="button" class="chip" data-t="Hyperbaric oxygen (HBOT)">Hyperbaric oxygen (HBOT)</button>
           <button type="button" class="chip" data-t="Lp(a) test">Lp(a) test</button>
           <button type="button" class="chip" data-t="Microplastic detox">Microplastic detox</button>
@@ -716,8 +718,14 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
         </div>
       </div>
       <div>
-        <p class="vcount" id="vcount" aria-live="polite">7 published verdicts</p>
+        <p class="vcount" id="vcount" aria-live="polite">8 published verdicts</p>
         <div class="rowlist" id="vlist">
+        <a class="row vx" href="/verdict/008/" data-g="Recover &amp; perform" data-t="Creatine" data-s="008 creatine creatine extra strength gains does it add extra strength gains to resistance training after 40? adults aged 40 and over who do regular resistance training. recover &amp; perform supplements creatine creatine monohydrate monohydrate supplement strength muscle resistance training strength training креатин моногидрат моногідрат добавка сила мышцы м&#x27;язи силовые тренировки силові тренування strength after 40 over 40 sarcopenia sports nutrition сила после 40 сила після 40 саркопения саркопенія спортивное питание спортивне харчування not proven">
+          <span class="date">008</span>
+          <span class="vb"><span class="vn">VERDICT.008</span><span class="vt">Creatine</span><span class="rt">Does it add extra strength gains to resistance training after 40?</span><span class="vw">Adults aged 40 and over who do regular resistance training.</span></span>
+          <span class="pill s-np">Not proven</span>
+          <span class="rd">Recover &amp; perform · Issued 28 Nov 2026 · Evidence reviewed 25 Nov 2026</span>
+        </a>
         <a class="row vx" href="/verdict/007/" data-g="Recover &amp; perform" data-t="BPC-157" data-s="007 bpc-157 bpc-157 tendon healing does it help injured tendons heal faster? adults with a confirmed partial tendon tear, treated without surgery. recover &amp; perform medicines &amp; peptides bpc bpc157 bpc 157 wolverine peptide peptides injury tendon tendons ligament recovery sport sports пептид пептиды пептиди сухожилия сухожилля травма восстановление відновлення bpc-157 body protection compound pentadecapeptide wolverine stack tb-500 injectable peptide peptide therapy tendon tear tendon injury tendinopathy tendonitis healing regeneration росомаха пептид росомахи пептидная терапия инъекции пептидов разрыв сухожилия связки заживление регенерация тендинит пептидна терапія ін&#x27;єкції пептидів розрив сухожилля зв&#x27;язки загоєння регенерація тендиніт not justified">
           <span class="date">007</span>
           <span class="vb"><span class="vn">VERDICT.007</span><span class="vt">BPC-157</span><span class="rt">Does it help injured tendons heal faster?</span><span class="vw">Adults with a confirmed partial tendon tear, treated without surgery.</span></span>
@@ -762,15 +770,10 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
         </a>
           <div class="vempty" id="vempty" hidden>No verdicts match your search and filters. <button type="button" class="vclear" id="vclear">Clear filters</button> <a class="link" href="mailto:yevgen@shagov.pro?subject=Suggest%20a%20VERDICT%20topic">Suggest a topic →</a></div>
         </div>
-        <div id="vsoon">
+        <div id="vsoon" hidden>
           <div class="vsoon-h">Coming next</div>
           <div class="rowlist" id="vlist2">
-        <div class="row vx soon" data-g="" data-t="Creatine" data-s="008 creatine creatine extra strength gains does it add extra strength gains to resistance training after 40?   supplements creatine creatine monohydrate monohydrate supplement strength muscle resistance training strength training креатин моногидрат моногідрат добавка сила мышцы м&#x27;язи силовые тренировки силові тренування ">
-          <span class="date">008</span>
-          <span class="vb"><span class="vn">VERDICT.008</span><span class="vt">Creatine</span><span class="rt">Does it add extra strength gains to resistance training after 40?</span></span>
-          <span class="pill s-ir">In review</span>
-          <span class="rd">Review in progress</span>
-        </div>
+
           </div>
         </div>
       </div>
@@ -815,7 +818,7 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
       r.hidden = !ok; if (ok) { if (r.classList.contains('soon')) ns++; else n++; }
     });
     empty.hidden = (n + ns) !== 0; soonBox.hidden = ns === 0;
-    count.textContent = (st.q || st.t || st.g) ? (n === 0 && ns > 0 ? 'Not published yet · coming next' : (n + (n === 1 ? ' published verdict' : ' published verdicts'))) : '7 published verdicts';
+    count.textContent = (st.q || st.t || st.g) ? (n === 0 && ns > 0 ? 'Not published yet · coming next' : (n + (n === 1 ? ' published verdict' : ' published verdicts'))) : '8 published verdicts';
     document.querySelectorAll('#vg-goal .chip').forEach(function (c) { var g = c.getAttribute('data-g'); c.classList.toggle('on', g === st.g); c.classList.toggle('dim', !!(g && st.t && !pair(g, st.t))); });
     document.querySelectorAll('#vg-tool .chip').forEach(function (c) { var t = c.getAttribute('data-t'); c.classList.toggle('on', t === st.t); c.classList.toggle('dim', !!(t && st.g && !pair(st.g, t))); });
     if (push) try {
