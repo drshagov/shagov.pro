@@ -607,6 +607,7 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
 
 .strip.lib { grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); align-items: start; }
 .upcoming { border-top: 1px solid var(--ink); }
+.upcoming .vc.soon { margin: 6px 0 4px; max-width: 560px; min-height: 0; }
 .up-h { font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; color: var(--tantalum); padding: 14px 0 6px; }
 .up { padding: 14px 0; border-bottom: 1px dashed rgba(110,122,140,.5); }
 .up-t { display:flex; align-items:center; gap: 8px; flex-wrap: wrap; font-weight: 700; font-size: 17px; color: var(--ink); }
@@ -670,7 +671,7 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
           <span class="brand">SHAGOV | VERDICT.</span>
           <h1 class="big">Prove it.</h1>
           <p class="pl">I check longevity and healthspan claims against the evidence: what works, for whom, and at what cost.</p>
-          <a class="latest3" href="/verdict/008/"><span class="l1">Latest verdict · 008</span><span class="l2">Creatine</span><span class="l4 np">Not proven</span><span class="go" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20"><path d="M5 15 L15 5 M7 5 H15 V13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></a>
+          <a class="latest3" href="/verdict/008/"><span class="l1">Latest verdict · 008</span><span class="l2">Creatine: does it add strength after 40?</span><span class="l4 np">Not proven</span><span class="go" aria-hidden="true"><svg viewBox="0 0 20 20" width="20" height="20"><path d="M5 15 L15 5 M7 5 H15 V13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span></a>
         </div>
       </div>
             <p class="hero-foot"><a class="link sub" href="#how-i-check">How I check →</a></p>
@@ -704,7 +705,12 @@ nav.main { flex-basis: auto !important; gap: 20px !important; }
         </a>
         <div class="upcoming" aria-label="Upcoming reviews">
           <div class="up-h">Upcoming reviews</div>
-          <div class="up"><div class="up-t"><b>009</b> · Semaglutide<span class="ir">In review</span></div><p>Can it help adults with obesity lose an average of 15% of their body weight while on treatment?</p></div>
+          <div class="vc soon">
+            <div class="top"><span class="date">009</span><span>In review · Medicines</span></div>
+            <h3>Semaglutide: can it cut body weight by 15%?</h3>
+            <p class="muted small">Adults with obesity, while on treatment.</p>
+            <span class="stamp s-ir"><span class="in"><span class="band"><b>SHAGOV | VERDICT.</b></span><span class="word">In review.</span></span></span>
+          </div>
         </div>
       </div>
       <p><a class="link" href="/verdict/">All verdicts →</a></p>
